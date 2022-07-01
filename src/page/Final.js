@@ -16,7 +16,7 @@ const Final = () => {
         <>
             <header className=" container final__header"></header>
             <main className="main__final container">
-                <section className="container">
+                <section className="final__section">
                     <img className="final__image" src={finalImage} alt="final_image_goodluck"></img>
                 </section>
             </main>

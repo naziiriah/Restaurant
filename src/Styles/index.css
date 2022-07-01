@@ -177,7 +177,7 @@
   }
   .bill__waiter-option-1_activee {
     width: 24%;
-    height: 6rem;
+    height: 6.7rem;
     background-color: #000;
     margin-right: 5%;
     border-radius: 10px;
@@ -185,7 +185,7 @@
   }
   .bill__waiter-option-1_, .bill__waiter-option-1_actives, .bill__waiter-option-1_activez {
     width: 24%;
-    height: 6rem;
+    height: 6.7rem;
     background-color: #fff;
     margin-right: 5%;
     border-radius: 10px;
@@ -193,38 +193,30 @@
   }
   .bill__waiter-option-2_, .bill__waiter-option-2_activez, .bill__waiter-option-2_activee {
     width: 24%;
-    height: 6rem;
+    height: 6.7rem;
     background-color: #FAFAFA;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
   .bill__waiter-option-2_actives {
     width: 24%;
-    height: 6rem;
+    height: 6.7rem;
     background-color: #000;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
   .bill__waiter-option-3_, .bill__waiter-option-3_activee, .bill__waiter-option-3_actives {
     width: 36%;
-    height: 6rem;
+    height: 6.7rem;
     color: white;
     margin-left: 11%;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
-  .bill__waiter-option-3_activez, .bill__waiter-option-3_activeeactivez, .bill__waiter-option-3_activesactivez {
-    background-color: #000;
-    width: 36%;
-    height: 6rem;
-    margin-left: 11%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px;
-  }
   .bill__waiter-option-3_activez {
     width: 36%;
-    height: 6rem;
+    height: 6.7rem;
     color: white;
     margin-left: 11%;
     background-color: #000;
@@ -525,6 +517,12 @@
             animation-iteration-count: 1;
     width: 20rem;
     margin: auto;
+  }
+
+  .final__section {
+    margin: auto;
+    display: flex;
+    justify-content: center;
   }
 }
 @-webkit-keyframes design {
@@ -841,7 +839,7 @@
 
   .welcome__main {
     width: 90%;
-    margin: auto;
+    margin: 2rem auto;
     height: 20rem;
     background-color: #fff;
     color: #121212;
