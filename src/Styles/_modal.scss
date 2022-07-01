@@ -9,6 +9,7 @@ $font-title: 'Yatra One', cursive;
         right: 0;
         bottom: 0;
         position: fixed;
+        animation: ease-in .2s  Overtlay;
     }
     
     .overlay {
@@ -74,7 +75,7 @@ $font-title: 'Yatra One', cursive;
     .modal__buttons{
         display: flex;
         justify-content: space-between;
-        margin:3rem auto 0rem 0;
+        margin:7rem auto 0rem 0;
     }
     .modal__transfer{
         margin: 2rem 0;
@@ -198,5 +199,15 @@ $font-title: 'Yatra One', cursive;
     to{
         opacity: 1;
         height:6rem;
+    }
+}
+@keyframes Overtlay{
+    from{
+        // opacity:0;
+        height:200%;
+    }
+    to{
+        // opacity:1;
+        height:100%;
     }
 }

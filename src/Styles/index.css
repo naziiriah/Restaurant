@@ -570,6 +570,8 @@
     right: 0;
     bottom: 0;
     position: fixed;
+    -webkit-animation: ease-in 0.2s Overtlay;
+            animation: ease-in 0.2s Overtlay;
   }
 
   .overlay {
@@ -640,7 +642,7 @@
   .modal__buttons {
     display: flex;
     justify-content: space-between;
-    margin: 3rem auto 0rem 0;
+    margin: 7rem auto 0rem 0;
   }
 
   .modal__transfer {
@@ -788,6 +790,22 @@
   to {
     opacity: 1;
     height: 6rem;
+  }
+}
+@-webkit-keyframes Overtlay {
+  from {
+    height: 200%;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes Overtlay {
+  from {
+    height: 200%;
+  }
+  to {
+    height: 100%;
   }
 }
 @media screen and (max-width: 500px) {
