@@ -1,4 +1,4 @@
-Itimport { HomeDarkBTN, HomeLightBTN, } from "../components/Buttons"
+import { HomeDarkBTN, HomeLightBTN, } from "../components/Buttons"
 import  { WelcomeHeader } from "../components/Header"
 
 const Home = () => {
