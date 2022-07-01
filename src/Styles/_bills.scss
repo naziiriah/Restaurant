@@ -92,77 +92,137 @@
         height:8rem;
         width: 100%;
         display: flex;
-        &-1{
+
+        &-1_activee{
             width:24%;
-            height:5rem;
+            height:6rem;
             background-color: #000;
             margin-right: 5%;
             border-radius:10px;   
-            .bill__green{
-            height:.4rem;
-            width:.4rem;
-            border-radius:50%;
-            background-color: green;
-            margin-left: 85%;
-            margin-top: .1rem;
-            }
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+        //  display whenthe amount to be given to the waiter is selected  When selected
         }
 
-        &-2{
+        &-1_,
+        &-1_actives,
+        &-1_activez
+        {
             width:24%;
-            height:5rem;
+            height:6rem;
+            background-color: #fff;
+            margin-right: 5%;
+            border-radius:10px;   
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+        //    not selceted
+        }
+
+        &-2_,
+        &-2_activez, 
+        &-2_activee{
+            width:24%;
+            height:6rem;
             background-color: #FAFAFA;
             border-radius:10px;  
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+            // not sellected
+        }
+        &-2_actives{
+            width:24%;
+            height:6rem;
+            background-color: #000;
+            border-radius:10px;  
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+            //  display whenthe amount to be given to the waiter is selected  When selected
         }
 
-        &-3{
+        &-3_, 
+        &-3_activee, 
+        &-3_actives{
             width:36%;
-            height:5rem;
+            height:6rem;
+            color:white;
             margin-left: 11%;
-            background-color: #FAFAFA;
+            background-color: #fff;
             border-radius:10px;   
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-            .bill__custom{
-             color:#5E5E5E;   
-             font-weight: lighter;
-             width: 100%;
-             margin: auto;
-             text-align: center;
-            }
-            .bill__img3{
-                width:1.5rem;
-                height:1.5rem;
-                border-radius: 50%;
-                background-color: #EAEAEA;
-                margin:.4rem auto .4rem auto;
+            // NOT Selected
+            &activez{
+                background-color: #000; 
+                width:36%;
+                height:6rem;
+                margin-left: 11%;
+                border-radius:10px;   
+                box-shadow: 0px 0px 4px 
+                //  display whenthe amount to be given to the waiter is selected  When selected   
             }
         }
-        .bill__img{
-            width:2rem;
-            height:2rem;
-            border-radius: 50%;
-            background-color: #fff;
-            margin:.4rem auto;
+        &-3_activez{
+            width:36%;
+            height:6rem;
+            color:white;
+            margin-left: 11%;
+            background-color: #000;
+            border-radius:10px;   
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+            //  display whenthe amount to be given to the waiter is selected  When selected
         }
+
         .bill__img_white{
-            width:2rem;
-            height:2rem;
+            width:2.5rem;
+            height:2.5rem;
             border-radius: 50%;
             background-color: #EAEAEA;
             margin:.7rem auto;
             text-align: center;
+            img{
+                margin-top: .2rem;
+            }
         }
-        .bill__amount{
+        .bill__amount3_activez, 
+        .bill__amount2_actives, 
+        .bill__amount1_activee{
             color:#fff;
-            text-align: center;
+            text-align: center;  
+            //  display whenthe amount to be given to the waiter is selected  When selected 
         }
-        .bill__amount_white{
+        .bill__amount3_, .bill__amount2_, .bill__amount1_,
+        .bill__amount3_actives,.bill__amount3_activee, 
+        .bill__amount2_activee,.bill__amount2_activez, 
+        .bill__amount1_actives, .bill__amount1_activez{
             color:#000;
-            text-align: center;
-            font-weight: 600;
+            text-align: center;   
         }
     } 
+    .bill__custom_,
+    .bill__custom_actives, 
+    .bill__custom_activee {
+        color:#5E5E5E;   
+        font-weight: lighter;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        // NOT  selected 
+        &activez {
+           color:#fff;   
+           font-weight: lighter;
+           width: 100%;
+           margin: auto;
+           text-align: center;
+           //  display whenthe amount to be given to the waiter is selected  When selected 
+        }
+    }
+    .bill__green1__activee,
+    .bill__green2__actives, 
+    .bill__green3__activez {
+        height:.8rem;
+        width:.8rem;
+        border-radius:50%;
+        background-color: green;
+        margin-left: 80%;
+        margin-top: .1rem;
+        margin-bottom: -.5rem;
+        //  display the  green notification amount to be given to the waiter is selected  When selected 
+        }
     .bill__footer{
         width:100%;
         height:2rem;

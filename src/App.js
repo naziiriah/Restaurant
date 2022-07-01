@@ -4,17 +4,20 @@ import "../src/Styles/index.css";
 import Bills from "./page/Bills";
 import Menu from "./page/Menu";
 import Final from "./page/Final";
+import ScrollToTop from "./components/Scroll";
 
 
 function App() {
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path ="/" element={<Home/>} />
-          <Route path ="/bill" element={<Bills/>} />
-          <Route path ="/menu" element={<Menu/>} />
-          <Route path ="/end" element={<Final/>} />
-        </Routes>
+      <ScrollToTop>
+          <Routes>
+            <Route path ="/" element={<Home/>} />
+            <Route path ="/bill" element={<Bills/>} />
+            <Route path ="/menu" element={<Menu/>} />
+            <Route path ="/end" element={<Final/>} />
+          </Routes>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }

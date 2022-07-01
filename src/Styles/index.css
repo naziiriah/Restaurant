@@ -175,73 +175,116 @@
     width: 100%;
     display: flex;
   }
-  .bill__waiter-option-1 {
+  .bill__waiter-option-1_activee {
     width: 24%;
-    height: 5rem;
+    height: 6rem;
     background-color: #000;
     margin-right: 5%;
     border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
-  .bill__waiter-option-1 .bill__green {
-    height: 0.4rem;
-    width: 0.4rem;
-    border-radius: 50%;
-    background-color: green;
-    margin-left: 85%;
-    margin-top: 0.1rem;
-  }
-  .bill__waiter-option-2 {
+  .bill__waiter-option-1_, .bill__waiter-option-1_actives, .bill__waiter-option-1_activez {
     width: 24%;
-    height: 5rem;
+    height: 6rem;
+    background-color: #fff;
+    margin-right: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bill__waiter-option-2_, .bill__waiter-option-2_activez, .bill__waiter-option-2_activee {
+    width: 24%;
+    height: 6rem;
     background-color: #FAFAFA;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
-  .bill__waiter-option-3 {
+  .bill__waiter-option-2_actives {
+    width: 24%;
+    height: 6rem;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bill__waiter-option-3_, .bill__waiter-option-3_activee, .bill__waiter-option-3_actives {
     width: 36%;
-    height: 5rem;
+    height: 6rem;
+    color: white;
     margin-left: 11%;
-    background-color: #FAFAFA;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
-  .bill__waiter-option-3 .bill__custom {
+  .bill__waiter-option-3_activez, .bill__waiter-option-3_activeeactivez, .bill__waiter-option-3_activesactivez {
+    background-color: #000;
+    width: 36%;
+    height: 6rem;
+    margin-left: 11%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px;
+  }
+  .bill__waiter-option-3_activez {
+    width: 36%;
+    height: 6rem;
+    color: white;
+    margin-left: 11%;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bill__waiter-option .bill__img_white {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #EAEAEA;
+    margin: 0.7rem auto;
+    text-align: center;
+  }
+  .bill__waiter-option .bill__img_white img {
+    margin-top: 0.2rem;
+  }
+  .bill__waiter-option .bill__amount3_activez,
+.bill__waiter-option .bill__amount2_actives,
+.bill__waiter-option .bill__amount1_activee {
+    color: #fff;
+    text-align: center;
+  }
+  .bill__waiter-option .bill__amount3_, .bill__waiter-option .bill__amount2_, .bill__waiter-option .bill__amount1_,
+.bill__waiter-option .bill__amount3_actives, .bill__waiter-option .bill__amount3_activee,
+.bill__waiter-option .bill__amount2_activee, .bill__waiter-option .bill__amount2_activez,
+.bill__waiter-option .bill__amount1_actives, .bill__waiter-option .bill__amount1_activez {
+    color: #000;
+    text-align: center;
+  }
+
+  .bill__custom_,
+.bill__custom_actives,
+.bill__custom_activee {
     color: #5E5E5E;
     font-weight: lighter;
     width: 100%;
     margin: auto;
     text-align: center;
   }
-  .bill__waiter-option-3 .bill__img3 {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: #EAEAEA;
-    margin: 0.4rem auto 0.4rem auto;
-  }
-  .bill__waiter-option .bill__img {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: #fff;
-    margin: 0.4rem auto;
-  }
-  .bill__waiter-option .bill__img_white {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: #EAEAEA;
-    margin: 0.7rem auto;
-    text-align: center;
-  }
-  .bill__waiter-option .bill__amount {
+  .bill__custom_activez,
+.bill__custom_activesactivez,
+.bill__custom_activeeactivez {
     color: #fff;
+    font-weight: lighter;
+    width: 100%;
+    margin: auto;
     text-align: center;
   }
-  .bill__waiter-option .bill__amount_white {
-    color: #000;
-    text-align: center;
-    font-weight: 600;
+
+  .bill__green1__activee,
+.bill__green2__actives,
+.bill__green3__activez {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 80%;
+    margin-top: 0.1rem;
+    margin-bottom: -0.5rem;
   }
 
   .bill__footer {
@@ -341,16 +384,19 @@
   }
   .main-nav__lists li {
     cursor: pointer;
+    color: #8A8A8A;
   }
 
   .main-nav__list {
-    color: #8A8A8A;
     font-weight: 400;
     font-size: 17px;
   }
 
-  #list__1:visited {
-    color: red;
+  #style, #styler_12, #styles_13, #stylez_14, #stylez_15, #style_16 {
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
   }
 
   .dish {
@@ -466,11 +512,15 @@
     height: 10rem;
   }
 
+  .main__final {
+    width: 100%;
+  }
+
   .final__image {
     -webkit-animation-name: design;
             animation-name: design;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    -webkit-animation-duration: 2.3s;
+            animation-duration: 2.3s;
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
     width: 20rem;
@@ -483,10 +533,10 @@
     transform: rotate(-350deg);
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.75;
     transform: rotate(40deg);
   }
-  90% {
+  75% {
     opacity: 1;
     transform: rotate(0deg);
   }
@@ -500,10 +550,10 @@
     transform: rotate(-350deg);
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.75;
     transform: rotate(40deg);
   }
-  90% {
+  75% {
     opacity: 1;
     transform: rotate(0deg);
   }
@@ -757,8 +807,8 @@
     background-image: url("../images/IMG_9094.JPG");
     -webkit-mask-image: linear-gradient(to top, transparent 10%, white 50%);
             mask-image: linear-gradient(to top, transparent 10%, white 50%);
-    -webkit-animation: home__head__animation 0.75s;
-            animation: home__head__animation 0.75s;
+    -webkit-animation: home__animation 1s;
+            animation: home__animation 1s;
   }
 
   .container {
@@ -772,8 +822,8 @@
     height: 20rem;
     background-color: #fff;
     color: #121212;
-    -webkit-animation: home__main__animation 0.75s;
-            animation: home__main__animation 0.75s;
+    -webkit-animation: home__animation 1s;
+            animation: home__animation 1s;
   }
 
   .welcome__title {
@@ -858,33 +908,33 @@
 }
 @-webkit-keyframes home__main__animation {
   from {
-    margin-left: 10rem;
+    opacity: 0;
   }
   to {
-    margin-left: 1.2rem;
+    opacity: 1;
   }
 }
 @keyframes home__main__animation {
   from {
-    margin-left: 10rem;
+    opacity: 0;
   }
   to {
-    margin-left: 1.2rem;
+    opacity: 1;
   }
 }
-@-webkit-keyframes home__head__animation {
+@-webkit-keyframes home__animation {
   from {
-    margin-left: 10rem;
+    opacity: 0;
   }
   to {
-    margin-left: 0rem;
+    opacity: 1;
   }
 }
-@keyframes home__head__animation {
+@keyframes home__animation {
   from {
-    margin-left: 10rem;
+    opacity: 0;
   }
   to {
-    margin-left: 0rem;
+    opacity: 1;
   }
 }/*# sourceMappingURL=index.css.map */

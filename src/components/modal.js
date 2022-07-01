@@ -113,6 +113,7 @@ export const SplitModal = ({total, myBill}) => {
                                 
                             <div className="modal__input">
                                     <input 
+                                        type="number"
                                         value={bill}
                                         onChange = {BillChange}
                                         />

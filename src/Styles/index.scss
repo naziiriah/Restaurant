@@ -37,7 +37,7 @@ $openSans: 'Open Sans', sans-serif;
     background-repeat: no-repeat;
     background-image:url('../images/IMG_9094.JPG');
     mask-image: linear-gradient(to top, transparent 10%, white 50%);
-    animation: home__head__animation .75s ;
+    animation: home__animation 1s ;
    
  }
  
@@ -53,7 +53,7 @@ $openSans: 'Open Sans', sans-serif;
    height:20rem;
    background-color: #fff;
    color:$black; 
-   animation: home__main__animation .75s ;
+   animation: home__animation 1s ;
  }
  .welcome__title{
     font-weight: 600;
@@ -132,20 +132,23 @@ $openSans: 'Open Sans', sans-serif;
 
 @keyframes home__main__animation { 
    from {
-      margin-left: 10rem;
-      
+      // margin-left: 10rem;
+      opacity:0;
   }
   to {
-      margin-left:1.2rem;
+      // margin-left:1.2rem;
+      opacity:1;
+
   }
 }
 
-@keyframes home__head__animation{
+@keyframes home__animation{
    from {
-      margin-left: 10rem;
+      opacity:0;
       
   }
   to {
-      margin-left:0rem;
+
+      opacity:1;
   }
 }

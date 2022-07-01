@@ -3,13 +3,16 @@ import { useState } from "react";
 import {  HomeLightBTN} from "../components/Buttons"
 import { BillHeader } from "../components/Header"
 import { PayModal, SplitModal } from "../components/modal"
-
+import WingedMoney from "../images/money-with-wings.png"
 
 const Bills = () => {
     // Arrange the bill content and button
     const PurchaseBill = JSON.parse(localStorage.getItem('Bills')),
     Total = PurchaseBill && PurchaseBill.reduce((total, price) => total + (price.price * price.quantity),  0),
-    myBill = useState(0)
+    myBill = useState(),
+    [Waiter, setWaiter] = useState(0),
+    [Active, setActive] = useState(''),
+    overall = Total  + Waiter
 
     return(
         <>
@@ -37,7 +40,7 @@ const Bills = () => {
                    
                     <div className="bill__flex">
                         <div className="welcome__tableText1">Table bill</div>
-                        <div className="welcome__tableText2">&#x20A6;{Total.toLocaleString("en-US")}</div>
+                        <div className="welcome__tableText2">&#x20A6;{overall.toLocaleString("en-US")}</div>
                     </div>
                 {  myBill[0] > 0 &&
                     <div className="bill__flex">
@@ -57,20 +60,30 @@ const Bills = () => {
                         <h2 className="bill__waiter-text-2">(This goes directly to the waiter that served you)</h2>
                     </div>
                     <div className="bill__waiter-option">
-                        <div className="bill__waiter-option-1">
-                            <div className="bill__green"></div>
-                            <div className="bill__img"></div>
-                            <div className="bill__amount">&#x20A6;1000</div>
+
+                        <div className={"bill__waiter-option-1_" + Active} onClick ={() =>{setWaiter(1000); setActive('activee')}}>
+                        <div className={"bill__green1__" +Active }></div>
+                            <div className={"bill__img_white"}>
+                                <img src={WingedMoney}  alt='winged money'/>
+                            </div>
+                            <div className={"bill__amount1_" + Active}>&#x20A6;1,000.00</div>
                         </div>
-                        <div className="bill__waiter-option-2">
-                            
-                            <div className="bill__img_white"></div>
-                            <div className="bill__amount_white">&#x20A6;2000</div>
+
+                        <div className={"bill__waiter-option-2_" + Active }onClick ={() =>{setWaiter(2000); setActive('actives')}}>
+                            <div className={"bill__green2__" +Active }></div>
+                            <div className={"bill__img_white" }>
+                                <img src={WingedMoney}  alt='winged money'/>
+                            </div>
+                            <div className={"bill__amount2_" + Active}>&#x20A6;2,000.00</div>
                         </div>
-                        <div className="bill__waiter-option-3">
-                            <div className="bill__img3"></div>
-                            <div className="bill__custom">custom amount</div>
-                            <div className="bill__amount_white">&#x20A6;0.00</div>
+
+                        <div className={"bill__waiter-option-3_" + Active} onClick ={() =>{setWaiter(0); setActive('activez')}}>
+                        <div className={"bill__green3__" +Active }></div>
+                            <div className={"bill__img_white"}>
+                                <img src={WingedMoney}  alt='winged money'/>
+                            </div>
+                            <div className={"bill__custom_" + Active}>custom amount</div>
+                            <div className={"bill__amount3_" + Active}>&#x20A6;0.00</div>
                         </div>
                     </div>
                 </aside>

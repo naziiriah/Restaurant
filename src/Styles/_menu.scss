@@ -57,26 +57,21 @@ $font-title: 'Yatra One', cursive;
         transition: ease-in 10s;
         li{
             cursor: pointer;
+            color: #8A8A8A;
         }
      
     }
 
 
     .main-nav__list{
-        color: #8A8A8A;
-        // change color
+        
         font-weight: 400;
         font-size: 17px;
-      
-        // &:focus{
-        //     font-size: 347px; 
-        //     background-image: linear-gradient(60deg, #E21143, #FFB03A);
-        //     background-clip: text;
-        //     color: transparent;
-        // }
     }
-    #list__1:visited{
-        color:red
+    #style, #styler_12,#styles_13 , #stylez_14, #stylez_15, #style_16 {
+        background-image: linear-gradient(60deg, #E21143, #FFB03A);
+        background-clip: text;
+        color: transparent;   
     }
 
     .dish{

@@ -2,9 +2,12 @@
     .final__header{
         height:10rem;
     }
+    .main__final{
+        width:100%;
+    }
     .final__image{
         animation-name: design;
-        animation-duration: 2s;
+        animation-duration: 2.3s;
         animation-iteration-count: 1;
         width:20rem;
         margin: auto;
@@ -17,10 +20,10 @@
         transform: rotate(-350deg)
     }
     50%  {
-        opacity:0.5;
+        opacity:0.75;
         transform: rotate(40deg)
     }
-    90% {
+    75% {
         opacity: 1;
         transform: rotate(0deg)
     }
