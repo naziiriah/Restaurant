@@ -1,0 +1,30 @@
+@media screen and (max-width:500px) {
+    .final__header{
+        height:10rem;
+    }
+    .final__image{
+        animation-name: design;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        width:20rem;
+        margin: auto;
+    }
+}   
+
+@keyframes design{
+    0%   { 
+        opacity:0;
+        transform: rotate(-350deg)
+    }
+    50%  {
+        opacity:0.5;
+        transform: rotate(40deg)
+    }
+    90% {
+        opacity: 1;
+        transform: rotate(0deg)
+    }
+    100%{
+        opacity: 0;
+    }
+  }

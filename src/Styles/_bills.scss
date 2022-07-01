@@ -1,0 +1,192 @@
+@media screen and (max-width:500px) {
+    .bill{
+        width:100%;
+        max-width: 500px;
+    }
+    .bill-header{
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+        font-family: 400;
+        line-height: 32px;
+        padding-top: 3rem;
+        width:100%;
+    }
+
+    .bill__flex-title{
+        display: flex;
+        justify-content: space-between;
+    }
+    .bill__title{
+        text-transform: capitalize;
+        font-size: 16px;
+        line-height: 17px;
+    }
+    .bill__title_1{
+        width:20%;
+    }
+    .bill__title_2{
+        width:50%;
+        text-align: start;
+    }
+    .bill__title_3{
+        width:30%;
+        text-align: end;
+    }
+    .bill__content{
+        width:100%;
+    }
+    
+    .bill__items{
+        display: flex;
+        justify-content: space-between;
+        height: 2rem;
+        width: 100%;
+        margin:1rem 0rem;
+    } 
+    .bill__item{
+        text-transform: capitalize;
+        font-size: 16px;
+    }  
+    .bill__empty{
+        height:10rem;
+        width:100%;
+    }
+    .bill__emptyText{
+        text-align: center;
+        font-size: 33px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        line-height: 35px;
+    }
+    .bill__emptyDirective{
+        text-align: center;
+        font-size: 25px;
+        color:#5E5E5E;
+        font-weight: lighter;
+        line-height: 28px;
+        margin: 4rem 0rem;
+    }
+    .bill__waiter{
+        width:100%;
+    }
+
+    .bill__waiter-text{
+        height:3rem;
+        width:100%;
+        margin:1rem 0;
+        &-1{
+            font-size: 18px;
+            line-height: 21px ; 
+            font-weight:normal;
+        }
+        &-2{
+            font-size: 14px;
+            line-height: 16px;
+            color:#5E5E5E;
+            font-weight:lighter;
+            margin-top: .4rem;
+        }                   
+    }  
+    .bill__waiter-option{
+        height:8rem;
+        width: 100%;
+        display: flex;
+        &-1{
+            width:24%;
+            height:5rem;
+            background-color: #000;
+            margin-right: 5%;
+            border-radius:10px;   
+            .bill__green{
+            height:.4rem;
+            width:.4rem;
+            border-radius:50%;
+            background-color: green;
+            margin-left: 85%;
+            margin-top: .1rem;
+            }
+        }
+
+        &-2{
+            width:24%;
+            height:5rem;
+            background-color: #FAFAFA;
+            border-radius:10px;  
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+        }
+
+        &-3{
+            width:36%;
+            height:5rem;
+            margin-left: 11%;
+            background-color: #FAFAFA;
+            border-radius:10px;   
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+            .bill__custom{
+             color:#5E5E5E;   
+             font-weight: lighter;
+             width: 100%;
+             margin: auto;
+             text-align: center;
+            }
+            .bill__img3{
+                width:1.5rem;
+                height:1.5rem;
+                border-radius: 50%;
+                background-color: #EAEAEA;
+                margin:.4rem auto .4rem auto;
+            }
+        }
+        .bill__img{
+            width:2rem;
+            height:2rem;
+            border-radius: 50%;
+            background-color: #fff;
+            margin:.4rem auto;
+        }
+        .bill__img_white{
+            width:2rem;
+            height:2rem;
+            border-radius: 50%;
+            background-color: #EAEAEA;
+            margin:.7rem auto;
+            text-align: center;
+        }
+        .bill__amount{
+            color:#fff;
+            text-align: center;
+        }
+        .bill__amount_white{
+            color:#000;
+            text-align: center;
+            font-weight: 600;
+        }
+    } 
+    .bill__footer{
+        width:100%;
+        height:2rem;
+    }
+    .bill__flex{
+        width: 100%;
+        height:2rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        align-items: center;
+        animation: 1s bill ease-in;
+    }
+
+}
+@keyframes bill {
+    from{
+        opacity:0;
+        height:0;
+    }
+    to{
+        opacity:1;
+        height:2rem;
+    }
+    
+}
