@@ -19,10 +19,12 @@ $roboto:'Roboto', sans-serif;
 $cursive:'Yatra One', cursive;
 $openSans: 'Open Sans', sans-serif;
 
-
+.container{
+   width:90%;
+   margin: auto;
+   background-color: #121212;
+}
 @media screen and (max-width:500px) { 
-
-
 .header{
     text-transform: capitalize;
     font-family:$font-title;
@@ -44,7 +46,6 @@ $openSans: 'Open Sans', sans-serif;
 .container{
     width:90%;
     margin: auto;
-    
 }
  
  .welcome__main{
