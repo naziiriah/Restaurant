@@ -227,7 +227,43 @@
         margin-top: 1rem;
         align-items: center;
         animation: 1s bill ease-in;
+        .welcome__tableText2{
+            font-size: 21px;
+            font-weight: 600;
+            border: 6px solid rgb(0, 183, 255);
+            border-top-left-radius: 40%;
+            border-top-right-radius:30% ;
+            border-bottom-right-radius:35% ;
+            border-bottom-left-radius:40% ;
+            padding:10px 3px;
+            line-height: 29px;
+            border-top: transparent;
+        }
     }
+#welcome__tableText1{
+    border: 6px solid rgb(0, 183, 255);
+    border-top-left-radius: 40%;
+    border-top-right-radius:30% ;
+    border-bottom-right-radius:35% ;
+    border-bottom-left-radius:40% ;
+    padding:10px 3px;
+    line-height: 29px;
+    font-size: 19px;
+    border-top: transparent;
+}   
+
+
+.welcome__tableText1__img{
+    display:none;
+}
+.welcome__design__img{
+    margin-left: -4rem;
+    margin-bottom: -.4rem;
+}
+#welcome__design{
+    font-size: 21px;
+    font-weight: 600;
+}
 
 }
 @keyframes bill {

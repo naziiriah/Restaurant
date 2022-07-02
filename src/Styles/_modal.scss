@@ -109,20 +109,31 @@ $font-title: 'Yatra One', cursive;
         margin-bottom: 1rem;
     }
     .modal__input{
-        // width:100%;
+        width:100%;
         margin: 1rem auto;
         & input {
             display: flex;
-            border:transparent solid 0px;
-            // border-bottom: black solid 2px; 
-            width:70%;
+            border:transparent solid 17px;
+            width:40%;
             font-size: 30px;
+            font-weight: 600;
             margin: auto;
             text-align: center;
         }
         & input:focus{
             outline: none;
             text-align: center;
+        }
+        img{
+            margin:-1rem auto 0rem;
+            display: flex;
+            justify-content: center;
+        }
+        .modal__design{
+            border-bottom: rgb(43, 185, 178) solid 2px; 
+            width:20%;
+            height: 1rem;
+            margin: -.6rem auto;
         }
     }
     .modal__buttons{

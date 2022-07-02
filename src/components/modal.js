@@ -6,6 +6,7 @@ import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp} from "react-icons
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { CalculateTotal } from "../redux"
+import doubleStroke from "../images/double.png"
 
 
 
@@ -42,7 +43,7 @@ export const PayModal = ({MyFee, Total}) => {
                         <div className="modal__head">
                             <h1>Pay bill</h1>
 
-                            <h1>&#x20A6;{Bill}</h1>
+                            <h1>&#x20A6;{Bill + '.00'}</h1>
                         </div>
                         <div className="modal__transfer">
                             <div className="modal__box" onClick={() => SetShowtransfer(!showTransfer)}>
@@ -89,15 +90,15 @@ export const PayModal = ({MyFee, Total}) => {
     )
 }
 
-export const SplitModal = ({total, myBill}) => {
+export const SplitModal = ({total, myBills}) => {
     const [modal, setModal] = useState(false),
-        [bill,setBill] = myBill,
+        [myBill,setMyBill] = myBills,
         BillChange = (event) => {
-            setBill(Number(event.target.value))
+            setMyBill(Number(event.target.value))
         },
         SplitCancel = () => {
             setModal(!modal)
-            setBill(0)          
+            setMyBill(0)          
         };
     return (
         <>
@@ -118,7 +119,7 @@ export const SplitModal = ({total, myBill}) => {
                             </div>
                             <div className="modal__price">
                                 <h2> Table bill</h2>
-                                <h2> &#x20A6;{total.toLocaleString("en-US")}</h2>
+                                <h2> &#x20A6;{String(total.toLocaleString("en-US")) + '.00'} </h2>
                             </div>
 
                             <div className="modal__text"> 
@@ -129,9 +130,10 @@ export const SplitModal = ({total, myBill}) => {
                                     <input 
                                         autoFocus
                                         type="number"
-                                        value={bill}
+                                        value={myBill}
                                         onChange = {BillChange}
                                         />
+                                        <img src={doubleStroke} alt="double_stroke"/>
                             </div>
 
                             <div className="modal__buttons">
@@ -151,10 +153,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
     const[modal, setModal] = useState(false),
     [Active, setActive] = active,
     [Waiter, setWaiter] = waiter;
-    if(Waiter === 0){
 
-        setActive('')
-    }
     return(
         <>
         {/* The tip is customised */}
@@ -184,6 +183,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                                 <section className="modal__tip">
                                     <label>Create a Tip</label>
                                     <input type={'number'}
+                                            autoFocus
                                             value = {Waiter}
                                             onChange={function(e){
                                                 setWaiter(e.target.value)

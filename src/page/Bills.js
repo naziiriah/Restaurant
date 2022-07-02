@@ -1,20 +1,24 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {  HomeLightBTN} from "../components/Buttons"
 import { BillHeader } from "../components/Header"
 import { CustomTip, PayModal, SplitModal } from "../components/modal"
 import WingedMoney from "../images/money-with-wings.png"
-
+import doubleStroke from "../images/double.png"
 const Bills = () => {
     // Arrange the bill content and button
     const PurchaseBill = JSON.parse(localStorage.getItem('Bills')),
     Total = PurchaseBill && JSON.parse(localStorage.getItem('Total')),
-    myBill = useState(),
+    [myBill, setMyBill] = useState(0),
     [Waiter, setWaiter] = useState(0),
     [Active, setActive] = useState(''),
     overall = Total  + Number(Waiter),
-    myfee = Number(Waiter) + Number(myBill[0])
+    [style, SetStyle] = useState("welcome__tableText1"),
+    myfee = Number(Waiter) + Number(myBill)
     
+   useEffect(() => 
+        {( myBill > 0) ? SetStyle('welcome__design') : SetStyle("welcome__tableText1")
+        } , [myBill])
 
     function SetDisplay (string, number){
         Active === string ? setWaiter(0) : setWaiter(number)
@@ -39,7 +43,7 @@ const Bills = () => {
                                     <div className="bill__items" key={state.id}>
                                         <h3 className="bill__item bill__title_1">{state.quantity}</h3>
                                         <h3 className="bill__item bill__title_2">{state.name}</h3>
-                                        <h3 className="bill__item bill__title_3">{state.price.toLocaleString("en-US")}</h3>
+                                        <h3 className="bill__item bill__title_3">{String(state.price.toLocaleString("en-US"))+ '.00'}</h3>
                                     </div>
                             )) 
                         }
@@ -47,19 +51,22 @@ const Bills = () => {
                 <section className="bill__content">
                    
                     <div className="bill__flex">
-                        <div className="welcome__tableText1">Table bill</div>
-                        <div className="welcome__tableText2">&#x20A6;{overall.toLocaleString("en-US")}</div>
+                        <div className="welcome__tableText1" >Table bill</div>
+                        <div>
+                        <div id={style} >&#x20A6;{String(overall.toLocaleString("en-US")) + '.00'} 
+                        <img className={style + '__img'} src={doubleStroke} alt ={'double stroke'}/></div>
+                        </div>
                     </div>
-                {  myBill[0] > 0 &&
+                {  myBill > 0 &&
                     <div className="bill__flex">
-                        <div className="welcome__tableText1">Your split</div>
-                        <div className="welcome__tableText2">&#x20A6;{myBill[0].toLocaleString("en-US")}</div>
+                        <div className={"welcome__tableText1"}>Your split</div>
+                        <div className="welcome__tableText2">&#x20A6;{String(myBill.toLocaleString("en-US")) + '.00'}</div>
                     </div>
                 }                           
                 </section>
 
                 <div>
-                    <SplitModal total = {overall} myBill={myBill}/>
+                    <SplitModal total = {overall} myBills={[myBill, setMyBill]}/>
                 </div>
 
                 <aside className="bill__waiter">

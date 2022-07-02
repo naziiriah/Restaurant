@@ -295,6 +295,44 @@
     -webkit-animation: 1s bill ease-in;
             animation: 1s bill ease-in;
   }
+  .bill__flex .welcome__tableText2 {
+    font-size: 21px;
+    font-weight: 600;
+    border: 6px solid rgb(0, 183, 255);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 35%;
+    border-bottom-left-radius: 40%;
+    padding: 10px 3px;
+    line-height: 29px;
+    border-top: transparent;
+  }
+
+  #welcome__tableText1 {
+    border: 6px solid rgb(0, 183, 255);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 35%;
+    border-bottom-left-radius: 40%;
+    padding: 10px 3px;
+    line-height: 29px;
+    font-size: 19px;
+    border-top: transparent;
+  }
+
+  .welcome__tableText1__img {
+    display: none;
+  }
+
+  .welcome__design__img {
+    margin-left: -4rem;
+    margin-bottom: -0.4rem;
+  }
+
+  #welcome__design {
+    font-size: 21px;
+    font-weight: 600;
+  }
 }
 @-webkit-keyframes bill {
   from {
@@ -677,19 +715,32 @@
   }
 
   .modal__input {
+    width: 100%;
     margin: 1rem auto;
   }
   .modal__input input {
     display: flex;
-    border: transparent solid 0px;
-    width: 70%;
+    border: transparent solid 17px;
+    width: 40%;
     font-size: 30px;
+    font-weight: 600;
     margin: auto;
     text-align: center;
   }
   .modal__input input:focus {
     outline: none;
     text-align: center;
+  }
+  .modal__input img {
+    margin: -1rem auto 0rem;
+    display: flex;
+    justify-content: center;
+  }
+  .modal__input .modal__design {
+    border-bottom: rgb(43, 185, 178) solid 2px;
+    width: 20%;
+    height: 1rem;
+    margin: -0.6rem auto;
   }
 
   .modal__buttons {
