@@ -76,6 +76,18 @@ $font-title: 'Yatra One', cursive;
         margin-top: 2rem;
 
     }
+    .modal__head{
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        margin-top: 2rem;
+
+    }
+    .modal__head h1{
+        font-family: $font-title;
+        font-weight: 500;
+        font-size: 37px;
+    }
 
     .modal__header h1{
         font-family: $font-title;

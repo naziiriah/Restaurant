@@ -8,11 +8,19 @@ import WingedMoney from "../images/money-with-wings.png"
 const Bills = () => {
     // Arrange the bill content and button
     const PurchaseBill = JSON.parse(localStorage.getItem('Bills')),
-    Total = PurchaseBill && PurchaseBill.reduce((total, price) => total + (price.price * price.quantity),  0),
+    Total = PurchaseBill && JSON.parse(localStorage.getItem('Total')),
     myBill = useState(),
     [Waiter, setWaiter] = useState(0),
     [Active, setActive] = useState(''),
-    overall = Total  + Number(Waiter)
+    overall = Total  + Number(Waiter),
+    myfee = Number(Waiter) + Number(myBill[0])
+    
+
+    function SetDisplay (string, number){
+        Active === string ? setWaiter(0) : setWaiter(number)
+        Active === string ? setActive('') :setActive(string)  
+        // () =>{setWaiter(1000); setActive('activee')
+    }
 
     return(
         <>
@@ -51,7 +59,7 @@ const Bills = () => {
                 </section>
 
                 <div>
-                    <SplitModal total = {Total} myBill={myBill}/>
+                    <SplitModal total = {overall} myBill={myBill}/>
                 </div>
 
                 <aside className="bill__waiter">
@@ -61,20 +69,21 @@ const Bills = () => {
                     </div>
                     <div className="bill__waiter-option">
 
-                        <div className={"bill__waiter-option-1_" + Active} onClick ={() =>{setWaiter(1000); setActive('activee')}}>
+                        <div className={"bill__waiter-option-1_" + Active} onClick ={() => SetDisplay('activee', 1000)}>
                         <div className={"bill__green1__" +Active }></div>
                             <div className={"bill__img_white"}>
                                 <img src={WingedMoney}  alt='winged money'/>
                             </div>
-                            <div className={"bill__amount1_" + Active}>&#x20A6;1,000.00</div>
+                            <div className={"bill__amount1_" + Active}>&#x20A6;1,000</div>
                         </div>
 
-                        <div className={"bill__waiter-option-2_" + Active }onClick ={() =>{setWaiter(2000); setActive('actives')}}>
+                        <div className={"bill__waiter-option-2_" + Active } 
+                                onClick ={() => SetDisplay('actives', 2000)}>
                             <div className={"bill__green2__" +Active }></div>
                             <div className={"bill__img_white" }>
                                 <img src={WingedMoney}  alt='winged money'/>
                             </div>
-                            <div className={"bill__amount2_" + Active}>&#x20A6;2,000.00</div>
+                            <div className={"bill__amount2_" + Active}>&#x20A6;2,000</div>
                         </div>
 
                         <CustomTip active={[Active, setActive]} Wingedmoney={WingedMoney} waiter={[Waiter, setWaiter]}/>
@@ -82,9 +91,7 @@ const Bills = () => {
                 </aside>
 
                 <div>
-                    <PayModal /> 
-                        {/* 
-                        the art design */}
+                    <PayModal MyFee={myfee} Total={overall}/> 
                 </div>
 
                 </main> :

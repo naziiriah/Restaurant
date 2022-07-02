@@ -41,7 +41,7 @@
   }
 
   .btn__menu {
-    width: 90%;
+    width: 70%;
     margin: auto;
     height: 3rem;
     font-size: 20px;
@@ -49,6 +49,10 @@
     text-transform: capitalize;
     font-weight: 600;
     cursor: pointer;
+  }
+
+  #cancel__btn {
+    margin: 1rem 0;
   }
 
   .btn--light {
@@ -62,10 +66,6 @@
     color: #fff;
     background-color: #121212;
     border: #121212 2px solid;
-  }
-
-  .btn__remove {
-    width: 10rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -426,9 +426,10 @@
     margin: 0.8rem 0rem;
   }
   .dish__purchase {
+    width: 90%;
     display: flex;
-    justify-content: space-between;
-    margin: 1.5rem 0rem 2.4rem 0;
+    justify-content: space-evenly;
+    margin: 1.5rem auto 2.4rem;
   }
   .dish__calculator {
     background-color: #000;
@@ -637,6 +638,19 @@
     display: flex;
     background-color: #fff;
     margin-top: 2rem;
+  }
+
+  .modal__head {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-top: 2rem;
+  }
+
+  .modal__head h1 {
+    font-family: "Yatra One", cursive;
+    font-weight: 500;
+    font-size: 37px;
   }
 
   .modal__header h1 {

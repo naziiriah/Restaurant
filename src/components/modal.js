@@ -1,19 +1,32 @@
 import {  useState } from "react"
 import {IoMdPaper} from "react-icons/io"
 import { Icon } from "@chakra-ui/react"
-import { TbArrowsLeftRight,TbCurrencyNaira} from "react-icons/tb"
+import { TbArrowsLeftRight,} from "react-icons/tb"
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { CalculateTotal } from "../redux"
 
 
 
-export const PayModal = () => {
+export const PayModal = ({MyFee, Total}) => {
     const [showTransfer, SetShowtransfer] = useState(false),
     [showCard, setShowCard] = useState(false),
     [modal, setModal] = useState(false),
     navigation = useNavigate();
     let icon = showTransfer ? MdOutlineKeyboardArrowUp : MdOutlineKeyboardArrowDown
     let icon2 = showCard ? MdOutlineKeyboardArrowUp : MdOutlineKeyboardArrowDown
+    const Bill = Number(MyFee) ? Number(MyFee) : Total,
+    Dispatch = useDispatch(),
+    
+    confirmPayment = () => {
+        navigation('/end')
+        Dispatch(CalculateTotal({
+            total:Total,
+            mySplit: Bill
+        }))
+    };
+
 
     return (
         <>
@@ -26,9 +39,10 @@ export const PayModal = () => {
                 <div className="modal">
                     <div className="overlay" onClick={() => setModal(!modal)}></div>
                     <section className="modal__content container">
-                        <div className="modal__header">
+                        <div className="modal__head">
                             <h1>Pay bill</h1>
-                            <Icon as={TbCurrencyNaira} my=".2rem" ml="1.3rem" fontSize={'34px'} border={'solid 2px black'} borderRadius={'10px'}/>
+
+                            <h1>&#x20A6;{Bill}</h1>
                         </div>
                         <div className="modal__transfer">
                             <div className="modal__box" onClick={() => SetShowtransfer(!showTransfer)}>
@@ -65,7 +79,7 @@ export const PayModal = () => {
                             }
                         </div>
                         <div className="modal__final">
-                            <button className="btn btn--light" onClick={() => navigation('/end')} >confirm</button>
+                            <button className="btn btn--light" onClick={confirmPayment} >confirm</button>
                         </div>
                     </section>
                 </div>
@@ -136,6 +150,10 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
     const[modal, setModal] = useState(false),
     [Active, setActive] = active,
     [Waiter, setWaiter] = waiter;
+    if(Waiter === 0){
+
+        setActive('')
+    }
     return(
         <>
         {/* The tip is customised */}
@@ -153,13 +171,13 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
 
                 <div className={"bill__custom_" + Active}>custom amount</div>
 
-                <div className={"bill__amount3_" + Active}>&#x20A6;{Number(Waiter)}</div>
+                <div className={"bill__amount3_" + Active}>&#x20A6;{Number(Waiter).toLocaleString("en-US")}</div>
 
             </div>
 
            { modal &&  <div className="modal">                
                             <div className="overlay"
-                                onClick={() => setModal(!modal)}
+                                onClick={() => {setModal(!modal); setActive('')}}
                                 ></div>
 
                                 <section className="modal__tip">
@@ -174,6 +192,14 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                                            setModal(!modal) 
                                         }}>
                                             Submit
+                                    </button>
+                                    <button id='cancel__btn' className="btn btn--dark"
+                                        onClick={function(){
+                                           setModal(!modal);
+                                           setWaiter(0); 
+                                           setActive('')
+                                        }}>
+                                            Cancel
                                     </button>
                                 </section>
                             

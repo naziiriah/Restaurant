@@ -1,4 +1,4 @@
-import { useState, } from "react"
+import { useEffect, useState, } from "react"
 import { Appetizer, Burger, Wine, Main } from "../components/Menu-properties"
 import {IoIosArrowForward, IoIosArrowBack} from "react-icons/io"
 import { Icon } from "@chakra-ui/react"
@@ -12,7 +12,9 @@ const Menu  = () => {
     navigation = useNavigate(),
     [first, setFirst] = useState(false),
     [style, setStyle] = useState('style');
-
+    useEffect(() => {
+            window.scrollTo(0, 0); 
+    },[title])
     
     return(
         <>

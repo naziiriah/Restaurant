@@ -2,6 +2,7 @@ import { HomeDarkBTN, HomeLightBTN, } from "../components/Buttons"
 import  { WelcomeHeader } from "../components/Header"
 
 const Home = () => {
+    const Total = JSON.parse(localStorage.getItem('Total'))
     return(
         <>
         <WelcomeHeader/>
@@ -21,7 +22,7 @@ const Home = () => {
 
                     <div className="welcome__tableBill">
                         <div className="welcome__tableText1">Table Bill</div>
-                        <div className="welcome__tableText2">&#x20A6;0.00</div>
+                        <div className="welcome__tableText2">&#x20A6;{Number(Total).toLocaleString("en-US")}</div>
                     </div>
 
                     <HomeDarkBTN text={'view bill'}/>
