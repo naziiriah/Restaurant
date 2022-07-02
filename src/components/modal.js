@@ -43,7 +43,7 @@ export const PayModal = ({MyFee, Total}) => {
                         <div className="modal__head">
                             <h1>Pay bill</h1>
 
-                            <h2>&#x20A6;{Bill + '.00'}</h2>
+                            <h2>&#x20A6;{String(Bill.toLocaleString("en-US")) + '.00'}</h2>
                         </div>
                         <div className="modal__transfer">
                             <div className="modal__box" onClick={() => SetShowtransfer(!showTransfer)}>
