@@ -677,13 +677,13 @@
   }
 
   .modal__input {
-    margin: auto;
+    margin: 1rem auto;
   }
   .modal__input input {
     display: flex;
     border: transparent solid 0px;
-    border-bottom: black solid 2px;
     width: 70%;
+    font-size: 30px;
     margin: auto;
     text-align: center;
   }

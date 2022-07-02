@@ -110,12 +110,13 @@ $font-title: 'Yatra One', cursive;
     }
     .modal__input{
         // width:100%;
-        margin: auto;
+        margin: 1rem auto;
         & input {
             display: flex;
             border:transparent solid 0px;
-            border-bottom: black solid 2px; 
+            // border-bottom: black solid 2px; 
             width:70%;
+            font-size: 30px;
             margin: auto;
             text-align: center;
         }

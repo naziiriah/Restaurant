@@ -93,7 +93,7 @@ export const SplitModal = ({total, myBill}) => {
     const [modal, setModal] = useState(false),
         [bill,setBill] = myBill,
         BillChange = (event) => {
-            setBill(event.target.value)
+            setBill(Number(event.target.value))
         },
         SplitCancel = () => {
             setModal(!modal)
@@ -127,6 +127,7 @@ export const SplitModal = ({total, myBill}) => {
                                 
                             <div className="modal__input">
                                     <input 
+                                        autoFocus
                                         type="number"
                                         value={bill}
                                         onChange = {BillChange}

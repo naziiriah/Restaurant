@@ -52,7 +52,7 @@ export const appetizier = [
         id:"c2",
         name:"Crab spring rolls",
         description: "Cross between spicy crab roll and spring roll, served with ponzu sauce",
-        price:2000.00,
+        price:2000,
         image:appet5,
     }
 ]
