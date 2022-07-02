@@ -14,7 +14,7 @@ const Bills = () => {
     [Active, setActive] = useState(''),
     overall = Total  + Number(Waiter),
     [style, SetStyle] = useState("welcome__tableText1"),
-    myfee = Number(Waiter) + Number(myBill)
+    myfee = myBill === 0 ? overall : (Number(Waiter) + Number(myBill))
     
    useEffect(() => 
         {( myBill > 0) ? SetStyle('welcome__design') : SetStyle("welcome__tableText1")
