@@ -17,7 +17,7 @@ export const BillHeader = () => {
         <header className="container bill-header header menu_pages">
         <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
                 onClick={() => navigate('/')}/>
-            <>table</>
+            <>bill</>
             <div></div>
         </header>
     )
