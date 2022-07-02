@@ -4,7 +4,7 @@ import {  HomeLightBTN} from "../components/Buttons"
 import { BillHeader } from "../components/Header"
 import { CustomTip, PayModal, SplitModal } from "../components/modal"
 import WingedMoney from "../images/money-with-wings.png"
-import doubleStroke from "../images/double.png"
+import doubleStroke from "../images/double2.png"
 const Bills = () => {
     // Arrange the bill content and button
     const PurchaseBill = JSON.parse(localStorage.getItem('Bills')),
