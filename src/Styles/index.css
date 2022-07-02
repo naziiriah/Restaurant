@@ -593,6 +593,46 @@
     overflow: auto;
   }
 
+  .modal__tip {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    max-width: 500px;
+    width: 80%;
+    height: 27%;
+    margin: auto;
+    overflow: auto;
+    -webkit-animation: tip 1s ease-in-out;
+            animation: tip 1s ease-in-out;
+    padding-top: 30px;
+  }
+  .modal__tip label {
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: 300;
+    line-height: 25px;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .modal__tip input {
+    width: 92%;
+    margin: 2rem auto;
+    height: 1rem;
+    border: solid transparent 10px;
+    background-color: #c9c2c2;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .modal__tip input:focus {
+    outline: none;
+    border: transparent 10px solid;
+  }
+
   .modal__header {
     display: flex;
     background-color: #fff;
@@ -631,6 +671,7 @@
     border-bottom: black solid 2px;
     width: 70%;
     margin: auto;
+    text-align: center;
   }
   .modal__input input:focus {
     outline: none;
@@ -720,6 +761,7 @@
     border-radius: 10px;
     text-align: center;
     font-size: 23px;
+    text-align: center;
   }
   .modal__card-number input:focus {
     outline: none;
@@ -744,6 +786,7 @@
     text-align: center;
     font-size: 20px;
     line-height: 22px;
+    text-align: center;
   }
   .modal__card-others input:focus {
     outline: none;
@@ -804,6 +847,22 @@
   }
   to {
     height: 100%;
+  }
+}
+@-webkit-keyframes tip {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes tip {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .container {

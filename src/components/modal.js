@@ -55,11 +55,11 @@ export const PayModal = () => {
                                 showCard && 
                                     <div className="modal__card-details">
                                         <div className="modal__card-number">
-                                            <input placeholder="1234   ****   ****  ****"/>
+                                            <input placeholder="1234   ****   ****  ****" type={'number'}/>
                                         </div>
                                         <div className="modal__card-others">
-                                            <input placeholder="MM/YY"/>
-                                            <input placeholder="CVV"/>
+                                            <input placeholder="MM/YY" type={'number'}/>
+                                            <input placeholder="CVV" type={'number'}/>
                                         </div>
                                     </div>
                             }
@@ -128,6 +128,56 @@ export const SplitModal = ({total, myBill}) => {
                         </section>
                     </div>
            }
+        </>
+    )
+}
+
+export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
+    const[modal, setModal] = useState(false),
+    [Active, setActive] = active,
+    [Waiter, setWaiter] = waiter;
+    return(
+        <>
+        {/* The tip is customised */}
+            <div className={"bill__waiter-option-3_" + Active} 
+            onClick ={function(){
+                            setActive('activez'); 
+                            setModal(!modal) ; 
+                            setWaiter(0)
+                            }}>
+                <div className={"bill__green3__" +Active }></div>
+
+                <div className={"bill__img_white"}>
+                    <img src={Wingedmoney}  alt='winged money'/>
+                </div>
+
+                <div className={"bill__custom_" + Active}>custom amount</div>
+
+                <div className={"bill__amount3_" + Active}>&#x20A6;{Number(Waiter)}</div>
+
+            </div>
+
+           { modal &&  <div className="modal">                
+                            <div className="overlay"
+                                onClick={() => setModal(!modal)}
+                                ></div>
+
+                                <section className="modal__tip">
+                                    <label>Create a Tip</label>
+                                    <input type={'number'}
+                                            value = {Waiter}
+                                            onChange={function(e){
+                                                setWaiter(e.target.value)
+                                            }}/>
+                                    <button className="btn btn--light"
+                                        onClick={function(){
+                                           setModal(!modal) 
+                                        }}>
+                                            Submit
+                                    </button>
+                                </section>
+                            
+                        </div>}
         </>
     )
 }

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import {  HomeLightBTN} from "../components/Buttons"
 import { BillHeader } from "../components/Header"
-import { PayModal, SplitModal } from "../components/modal"
+import { CustomTip, PayModal, SplitModal } from "../components/modal"
 import WingedMoney from "../images/money-with-wings.png"
 
 const Bills = () => {
@@ -12,7 +12,7 @@ const Bills = () => {
     myBill = useState(),
     [Waiter, setWaiter] = useState(0),
     [Active, setActive] = useState(''),
-    overall = Total  + Waiter
+    overall = Total  + Number(Waiter)
 
     return(
         <>
@@ -77,14 +77,7 @@ const Bills = () => {
                             <div className={"bill__amount2_" + Active}>&#x20A6;2,000.00</div>
                         </div>
 
-                        <div className={"bill__waiter-option-3_" + Active} onClick ={() =>{setWaiter(0); setActive('activez')}}>
-                        <div className={"bill__green3__" +Active }></div>
-                            <div className={"bill__img_white"}>
-                                <img src={WingedMoney}  alt='winged money'/>
-                            </div>
-                            <div className={"bill__custom_" + Active}>custom amount</div>
-                            <div className={"bill__amount3_" + Active}>&#x20A6;0.00</div>
-                        </div>
+                        <CustomTip active={[Active, setActive]} Wingedmoney={WingedMoney} waiter={[Waiter, setWaiter]}/>
                     </div>
                 </aside>
 
