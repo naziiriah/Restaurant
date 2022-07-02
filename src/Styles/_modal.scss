@@ -88,6 +88,14 @@ $font-title: 'Yatra One', cursive;
         font-weight: 500;
         font-size: 37px;
     }
+    .modal__head h2{
+        font-family: $font-title;
+        font-weight: 500;
+        font-size: 30px;  
+        padding-top:.3rem ;
+    }
+
+    
 
     .modal__header h1{
         font-family: $font-title;

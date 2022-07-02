@@ -691,6 +691,13 @@
     font-size: 37px;
   }
 
+  .modal__head h2 {
+    font-family: "Yatra One", cursive;
+    font-weight: 500;
+    font-size: 30px;
+    padding-top: 0.3rem;
+  }
+
   .modal__header h1 {
     font-family: "Yatra One", cursive;
     font-weight: 500;
