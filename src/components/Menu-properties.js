@@ -14,7 +14,7 @@ export const Appetizer = () => {
         <main className="menu__main menu menu_pages container">
             {
                 appetizier.map((state, key) => 
-                    <BasicTheme index={key} state = {state}/>
+                <div key={state.id}><BasicTheme index={key} state = {state}/></div>
                 )
             }
         </main>
@@ -27,7 +27,7 @@ export const Burger= () => {
         <main className="menu__main menu container">
             {
                 burger.map(
-                    (state, index) => <BasicTheme index={index} state={state} />
+                    (state, index) => <div key={state.id}><BasicTheme index={index} state={state} /></div>
                     )
             }
         </main>
@@ -41,7 +41,7 @@ export const Wine = () => {
                  {
                     
                     Wines.map(
-                    (state, index) => <BasicTheme index={index} state={state} />
+                    (state, index) => <div key={state.id}><BasicTheme index={index} state={state} /></div>
                     )
             }
         </main>
@@ -53,7 +53,7 @@ export const Main  = () => {
         <main className="menu__main menu container">
             {
                 MainDish.map(
-                    (state, index) => <BasicTheme index={index} state={state} />
+                    (state, index) => <div key={state.id}><BasicTheme index={index} state={state} /></div>
                     )
             }
         </main>
