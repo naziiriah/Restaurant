@@ -92,14 +92,16 @@ export const PayModal = ({MyFee, Total}) => {
 
 export const SplitModal = ({total, myBills}) => {
     const [modal, setModal] = useState(false),
-        [myBill,setMyBill] = myBills,
-        BillChange = (event) => {
-            setMyBill(Number(event.target.value))
+        [myBill,setMyBill] = myBills;
+        let Value 
+        const BillChange = (event) => {
+            Value = (Number(event.target.value))
         },
         SplitCancel = () => {
             setModal(!modal)
             setMyBill(0)          
         };
+        
     return (
         <>
             <button className="btn btn--light" 
@@ -130,7 +132,7 @@ export const SplitModal = ({total, myBills}) => {
                                     <input 
                                         autoFocus
                                         type="number"
-                                        value={myBill}
+                                        value={Value}
                                         onChange = {BillChange}
                                         />
                                         <img src={doubleStroke} alt="double_stroke"/>
@@ -140,7 +142,7 @@ export const SplitModal = ({total, myBills}) => {
                                 <button className="btn--light btn__modal"
                                     onClick={SplitCancel}>cancel</button>
                                 <button className="btn--dark  btn__modal"
-                                    onClick={() => setModal(!modal)}>confirm</button>
+                                    onClick={() => {setModal(!modal); setMyBill(Value)}}>confirm</button>
                             </div>
                         </section>
                     </div>
