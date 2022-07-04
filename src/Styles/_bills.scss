@@ -11,8 +11,13 @@
         line-height: 32px;
         padding-top: 3rem;
         width:100%;
+        
     }
-
+    .bill__header{
+        min-height: 300px;
+        align-self: flex-start;
+        width:100%;
+    }
     .bill__flex-title{
         display: flex;
         justify-content: space-between;

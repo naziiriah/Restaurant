@@ -1,17 +1,13 @@
 import { useEffect } from "react"
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"
 import finalImage from "../images/success.png"
-import { reset } from "../redux";
 
 const Final = () => {
-    const navigate = useNavigate(),
-    dispatch = useDispatch();
+    const navigate = useNavigate();
     
     useEffect(() => {
         setTimeout(() => navigate('/'), 2000)
-        dispatch(reset())
-    }, [dispatch, navigate])
+    }, [ navigate])
     return (
         <>
             <header className=" container final__header"></header>

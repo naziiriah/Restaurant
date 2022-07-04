@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { appetizier, burger, MainDish, Wines } from "./Properties"
 import { BiMinus} from "react-icons/bi"
 import {IoMdAdd} from "react-icons/io"
@@ -63,7 +63,16 @@ export const Main  = () => {
 const BasicTheme = ({state, index }) => {
     const [select, SetSelect] = useState(true),
     dispatch  = useDispatch(),
-    [value, setValue ]= useState(1); 
+    [value, setValue ]= useState(1);
+    const List = JSON.parse(localStorage.getItem('Bills'))
+     
+    useEffect(() => {
+        const ItemExist = List.filter(stat => stat.id === state.id)
+        if(ItemExist.length > 0){
+            SetSelect(false)
+            setValue(ItemExist[0].quantity)
+        }
+    }, [List, state.id])
 
     function removeFood(){
         dispatch(removeFromCart({

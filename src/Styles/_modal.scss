@@ -13,11 +13,11 @@ $font-title: 'Yatra One', cursive;
     }
     
     .overlay {
-        background: rgba(49,49,49,0.8);
+        background: rgba(0, 0, 0, 0.4);
     }
     .modal__content{
         position: absolute;
-        top: 70%;
+        top: 95%;
         left: 50%;
         transform: translate(-50%, -50%);
         line-height: 1.4;
@@ -26,7 +26,8 @@ $font-title: 'Yatra One', cursive;
         border-radius: 3px;
         max-width: 500px;
         width:100%;
-        height:65%;
+        max-height:45rem;
+        height:100%;
         border-top-left-radius: 55px;
         border-top-right-radius: 55px;
         overflow: auto;
@@ -147,7 +148,7 @@ $font-title: 'Yatra One', cursive;
     .modal__buttons{
         display: flex;
         justify-content: space-between;
-        margin:7rem auto 0rem 0;
+        margin:2rem auto 0rem 0;
     }
     .modal__transfer{
         margin: 2rem 0;

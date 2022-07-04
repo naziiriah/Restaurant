@@ -11,10 +11,6 @@ export const BillSlice = createSlice({
     name:'bill',
     initialState,
     reducers: {
-        reset: (state) => {
-            // state.value = []
-            // localStorage.setItem('Bills', JSON.stringify(state.value))
-        },
         addToCart:(state,{payload}) => {
             // find if this state exists and update the quantity
             const existingState = state.value.filter(state => state.id === payload.id)
@@ -32,7 +28,8 @@ export const BillSlice = createSlice({
                     id:payload.id,
                     quantity:payload.quantity ,
                     name:payload.name,  
-                    price:payload.price
+                    price:payload.price,
+                    isSelected:payload.isSelected
                 })
                 localStorage.setItem('Bills', JSON.stringify(state.value))
                 state.Total =state.value.reduce((total, price) => total + (price.price * price.quantity),  0)         
@@ -94,9 +91,20 @@ export const BillSlice = createSlice({
 
             localStorage.setItem('Bills', JSON.stringify(state.value))
             localStorage.setItem('Total', JSON.stringify(state.Total))
+        },
+        UpdateSelectedStatus : (state, {payload}) => {
+            const existingState = state.value.filter(state => state.id === payload.id)
+
+            if(existingState.length === 1 ){
+                for(const newState of state.value) {
+                    if (newState.id === payload.id) {
+                        newState.isSelected = !payload.quantity  ;
+                    }
+                }
+            }
         }
     }
 })
 
-export const {reset, addToCart, removeFromCart, AddQuantity, SubtractQuantity, CalculateTotal} = BillSlice.actions
+export const { addToCart, removeFromCart, AddQuantity, SubtractQuantity, CalculateTotal} = BillSlice.actions
 export default BillSlice.reducer
