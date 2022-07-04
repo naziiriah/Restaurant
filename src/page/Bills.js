@@ -39,7 +39,7 @@ const Bills = () => {
                         <div className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
                             <h2 className=" bill__title start bill__title_2">item</h2>
-                            <h2 className=" bill__title end bill__title_3">price(&#x20A6;)</h2>                    
+                            <h2 className=" bill__title end bill__title_3">price (&#x20A6;)</h2>                    
                         </div>
                        { PurchaseBill.map((state) => (
                                     <div className="bill__items" key={state.id}>

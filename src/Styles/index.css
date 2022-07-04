@@ -568,22 +568,6 @@
     margin: auto;
     transition: 4s ease-in;
   }
-
-  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-    .main-nav__list:hover {
-      background-image: linear-gradient(60deg, #E21143, #FFB03A);
-      -webkit-background-clip: text;
-              background-clip: text;
-      color: transparent;
-    }
-
-    #list__1:hover {
-      background-image: linear-gradient(60deg, #E21143, #FFB03A);
-      -webkit-background-clip: text;
-              background-clip: text;
-      color: transparent;
-    }
-  }
 }
 @-webkit-keyframes menu-item {
   from {
@@ -920,7 +904,7 @@
   }
 
   .modal__final {
-    margin: 3rem 0rem;
+    margin: 3rem 0rem 7rem 0rem;
   }
 
   .modal__card-details {

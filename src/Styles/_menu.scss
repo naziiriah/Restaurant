@@ -146,18 +146,6 @@ $proxima: 'Proxima Nova', sans-serif;
             transition: 4s ease-in;
         }
     }
-    @supports (background-clip: text){
-        .main-nav__list:hover{
-            background-image: linear-gradient(60deg, #E21143, #FFB03A);
-            background-clip: text;
-            color: transparent;
-        }
-        #list__1:hover{
-            background-image: linear-gradient(60deg, #E21143, #FFB03A);
-            background-clip: text;
-            color: transparent; 
-        }
-    }
 }
 
 // window.onload = function() {
