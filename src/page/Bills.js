@@ -4,7 +4,9 @@ import {  HomeLightBTN} from "../components/Buttons"
 import { BillHeader } from "../components/Header"
 import { CustomTip, PayModal, SplitModal } from "../components/modal"
 import WingedMoney from "../images/money-with-wings.png"
-import doubleStroke from "../images/double2.png"
+// import doubleStroke from "../images/double2.png"
+import handdrawncircle from "../images/handdrawn-cricle.png"
+
 const Bills = () => {
     // Arrange the bill content and button
     const PurchaseBill = JSON.parse(localStorage.getItem('Bills')),
@@ -14,7 +16,7 @@ const Bills = () => {
     [Active, setActive] = useState(''),
     overall = Total  + Number(Waiter),
     [style, SetStyle] = useState("welcome__tableText1"),
-    myfee = myBill === 0 ? overall : (Number(Waiter) + Number(myBill))
+    myfee = myBill === 0 ? overall : (Number(myBill))
     
    useEffect(() => 
         {( myBill > 0) ? SetStyle('welcome__design') : SetStyle("welcome__tableText1")
@@ -52,15 +54,22 @@ const Bills = () => {
                    
                     <div className="bill__flex">
                         <div className="welcome__tableText1" >Table bill</div>
-                        <div>
-                        <div id={style} >&#x20A6;{String(overall.toLocaleString("en-US")) + '.00'} 
-                        <img className={style + '__img'} src={doubleStroke} alt ={'double stroke'}/></div>
-                        </div>
+
+                            <div className={"welcome__tablePrice1__" + style}>
+                                <h2>&#x20A6;{String(overall.toLocaleString("en-US")) + '.00'}</h2>
+                                <img className ={style} src={handdrawncircle} alt={'handrawn circle'}/> 
+                            </div>
+
                     </div>
                 {  myBill > 0 &&
                     <div className="bill__flex">
+
                         <div className={"welcome__tableText1"}>Your split</div>
-                        <div className="welcome__tableText2">&#x20A6;{String(myBill.toLocaleString("en-US")) + '.00'}</div>
+                        <div className="welcome__tableText2">
+                            <h2> &#x20A6;{String(myBill.toLocaleString("en-US")) + '.00'} </h2>
+                            <img src={handdrawncircle} alt={'handrawn circle'}/>
+
+                        </div>
                     </div>
                 }                           
                 </section>
@@ -70,18 +79,22 @@ const Bills = () => {
                 </div>
 
                 <aside className="bill__waiter">
+
                     <div className="bill__waiter-text">
                         <h2 className="bill__waiter-text-1">Tip the waiter?</h2>
                         <h2 className="bill__waiter-text-2">(This goes directly to the waiter that served you)</h2>
                     </div>
+
                     <div className="bill__waiter-option">
 
                         <div className={"bill__waiter-option-1_" + Active} onClick ={() => SetDisplay('activee', 1000)}>
-                        <div className={"bill__green1__" +Active }></div>
+
+                            <div className={"bill__green1__" +Active }></div>
                             <div className={"bill__img_white"}>
                                 <img src={WingedMoney}  alt='winged money'/>
                             </div>
-                            <div className={"bill__amount1_" + Active}>&#x20A6;1,000</div>
+                            <div className={"bill__amount1_" + Active}>&#x20A6;1,000
+                            </div>
                         </div>
 
                         <div className={"bill__waiter-option-2_" + Active } 

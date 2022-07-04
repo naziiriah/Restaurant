@@ -1,7 +1,5 @@
 import { useEffect, useState, } from "react"
 import { Appetizer, Burger, Wine, Main } from "../components/Menu-properties"
-import {IoIosArrowForward, IoIosArrowBack} from "react-icons/io"
-import { Icon } from "@chakra-ui/react"
 import menu_header from "../images/menu-header.png"
 import invoice from "../images/alert.png"
 import { useNavigate } from "react-router-dom"
@@ -10,7 +8,6 @@ import { useNavigate } from "react-router-dom"
 const Menu  = () => {
     const [title, setTitle] = useState('appetizer'),
     navigation = useNavigate(),
-    [first, setFirst] = useState(false),
     [style, setStyle] = useState('style');
     useEffect(() => {
             window.scrollTo(0, 0); 
@@ -32,35 +29,16 @@ const Menu  = () => {
                     <div className="art__line"></div>
                 </aside>
                 <nav className="main__nav">
-                { !first &&
                     <ul className="main-nav__lists">               
                         <li className="main-nav__list" id={style} onClick={ () => { setTitle('appetizer');setStyle('style')  }}>appetizer</li>
                         <li className="main-nav__list" id={style + '_12'} onClick={() =>{setTitle('burger'); setStyle('styler') }}>burger</li>
                         <li className="main-nav__list" id={style + '_13'} onClick={() =>{setTitle('wine');setStyle('styles') }}>wine</li>
                         <li className="main-nav__list" id={style + '_14'} onClick={() =>{setTitle('main'); setStyle('stylez')} }>main</li>
-                        <li className="main-nav__list" 
-                            onClick={
-                                () => { 
-                                    setFirst(!first); setTitle('main'); setStyle('style') 
-                                }
-                            }>more 
-                                <Icon mr=".4rem"as={IoIosArrowForward}/>
-                        </li>
+                        <li className="main-nav__list"  id={style + '_16'} onClick={() => setStyle('style1')}>shawarma</li>
+                        <li className="main-nav__list" id={style + '_17'} onClick={() => setStyle('style2')} >dessert</li>
+                        <li className="main-nav__list" id={style + '_18'} onClick={() => setStyle('style3')}>salad</li>
+                        <li className="main-nav__list" id={style + '_19'} onClick={() => setStyle('style4')}>cocktail</li>
                     </ul>
-                
-                }
-                {
-                    first &&
-                    <ul className="main-nav__lists">
-                        <li className="main-nav__list" onClick={() => {setFirst(!first)
-                            ;setTitle('appetizer'); setStyle('style')}}>
-                                <Icon mr=".4rem"as={IoIosArrowBack}/>more</li>
-                        <li className="main-nav__list"  id={style} onClick={() => setStyle('style')}>shawarma</li>
-                        <li className="main-nav__list" id={style + '_12'} onClick={() => setStyle('styler')} >dessert</li>
-                        <li className="main-nav__list" id={style + '_13'} onClick={() => setStyle('styles')}>salad</li>
-                        <li className="main-nav__list" id={style + '_14'} onClick={() => setStyle('stylez')}>cocktail</li>
-                    </ul>
-                }
                 </nav>
             </div>
                 

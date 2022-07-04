@@ -1,3 +1,6 @@
+$Caterina: CALCaterinaW01, sans-serif;
+$proxima: 'Proxima Nova', sans-serif;
+
 @media screen and (max-width:500px) {
     .bill{
         width:100%;
@@ -7,14 +10,14 @@
         display: flex;
         justify-content: space-between;
         font-size: 30px;
-        font-family: 400;
+        font-family: $Caterina;
         line-height: 32px;
         padding-top: 3rem;
         width:100%;
         
     }
     .bill__header{
-        min-height: 300px;
+        min-height: 230px;
         align-self: flex-start;
         width:100%;
     }
@@ -25,7 +28,9 @@
     .bill__title{
         text-transform: capitalize;
         font-size: 16px;
+        font-weight: bold;
         line-height: 17px;
+        font-family: $proxima;
     }
     .bill__title_1{
         width:20%;
@@ -52,6 +57,10 @@
     .bill__item{
         text-transform: capitalize;
         font-size: 16px;
+        line-height: 19px;
+        font-family: $proxima;
+        font-weight: 400;
+        font-style: normal;
     }  
     .bill__empty{
         height:10rem;
@@ -77,27 +86,30 @@
     }
 
     .bill__waiter-text{
-        height:3rem;
+        height:4rem;
         width:100%;
-        margin:1rem 0;
+        margin:1.5rem 0;
         &-1{
             font-size: 18px;
             line-height: 21px ; 
             font-weight:normal;
+            font-family: $proxima;
+
         }
         &-2{
             font-size: 14px;
             line-height: 16px;
             color:#5E5E5E;
-            font-weight:lighter;
+            font-weight:500;
             margin-top: .4rem;
+            font-family: $proxima;
         }                   
     }  
     .bill__waiter-option{
         height:8rem;
         width: 100%;
         display: flex;
-
+        font-family: $proxima;
         &-1_activee{
             width:24%;
             height:6.7rem;
@@ -151,6 +163,7 @@
             border-radius:10px;   
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
             // NOT Selected
+            font-family: $proxima;
         }
         &-3_activez{
             width:36%;
@@ -161,6 +174,7 @@
             border-radius:10px;   
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
             //  display whenthe amount to be given to the waiter is selected  When selected
+            font-family: $proxima;
         }
 
         .bill__img_white{
@@ -179,6 +193,7 @@
         .bill__amount1_activee{
             color:#fff;
             text-align: center;  
+            font-family: $proxima;
             //  display whenthe amount to be given to the waiter is selected  When selected 
         }
         .bill__amount3_, .bill__amount2_, .bill__amount1_,
@@ -187,20 +202,23 @@
         .bill__amount1_actives, .bill__amount1_activez{
             color:#000;
             text-align: center;   
+            font-family: $proxima;
         }
     } 
     .bill__custom_,
     .bill__custom_actives, 
     .bill__custom_activee {
         color:#5E5E5E;   
-        font-weight: lighter;
+        font-weight: normal;
+        font-family: $proxima;
         width: 100%;
         margin: auto;
         text-align: center;
         // NOT  selected 
         &activez {
            color:#fff;   
-           font-weight: lighter;
+           font-weight: normal;
+           font-family: $proxima;
            width: 100%;
            margin: auto;
            text-align: center;
@@ -225,41 +243,84 @@
     }
     .bill__flex{
         width: 100%;
-        height:2rem;
+        height:3rem;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 2rem;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-top: .5rem;
         align-items: center;
-        animation: 1s bill ease-in;
-        .welcome__tableText2{
-            font-size: 20px;
-            font-weight: 500;
-            border: 6px solid rgb(0, 183, 255);
-            border-top-left-radius: 40%;
-            border-top-right-radius:30% ;
-            border-bottom-right-radius:35% ;
-            border-bottom-left-radius:40% ;
-            padding:10px 3px;
-            line-height: 29px;
-            border-top: transparent;
-        }
+        animation: .2s bill ease-in;
+        font-family: $proxima;
     }
-#welcome__tableText1{
-    border: 6px solid rgb(0, 183, 255);
-    border-top-left-radius: 40%;
-    border-top-right-radius:30% ;
-    border-bottom-right-radius:35% ;
-    border-bottom-left-radius:40% ;
-    padding:10px 3px;
+
+
+.welcome__tableText1{
+    height: 1rem;
+    font-size: 22px;
+    font-family: $proxima;
+    font-weight: bold;
     line-height: 29px;
-    font-size: 19px;
-    border-top: transparent;
-}   
-
-
-.welcome__tableText1__img{
-    display:none;
+    text-align: end;
+    padding-top: 1rem;
+}
+.welcome__tablePrice1__welcome__tableText1{
+    font-family: $proxima;
+    font-weight: bold;
+    font-size: 22px;
+    height:4rem;
+    h2{
+        height: 1rem;
+        font-size: 22px;
+        font-family: $proxima;
+        font-weight: bold;
+        line-height: 29px;
+        text-align: end;
+        padding-top: 2rem;
+    }
+     img{
+        width:8rem;
+        height:3rem;
+        margin-top: -7rem;
+        margin-right: -1rem;
+    }
+}
+.welcome__tablePrice1__welcome__design{
+    background-image: url('../images/double2.png');   
+    background-repeat: no-repeat;
+    background-size: 5rem;
+    background-position: bottom;
+    font-family: $proxima;
+    font-weight: bold;
+    font-size: 22px;
+    h2{
+        height: 2rem;
+        font-size: 22px;
+        font-family: $proxima;
+        font-weight: bold;
+        line-height: 29px;
+        text-align: end;
+        padding-top: 2rem;
+    }
+     img{
+        display: none;
+    }
+    
+}
+.welcome__tableText2{
+    h2{
+        height: 1rem;
+        font-size: 22px;
+        font-family: $proxima;
+        font-weight: bold;
+        line-height: 29px;
+        text-align: end;
+        padding-top: 2rem;
+    }
+     img{
+        width:8rem;
+        margin-top: -3rem;
+        margin-right: -1rem;
+    }
 }
 .welcome__design__img{
     margin-left: -4rem;

@@ -21,8 +21,8 @@ const Home = () => {
                     <HomeLightBTN text={'view menu'}/>
 
                     <div className="welcome__tableBill">
-                        <div className="welcome__tableText1">Table Bill</div>
-                        <div className="welcome__tableText2">&#x20A6;{Number(Total).toLocaleString("en-US")}</div>
+                        <div className="welcome__tableText1">Table bill</div>
+                        <div className="welcome__tableText2">&#x20A6;{String(Number(Total).toLocaleString("en-US")) + '.00'}</div>
                     </div>
 
                     <HomeDarkBTN text={'view bill'}/>

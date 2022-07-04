@@ -22,7 +22,7 @@ import wine5 from "../images/wine-5.png"
 export const appetizier = [
     {
         id:"a1",
-        name: 'charleston cheese dip',
+        name: 'Charleston cheese dip',
         description: 'Creamy cheese tapped with bacon, red bells, & green onions, served with chips',
         price: 7500.00,
         image:appet1,

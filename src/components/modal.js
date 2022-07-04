@@ -1,7 +1,7 @@
 import {  useState } from "react"
 import {IoMdPaper} from "react-icons/io"
 import { Icon } from "@chakra-ui/react"
-import { TbArrowsLeftRight,} from "react-icons/tb"
+import { TbArrowsLeftRight, TbCurrencyNaira} from "react-icons/tb"
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
@@ -41,16 +41,21 @@ export const PayModal = ({MyFee, Total}) => {
                     <div className="overlay" onClick={() => setModal(!modal)}></div>
                     <section className="modal__content container">
                         <div className="modal__head">
-                            <h1>Pay bill</h1>
-
+                            <h1>Pay bill</h1>       
+                            {/* <Icon as={TbCurrencyNaira} 
+                                border={'solid 2px black' } borderRadius={'5px'}
+                                fontSize={'33px'} marginLeft={'20px'} marginTop={"2.5"}/> */}
                             <h2>&#x20A6;{String(Bill.toLocaleString("en-US")) + '.00'}</h2>
                         </div>
+
                         <div className="modal__transfer">
+
                             <div className="modal__box" onClick={() => SetShowtransfer(!showTransfer)}>
                                 <Icon as={TbArrowsLeftRight} mt="0.1rem" ml="1rem" fontSize={'30px'}/>
                                 <h3>Pay by bank transfer</h3>
                                 <Icon as={icon} mt="-0.1rem" ml="2rem" fontSize={'34px'} />  
                             </div>
+
                             {showTransfer &&
                                 <div className="modal__account">
                                         <h4>Transfer your bill to the 
@@ -80,7 +85,8 @@ export const PayModal = ({MyFee, Total}) => {
                             }
                         </div>
                         <div className="modal__final">
-                            <button className="btn btn--light" onClick={confirmPayment} >confirm</button>
+                            { showCard && 
+                                <button className="btn btn--dark" onClick={confirmPayment} >Proceed</button>}
                         </div>
                     </section>
                 </div>
@@ -125,17 +131,26 @@ export const SplitModal = ({total, myBills}) => {
                             </div>
 
                             <div className="modal__text"> 
-                                How much would you like to pay?
+                                <h2>How much would you like to pay?</h2>
                             </div>
                                 
                             <div className="modal__input">
-                                    <input 
+                                <div>
+                                <span>
+                                 &#x20A6;
+                                  <input 
+                                        placeholder="0.00"
                                         autoFocus
                                         type="number"
                                         value={Value}
                                         onChange = {BillChange}
                                         />
-                                        <img src={doubleStroke} alt="double_stroke"/>
+                                 </span>
+                                   
+                                </div>
+                                
+                                 
+                                    <img src={doubleStroke} alt="double_stroke"/>
                             </div>
 
                             <div className="modal__buttons">

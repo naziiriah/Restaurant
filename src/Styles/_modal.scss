@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-$font-title: 'Yatra One', cursive;
+$Caterina: CALCaterinaW01, sans-serif;
+$proxima: 'Proxima Nova', sans-serif;
+
 @media screen and (max-width:500px) { 
     .modal, .overlay {
         width: 100%;
@@ -17,7 +18,7 @@ $font-title: 'Yatra One', cursive;
     }
     .modal__content{
         position: absolute;
-        top: 95%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
         line-height: 1.4;
@@ -26,8 +27,7 @@ $font-title: 'Yatra One', cursive;
         border-radius: 3px;
         max-width: 500px;
         width:100%;
-        max-height:45rem;
-        height:100%;
+        height:65%;
         border-top-left-radius: 55px;
         border-top-right-radius: 55px;
         overflow: auto;
@@ -74,67 +74,98 @@ $font-title: 'Yatra One', cursive;
     .modal__header{
         display: flex;
         background-color: #fff;
-        margin-top: 2rem;
-
+        margin-top: 1rem;
+        height:2rem;
     }
     .modal__head{
-        display: flex;
-        justify-content: space-between;
         background-color: #fff;
         margin-top: 2rem;
+        height:4rem;
+        display: flex;
+        justify-content: space-between;
+        
 
     }
     .modal__head h1{
-        font-family: $font-title;
-        font-weight: 500;
-        font-size: 37px;
+        font-family: $Caterina;
+        font-weight: 600;
+        font-style:normal ;
+        font-size: 40px;
     }
     .modal__head h2{
-        font-family: $font-title;
-        font-weight: 500;
-        font-size: 30px;  
-        padding-top:.3rem ;
+        font-family: $proxima;
+        font-weight: 600;
+        font-style:normal ;
+        font-size: 20px;
+        margin-top: 1rem;
+        letter-spacing: 1px;
     }
-
     
 
     .modal__header h1{
-        font-family: $font-title;
-        font-weight: 500;
-        font-size: 37px;
+        font-family: $Caterina;
+        font-weight: 600;
+        font-size: 40px;
+        color:#121212;
     }
     .modal__price{
         display: flex;
         justify-content: space-between;
-        margin: 1.5rem auto 2rem;
+        margin: 1.5rem auto .5rem;
+        height: 2rem;
+        color:#121212;
     }
     .modal__price h2{
-        font-size: 23px;
+        font-size: 20px;
         line-height: 25px;
+        font-family: $proxima;
+        font-weight: bold;
+        font-style: normal;
     }
     .modal__text{
         text-align: center;
         font-size: larger;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
+        
+        & h2{
+            font-size: 18px;
+            font-family: $proxima;
+            font-weight: 400;
+            color:#121212;
+        }
     }
     .modal__input{
         width:100%;
         margin: 1rem auto;
-        & input {
+        height: 5rem;
+        font-family: $proxima;
+        font-size: 36px;
+        font-weight: bold;
+
+        & div{
             display: flex;
-            border:transparent solid 17px;
-            width:40%;
-            font-size: 30px;
-            font-weight: 600;
-            margin: auto;
-            text-align: center;
+            justify-content: center;
+            & span{
+                font-size: 36px;
+                margin:auto;
+                width:50%;
+                border:inset 0px #ccc ;
+            }
         }
-        & input:focus{
+        
+        & div span input{
+            border:transparent solid 0px;
+            width:70%;
+            font-size: 36px;
+            font-weight: 600;
+            font-family: $proxima;
+        }
+        & div input:focus{
             outline: none;
             text-align: center;
         }
         img{
-            margin:-1rem auto 0rem;
+            margin:.5rem auto 0rem;
             display: flex;
             justify-content: center;
         }
@@ -146,12 +177,14 @@ $font-title: 'Yatra One', cursive;
         }
     }
     .modal__buttons{
+        height:14rem;
         display: flex;
         justify-content: space-between;
         margin:2rem auto 0rem 0;
     }
     .modal__transfer{
         margin: 2rem 0;
+        
 
     }
     .modal__box{
@@ -164,6 +197,9 @@ $font-title: 'Yatra One', cursive;
         border:solid #000 2px;
         & h3{
             padding-top: .3rem;
+            font-family: $proxima;
+            font-size: 18px;
+            font-weight: bold;
         }
     }
     .modal__account{
@@ -190,13 +226,10 @@ $font-title: 'Yatra One', cursive;
     }
     .btn__modal{
         height:3rem;
-        font-size: 20px;
         border-radius: 10px;
         text-transform: capitalize;
-        font-weight: 600;
         cursor: pointer; 
-        width:48%
-        ;
+        width:48%;
     }
     .modal__final{
         margin:3rem 0rem;
@@ -218,10 +251,11 @@ $font-title: 'Yatra One', cursive;
             margin: auto;
             display: flex;
             height: 3rem;
+            font-family: $proxima;
             width: 100%;
             border-radius: 10px;
             text-align: center;
-            font-size: 23px;
+            font-size: 20px;
             text-align: center;
         }
         & input:focus{
@@ -238,20 +272,23 @@ $font-title: 'Yatra One', cursive;
             border:transparent solid 0px;
             background-color: #EFEFEF;
             color:#5A5A5A;
-            margin: auto;
             display: flex;
             height: 3rem;
-            width: 45%;
+            width: 47%;
             border-radius: 10px;
             text-align: center;
             font-size: 20px;
             line-height: 22px;
             text-align: center;
+            font-family: $proxima;
         }
         & input:focus{
             outline: none;
             text-align: center;
         }
+    }
+    .modal__final{
+        height:12rem;
     }
 }
 

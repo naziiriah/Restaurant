@@ -29,7 +29,6 @@ export const BillSlice = createSlice({
                     quantity:payload.quantity ,
                     name:payload.name,  
                     price:payload.price,
-                    isSelected:payload.isSelected
                 })
                 localStorage.setItem('Bills', JSON.stringify(state.value))
                 state.Total =state.value.reduce((total, price) => total + (price.price * price.quantity),  0)         

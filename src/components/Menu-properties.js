@@ -67,8 +67,8 @@ const BasicTheme = ({state, index }) => {
     const List = JSON.parse(localStorage.getItem('Bills'))
      
     useEffect(() => {
-        const ItemExist = List.filter(stat => stat.id === state.id)
-        if(ItemExist.length > 0){
+        const ItemExist = List && List.filter(stat => stat.id === state.id)
+        if(List && ItemExist.length > 0){
             SetSelect(false)
             setValue(ItemExist[0].quantity)
         }

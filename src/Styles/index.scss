@@ -2,16 +2,19 @@
     padding: 0;
     margin:0;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yatra+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Yatra+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&family=Yatra+One&display=swap');
 @import 'buttons';
 @import 'bills';
 @import 'menu';
 @import 'final';
 @import 'modal';
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+@import url("http://db.onlinewebfonts.com/t/15f829bee3e1d2bdf3fd9ab7e488ab80.ttf");
+@import url("http://db.onlinewebfonts.com/c/3f495639499d4d097ef146630f9c9eb9?family=CALCaterinaW01");
+$proxima-style: normal;
+$proxima-weight: 400;
+$Caterina: CALCaterinaW01, sans-serif;
+$proxima: 'Proxima Nova', sans-serif;
+                                                
 
 $font-title: 'Yatra One', cursive;
 $black: #121212;
@@ -26,10 +29,11 @@ $openSans: 'Open Sans', sans-serif;
 @media screen and (max-width:500px) { 
 .header{
     text-transform: capitalize;
-    font-family:$font-title;
+    font-family:$Caterina;
     width:100%;
     text-align: center;
     height:3rem;
+    font-size: 30px;
 }
  .welcome__header{
     width:100%;
@@ -57,11 +61,14 @@ $openSans: 'Open Sans', sans-serif;
  }
  .welcome__title{
     font-weight: 600;
-    font-family:$font-title;
+    font-family:$Caterina;
     text-transform: capitalize;
+    font-size: 44px;
     line-height: 26px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
+    width: 100%;
  }
  .welcome__extras{
     font-weight: 300;
