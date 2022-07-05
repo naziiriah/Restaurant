@@ -8,7 +8,7 @@ const Home = () => {
         <WelcomeHeader/>
         <main className="welcome__main ">
 
-            <div className="welcome__main container">
+            <div >
 
                 <h1 className="welcome__title">sydney's dome</h1> 
               
