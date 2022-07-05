@@ -62,13 +62,13 @@ $proxima: 'Proxima Nova', sans-serif;
         text-transform: capitalize;
         transition: ease-in 10s;
         white-space:nowrap;
-        overflow-x:auto;
+        overflow-x:scroll;
         width:100%;
         height: 2rem;
         li{
             cursor: pointer;
             color: #8A8A8A;
-            margin: 0rem 1.5rem;      
+            margin: 0rem 0.6rem;      
         }
         &::-webkit-scrollbar {
             display: none;
