@@ -491,7 +491,7 @@
   .main-nav__lists li {
     cursor: pointer;
     color: #8A8A8A;
-    margin-right: 1.1rem;
+    margin: 0.7rem;
   }
   .main-nav__lists::-webkit-scrollbar {
     display: none;
