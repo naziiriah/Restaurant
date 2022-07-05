@@ -826,6 +826,7 @@
     font-size: 36px;
     font-weight: 600;
     font-family: "Proxima Nova", sans-serif;
+    text-align: center;
   }
   .modal__input div input:focus {
     outline: none;
