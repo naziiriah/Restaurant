@@ -45,6 +45,8 @@ $proxima: 'Proxima Nova', sans-serif;
         background-color: #fff;
         height: 1.5rem;
         margin-top: -1rem;
+        width:100%;
+        display: flex;
     } 
     .menu__fixed{
         position: sticky;
@@ -64,11 +66,12 @@ $proxima: 'Proxima Nova', sans-serif;
         white-space:nowrap;
         overflow-x:scroll;
         width:100%;
+        margin:auto;
         height: 2rem;
         li{
             cursor: pointer;
             color: #8A8A8A;
-            margin: 0 0.75rem;      
+            margin: 0 0.7rem;      
         }
         &::-webkit-scrollbar {
             display: none;

@@ -3,6 +3,8 @@ import { Appetizer, Burger, Wine, Main } from "../components/Menu-properties"
 import menu_header from "../images/menu-header.png"
 import invoice from "../images/alert.png"
 import { useNavigate } from "react-router-dom"
+import { Icon } from "@chakra-ui/react"
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md"
 
 
 const Menu  = () => {
@@ -30,6 +32,7 @@ const Menu  = () => {
                 </aside>
                 <nav className="main__nav">
                     <ul className="main-nav__lists">               
+                        <Icon as={MdKeyboardArrowRight}/>
                         <li className="main-nav__list" id={style} onClick={ () => { setTitle('appetizer');setStyle('style')  }}>appetizer</li>
                         <li className="main-nav__list" id={style + '_12'} onClick={() =>{setTitle('burger'); setStyle('styler') }}>burger</li>
                         <li className="main-nav__list" id={style + '_13'} onClick={() =>{setTitle('wine');setStyle('styles') }}>wine</li>
@@ -38,6 +41,7 @@ const Menu  = () => {
                         <li className="main-nav__list" id={style + '_17'} onClick={() => setStyle('style2')} >dessert</li>
                         <li className="main-nav__list" id={style + '_18'} onClick={() => setStyle('style3')}>salad</li>
                         <li className="main-nav__list" id={style + '_19'} onClick={() => setStyle('style4')}>cocktail</li>
+                       <Icon as={MdKeyboardArrowLeft}/> 
                     </ul>
                 </nav>
             </div>
