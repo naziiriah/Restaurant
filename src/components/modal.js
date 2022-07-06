@@ -142,6 +142,7 @@ export const SplitModal = ({total, myBills}) => {
                                         placeholder="0.00"
                                         autoFocus
                                         pattern="[0-9]*" 
+                                        inputmode="numeric"
                                         type="number" 
                                         value={Value}
                                         onChange = {BillChange}
