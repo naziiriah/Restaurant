@@ -27,7 +27,7 @@ $proxima: 'Proxima Nova', sans-serif;
         border-radius: 3px;
         max-width: 500px;
         width:100%;
-        height:65%;
+        height:69%;
         border-top-left-radius: 55px;
         border-top-right-radius: 55px;
         overflow: auto;
@@ -46,7 +46,7 @@ $proxima: 'Proxima Nova', sans-serif;
         height:27%;
         margin: auto;
         overflow: auto;
-        animation:tip 1s ease-in-out;
+        animation:tip 0.4s ease-in-out;
         padding-top: 30px;
         label{
             text-align: center;
@@ -74,7 +74,7 @@ $proxima: 'Proxima Nova', sans-serif;
     .modal__header{
         display: flex;
         background-color: #fff;
-        margin-top: 1rem;
+        margin-top: .7rem;
         height:2rem;
     }
     .modal__head{
@@ -111,7 +111,7 @@ $proxima: 'Proxima Nova', sans-serif;
     .modal__price{
         display: flex;
         justify-content: space-between;
-        margin: 1.5rem auto .5rem;
+        margin: 1.5rem auto 0rem;
         height: 2rem;
         color:#121212;
     }
@@ -136,8 +136,8 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .modal__input{
         width:100%;
-        margin: 1rem auto;
-        height: 5rem;
+        margin: 1rem auto 0rem;
+        height: 3.5rem;
         font-family: $proxima;
         font-size: 36px;
         font-weight: bold;
@@ -147,27 +147,28 @@ $proxima: 'Proxima Nova', sans-serif;
             justify-content: center;
             & span{
                 font-size: 36px;
-                margin:auto;
-                width:50%;
+                margin-left: 5rem;
+                width:60%;
                 border:inset 0px #ccc ;
             }
         }
         
-        & div span input{
+        & div span .input__split{
             border:transparent solid 0px;
             width:70%;
             font-size: 36px;
             font-weight: 600;
             font-family: $proxima;
-            text-align: center;
+            text-align: start;
         }
         & div input:focus{
             outline: none;
-            text-align: center;
+            text-align: start;
         }
         img{
-            margin:.5rem auto 0rem;
+            margin:-.50rem auto 0rem;
             display: flex;
+            width:6rem;
             justify-content: center;
         }
         .modal__design{
@@ -291,6 +292,12 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .modal__final{
         height:12rem;
+    }
+    .custom__buttons{
+        display: flex;
+        justify-content: space-between;
+        height:5rem;
+        width:100%;
     }
 }
 

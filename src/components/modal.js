@@ -1,11 +1,12 @@
-import {  useState } from "react"
+import {   useEffect, useState } from "react"
 import {IoMdPaper} from "react-icons/io"
 import { Icon } from "@chakra-ui/react"
-import { TbArrowsLeftRight, TbCurrencyNaira} from "react-icons/tb"
+import { TbArrowsLeftRight, } from "react-icons/tb"
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { CalculateTotal } from "../redux"
+import CurrencyInput from 'react-currency-input-field';
 import doubleStroke from "../images/double.png"
 
 
@@ -42,9 +43,6 @@ export const PayModal = ({MyFee, Total}) => {
                     <section className="modal__content container">
                         <div className="modal__head">
                             <h1>Pay bill</h1>       
-                            {/* <Icon as={TbCurrencyNaira} 
-                                border={'solid 2px black' } borderRadius={'5px'}
-                                fontSize={'33px'} marginLeft={'20px'} marginTop={"2.5"}/> */}
                             <h2>&#x20A6;{String(Bill.toLocaleString("en-US")) + '.00'}</h2>
                         </div>
 
@@ -98,11 +96,8 @@ export const PayModal = ({MyFee, Total}) => {
 
 export const SplitModal = ({total, myBills}) => {
     const [modal, setModal] = useState(false),
-        [myBill,setMyBill] = myBills;
-        let Value 
-        const BillChange = (event) => {
-            Value = (Number(event.target.value))
-        },
+        [setMyBill] = myBills,
+        [Value, setValue] = useState(0),
         SplitCancel = () => {
             setModal(!modal)
             setMyBill(0)          
@@ -138,20 +133,20 @@ export const SplitModal = ({total, myBills}) => {
                                 <div>
                                 <span>
                                  &#x20A6;
-                                  <input 
+                                  <CurrencyInput 
+                                        className="input__split"
                                         placeholder="0.00"
+                                        name="bill"
                                         autoFocus
                                         pattern="[0-9]*" 
-                                        inputmode="numeric"
-                                        type="number" 
-                                        value={Value}
-                                        onChange = {BillChange}
+                                        inputMode="numeric"
+                                        type={'text'}
+                                        defaultValue={Value}
+                                        onValueChange={(value) => setValue(value)}
                                         />
                                  </span>
                                    
                                 </div>
-                                
-                                 
                                     <img src={doubleStroke} alt="double_stroke"/>
                             </div>
 
@@ -159,7 +154,7 @@ export const SplitModal = ({total, myBills}) => {
                                 <button className="btn--light btn__modal"
                                     onClick={SplitCancel}>cancel</button>
                                 <button className="btn--dark  btn__modal"
-                                    onClick={() => {setModal(!modal); setMyBill(Value)}}>confirm</button>
+                                    onClick={() => {setModal(!modal); setMyBill(Number(Value));}}>confirm</button>
                             </div>
                         </section>
                     </div>
@@ -171,13 +166,21 @@ export const SplitModal = ({total, myBills}) => {
 export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
     const[modal, setModal] = useState(false),
     [Active, setActive] = active,
-    [Waiter, setWaiter] = waiter;
+    [customTip, SetCustomTip] = useState(0),
+    [Waiter,setWaiter] = waiter;
+
+    useEffect(() => {
+        if(Waiter !== customTip){
+            SetCustomTip(0)
+        }
+    }, [Waiter])
 
     return(
         <>
         {/* The tip is customised */}
-            <div className={"bill__waiter-option-3_" + Active} 
-            onClick ={function(){
+            <div id={"tip-3_" + Active}
+                className='custom-tip'
+                onClick ={function(){
                             setActive('activez'); 
                             setModal(!modal) ; 
                             setWaiter(0)
@@ -188,9 +191,9 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                     <img src={Wingedmoney}  alt='winged money'/>
                 </div>
 
-                <div className={"bill__custom_" + Active}>custom amount</div>
+                <div className={"bill__custom_" + Active}>custom tip</div>
 
-                <div className={"bill__amount3_" + Active}>&#x20A6;{Number(Waiter).toLocaleString("en-US")}</div>
+                <div className={"bill__amount3_" + Active}>&#x20A6;{Number(customTip).toLocaleString("en-US")}</div>
 
             </div>
 
@@ -200,20 +203,27 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                                 ></div>
 
                                 <section className="modal__tip">
-                                    <label>Create a Tip</label>
-                                    <input type={'number'}
+                                    <label>Enter Tip amount</label>
+                                    <CurrencyInput 
+                                            pattern="[0-9]*" 
+                                            inputMode="numeric"
+                                            type={'text'}
                                             autoFocus
-                                            value = {Waiter}
-                                            onChange={function(e){
-                                                setWaiter(e.target.value)
-                                            }}/>
-                                    <button className="btn btn--light"
+                                            name="custom tip"
+                                            defaultValue = {customTip}
+                                            onValueChange={
+                                                (value) => {
+                                                    SetCustomTip(value)}
+                                    }/>
+                                <div className="custom__buttons">
+                                    <button className="btn--dark btn__custom"
                                         onClick={function(){
-                                           setModal(!modal) 
+                                           setModal(!modal);
+                                           setWaiter(customTip) 
                                         }}>
                                             Submit
                                     </button>
-                                    <button id='cancel__btn' className="btn btn--dark"
+                                    <button className="btn--light btn__custom"
                                         onClick={function(){
                                            setModal(!modal);
                                            setWaiter(0); 
@@ -221,6 +231,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                                         }}>
                                             Cancel
                                     </button>
+                                </div>
                                 </section>
                             
                         </div>}

@@ -14,9 +14,9 @@ const Bills = () => {
     [myBill, setMyBill] = useState(0),
     [Waiter, setWaiter] = useState(0),
     [Active, setActive] = useState(''),
-    overall = Total  + Number(Waiter),
+    overall = myBill === 0? Total  + Number(Waiter) : Total,
     [style, SetStyle] = useState("welcome__tableText1"),
-    myfee = myBill === 0 ? overall : (Number(myBill))
+    myfee = myBill === 0 ? overall : (Number(myBill) + Number(Waiter))
     
    useEffect(() => 
         {( myBill > 0) ? SetStyle('welcome__design') : SetStyle("welcome__tableText1")
@@ -66,7 +66,7 @@ const Bills = () => {
 
                         <div className={"welcome__tableText1"}>Your split</div>
                         <div className="welcome__tableText2">
-                            <h2> &#x20A6;{String(myBill.toLocaleString("en-US")) + '.00'} </h2>
+                            <h2> &#x20A6;{String(myfee.toLocaleString("en-US")) + '.00'} </h2>
                             <img src={handdrawncircle} alt={'handrawn circle'}/>
 
                         </div>
@@ -75,39 +75,50 @@ const Bills = () => {
                 </section>
 
                 <div>
-                    <SplitModal total = {overall} myBills={[myBill, setMyBill]}/>
+                    <SplitModal total = {overall} myBills={[setMyBill]}/>
                 </div>
 
-                <aside className="bill__waiter">
+{/* /The waiter arrangement and calculations
+    /the Arows in the 
+    /The split bill height
+    /the center split bill input
+*/}
 
-                    <div className="bill__waiter-text">
+                <aside className="bill__waiter">
+                        
+
+                     <div className="bill__waiter-text">
                         <h2 className="bill__waiter-text-1">Tip the waiter?</h2>
                         <h2 className="bill__waiter-text-2">(This goes directly to the waiter that served you)</h2>
                     </div>
 
-                    <div className="bill__waiter-option">
-
-                        <div className={"bill__waiter-option-1_" + Active} onClick ={() => SetDisplay('activee', 1000)}>
-
+                   <div className="bill__tip-option">
+                        <div className='bill-tips' id={"tip-0_" + Active} onClick={()=>SetDisplay('active',500)}>
+                            <div className={"bill__green0__" +Active }></div>
+                            <div className={"bill__img_white"}>
+                                <img src={WingedMoney}  alt='winged money'/>
+                            </div>
+                            <div className={"bill__amount0_" + Active}>&#x20A6;500</div>
+                        </div>
+                        
+                        <div className='bill-tips' id={"tip-1_" + Active} onClick={()=>SetDisplay('activee',1000)}>
                             <div className={"bill__green1__" +Active }></div>
                             <div className={"bill__img_white"}>
                                 <img src={WingedMoney}  alt='winged money'/>
                             </div>
-                            <div className={"bill__amount1_" + Active}>&#x20A6;1,000
-                            </div>
+                            <div className={"bill__amount1_" + Active}>&#x20A6;1,000</div>
                         </div>
 
-                        <div className={"bill__waiter-option-2_" + Active } 
-                                onClick ={() => SetDisplay('actives', 2000)}>
+                        <div className='bill-tips' id={"tip-2_" + Active} onClick={()=>SetDisplay('actives',2000)}>
                             <div className={"bill__green2__" +Active }></div>
-                            <div className={"bill__img_white" }>
+                            <div className={"bill__img_white"}>
                                 <img src={WingedMoney}  alt='winged money'/>
                             </div>
                             <div className={"bill__amount2_" + Active}>&#x20A6;2,000</div>
                         </div>
 
-                        <CustomTip active={[Active, setActive]} Wingedmoney={WingedMoney} waiter={[Waiter, setWaiter]}/>
-                    </div>
+                        <CustomTip active={[Active, setActive]} Wingedmoney={WingedMoney} waiter={[Waiter,setWaiter]}/>
+                    </div> 
                 </aside>
 
                 <div>

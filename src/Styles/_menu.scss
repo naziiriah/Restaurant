@@ -65,13 +65,15 @@ $proxima: 'Proxima Nova', sans-serif;
         transition: ease-in 10s;
         white-space:nowrap;
         overflow-x:scroll;
-        width:100%;
         margin:auto;
+        overscroll-behavior-inline: contain;
         height: 2rem;
         li{
             cursor: pointer;
             color: #8A8A8A;
-            margin: 0 0.7rem;      
+            margin: 0 .7rem;
+            width: 4rem;
+
         }
         &::-webkit-scrollbar {
             display: none;

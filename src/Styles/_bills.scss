@@ -4,7 +4,7 @@ $proxima: 'Proxima Nova', sans-serif;
 @media screen and (max-width:500px) {
     .bill{
         width:100%;
-        max-width: 500px;
+
     }
     .bill-header{
         display: flex;
@@ -84,11 +84,10 @@ $proxima: 'Proxima Nova', sans-serif;
     .bill__waiter{
         width:100%;
     }
-
     .bill__waiter-text{
         height:4rem;
         width:100%;
-        margin:1.5rem 0;
+        margin:2.5rem 0 0rem 0rem;
         &-1{
             font-size: 18px;
             line-height: 21px ; 
@@ -105,109 +104,143 @@ $proxima: 'Proxima Nova', sans-serif;
             font-family: $proxima;
         }                   
     }  
-    .bill__waiter-option{
-        height:8rem;
-        width: 100%;
+
+
+    .bill__tip-option{
+        min-height:8rem;
         display: flex;
         font-family: $proxima;
-        &-1_activee{
-            width:24%;
-            height:6.7rem;
+        overflow-x:auto;
+        overscroll-behavior-inline: contain;
+        margin:0.5rem 0rem;
+        .bill-tips{
+            height:6.5rem;
+            margin:0rem .8rem;
+            border-radius: 10px;
+            padding: 0rem 1rem;
+            border: #EAEAEA solid 1px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+            min-width:3rem;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        #tip-0_active{
             background-color: #000;
-            margin-right: 5%;
             border-radius:10px;   
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+            color: #FAFAFA;
         //  display whenthe amount to be given to the waiter is selected  When selected
         }
-
-        &-1_,
-        &-1_actives,
-        &-1_activez
+        
+        #tip-1_activee,
+        #tip-2_actives
         {
-            width:24%;
-            height:6.7rem;
-            background-color: #fff;
-            margin-right: 5%;
+            background-color: #000;
             border-radius:10px;   
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-        //    not selceted
+            color: #FAFAFA;
+            text-align: center;
         }
-
-        &-2_,
-        &-2_activez, 
-        &-2_activee{
-            width:24%;
-            height:6.7rem;
+        #tip-3_activez{
+            background-color: #000;
+            margin:0rem 1rem ;
+            border-radius:10px;   
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+            color: #FAFAFA;
+            text-align: center;
+        }
+        #tip-3_,
+        #tip-3_active,
+        #tip-3_actives,
+        #tip-3_activee{
             background-color: #FAFAFA;
-            border-radius:10px;  
+            margin:0rem 1rem;
+            border-radius: 10px;
+            border: #EAEAEA solid 1px;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            // not sellected
         }
-        &-2_actives{
-            width:24%;
-            height:6.7rem;
-            background-color: #000;
-            border-radius:10px;  
+        #tip-0_,
+        #tip-0_actives,
+        #tip-0_activez,
+        #tip-0_activee,
+        #tip-1_,
+        #tip-1_active,
+        #tip-1_actives,
+        #tip-1_activez,
+        #tip-2_,
+        #tip-2_active,
+        #tip-2_activee,
+        #tip-2_activez
+        {
+            background-color: #FAFAFA;
+            margin:0rem 1rem;
+            border-radius: 10px;
+            border: #EAEAEA solid 1px;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            //  display whenthe amount to be given to the waiter is selected  When selected
         }
-
-        &-3_, 
-        &-3_activee, 
-        &-3_actives{
-            width:36%;
-            height:6.7rem;
-            color:white;
-            margin-left: 11%;
-            background-color: #fff;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-            // NOT Selected
-            font-family: $proxima;
-        }
-        &-3_activez{
-            width:36%;
-            height:6.7rem;
-            color:white;
-            margin-left: 11%;
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-            //  display whenthe amount to be given to the waiter is selected  When selected
-            font-family: $proxima;
-        }
+       
 
         .bill__img_white{
             width:2.5rem;
             height:2.5rem;
             border-radius: 50%;
             background-color: #EAEAEA;
-            margin:.7rem auto;
+            margin:.5rem auto;
             text-align: center;
             img{
                 margin-top: .2rem;
             }
         }
-        .bill__amount3_activez, 
+        .bill__amount3_activez{
+            color:#fff;
+            text-align:center;  
+            font-family: $proxima;
+            width:100%;
+        }
+        .bill__amount0_active
         .bill__amount2_actives, 
         .bill__amount1_activee{
             color:#fff;
-            text-align: center;  
+            text-align:center;  
             font-family: $proxima;
+            width:100%;
+            margin: 1rem auto 0rem;
             //  display whenthe amount to be given to the waiter is selected  When selected 
         }
-        .bill__amount3_, .bill__amount2_, .bill__amount1_,
-        .bill__amount3_actives,.bill__amount3_activee, 
-        .bill__amount2_activee,.bill__amount2_activez, 
-        .bill__amount1_actives, .bill__amount1_activez{
+        .bill__amount3_actives,.bill__amount3_activee, .bill__amount3_{
             color:#000;
             text-align: center;   
             font-family: $proxima;
+            width:100%;
+            margin: 0.2rem auto 0;
+        }
+
+         .bill__amount2_, .bill__amount1_,
+        .bill__amount2_activee,.bill__amount2_activez, 
+        .bill__amount1_actives, .bill__amount1_activez,
+        .bill__amount0_activee, .bill__amount0_activez, 
+        .bill__amount0_actives, .bill__amount0_
+        {
+            color:#000;
+            text-align: center;   
+            font-family: $proxima;
+            width:100%;
+            margin: 0rem auto 0;
         }
     } 
+    .custom-tip{
+        height:6.5rem;
+        min-width:6rem;
+        margin:0rem 1rem;
+        border-radius: 10px;
+        border: #EAEAEA solid 1px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
     .bill__custom_,
     .bill__custom_actives, 
-    .bill__custom_activee {
+    .bill__custom_activee,
+    .bill__custom_activez {
         color:#5E5E5E;   
         font-weight: normal;
         font-family: $proxima;
@@ -220,11 +253,12 @@ $proxima: 'Proxima Nova', sans-serif;
            font-weight: normal;
            font-family: $proxima;
            width: 100%;
-           margin: auto;
+           margin: .5rem auto 0rem;
            text-align: center;
            //  display whenthe amount to be given to the waiter is selected  When selected 
         }
     }
+    .bill__green0__active,
     .bill__green1__activee,
     .bill__green2__actives, 
     .bill__green3__activez {

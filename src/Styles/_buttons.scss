@@ -11,6 +11,16 @@ $proxima: 'Proxima Nova', sans-serif;
         font-family: $proxima;
         cursor: pointer;   
     }
+    .btn__custom{
+        width:47%;
+        height:3rem;
+        font-size: 20px;
+        border-radius: 8px;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: $proxima;
+        cursor: pointer;           
+    }
     .btn__remove{
         width:40%;
         border: 10px solid #000;
@@ -53,7 +63,7 @@ $proxima: 'Proxima Nova', sans-serif;
         color:#000;
         background-color: #fff;
         border:#000 2px solid;
-        box-shadow: none;
+
     }   
     .btn--dark{
         color:#fff;

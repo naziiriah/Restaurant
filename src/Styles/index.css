@@ -18,6 +18,17 @@
     cursor: pointer;
   }
 
+  .btn__custom {
+    width: 47%;
+    height: 3rem;
+    font-size: 20px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: "Proxima Nova", sans-serif;
+    cursor: pointer;
+  }
+
   .btn__remove {
     width: 40%;
     border: 10px solid #000;
@@ -64,7 +75,6 @@
     color: #000;
     background-color: #fff;
     border: #000 2px solid;
-    box-shadow: none;
   }
 
   .btn--dark {
@@ -79,7 +89,6 @@
 @media screen and (max-width: 500px) {
   .bill {
     width: 100%;
-    max-width: 500px;
   }
 
   .bill-header {
@@ -175,7 +184,7 @@
   .bill__waiter-text {
     height: 4rem;
     width: 100%;
-    margin: 1.5rem 0;
+    margin: 2.5rem 0 0rem 0rem;
   }
   .bill__waiter-text-1 {
     font-size: 18px;
@@ -192,92 +201,133 @@
     font-family: "Proxima Nova", sans-serif;
   }
 
-  .bill__waiter-option {
-    height: 8rem;
-    width: 100%;
+  .bill__tip-option {
+    min-height: 8rem;
     display: flex;
     font-family: "Proxima Nova", sans-serif;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin: 0.5rem 0rem;
   }
-  .bill__waiter-option-1_activee {
-    width: 24%;
-    height: 6.7rem;
+  .bill__tip-option .bill-tips {
+    height: 6.5rem;
+    margin: 0rem 0.8rem;
+    border-radius: 10px;
+    padding: 0rem 1rem;
+    border: #EAEAEA solid 1px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    min-width: 3rem;
+  }
+  .bill__tip-option::-webkit-scrollbar {
+    display: none;
+  }
+  .bill__tip-option #tip-0_active {
     background-color: #000;
-    margin-right: 5%;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    color: #FAFAFA;
   }
-  .bill__waiter-option-1_, .bill__waiter-option-1_actives, .bill__waiter-option-1_activez {
-    width: 24%;
-    height: 6.7rem;
-    background-color: #fff;
-    margin-right: 5%;
+  .bill__tip-option #tip-1_activee,
+.bill__tip-option #tip-2_actives {
+    background-color: #000;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    color: #FAFAFA;
+    text-align: center;
   }
-  .bill__waiter-option-2_, .bill__waiter-option-2_activez, .bill__waiter-option-2_activee {
-    width: 24%;
-    height: 6.7rem;
+  .bill__tip-option #tip-3_activez {
+    background-color: #000;
+    margin: 0rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    color: #FAFAFA;
+    text-align: center;
+  }
+  .bill__tip-option #tip-3_,
+.bill__tip-option #tip-3_active,
+.bill__tip-option #tip-3_actives,
+.bill__tip-option #tip-3_activee {
     background-color: #FAFAFA;
+    margin: 0rem 1rem;
     border-radius: 10px;
+    border: #EAEAEA solid 1px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
-  .bill__waiter-option-2_actives {
-    width: 24%;
-    height: 6.7rem;
-    background-color: #000;
+  .bill__tip-option #tip-0_,
+.bill__tip-option #tip-0_actives,
+.bill__tip-option #tip-0_activez,
+.bill__tip-option #tip-0_activee,
+.bill__tip-option #tip-1_,
+.bill__tip-option #tip-1_active,
+.bill__tip-option #tip-1_actives,
+.bill__tip-option #tip-1_activez,
+.bill__tip-option #tip-2_,
+.bill__tip-option #tip-2_active,
+.bill__tip-option #tip-2_activee,
+.bill__tip-option #tip-2_activez {
+    background-color: #FAFAFA;
+    margin: 0rem 1rem;
     border-radius: 10px;
+    border: #EAEAEA solid 1px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
-  .bill__waiter-option-3_, .bill__waiter-option-3_activee, .bill__waiter-option-3_actives {
-    width: 36%;
-    height: 6.7rem;
-    color: white;
-    margin-left: 11%;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    font-family: "Proxima Nova", sans-serif;
-  }
-  .bill__waiter-option-3_activez {
-    width: 36%;
-    height: 6.7rem;
-    color: white;
-    margin-left: 11%;
-    background-color: #000;
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    font-family: "Proxima Nova", sans-serif;
-  }
-  .bill__waiter-option .bill__img_white {
+  .bill__tip-option .bill__img_white {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
     background-color: #EAEAEA;
-    margin: 0.7rem auto;
+    margin: 0.5rem auto;
     text-align: center;
   }
-  .bill__waiter-option .bill__img_white img {
+  .bill__tip-option .bill__img_white img {
     margin-top: 0.2rem;
   }
-  .bill__waiter-option .bill__amount3_activez,
-.bill__waiter-option .bill__amount2_actives,
-.bill__waiter-option .bill__amount1_activee {
+  .bill__tip-option .bill__amount3_activez {
     color: #fff;
     text-align: center;
     font-family: "Proxima Nova", sans-serif;
+    width: 100%;
   }
-  .bill__waiter-option .bill__amount3_, .bill__waiter-option .bill__amount2_, .bill__waiter-option .bill__amount1_,
-.bill__waiter-option .bill__amount3_actives, .bill__waiter-option .bill__amount3_activee,
-.bill__waiter-option .bill__amount2_activee, .bill__waiter-option .bill__amount2_activez,
-.bill__waiter-option .bill__amount1_actives, .bill__waiter-option .bill__amount1_activez {
+  .bill__tip-option .bill__amount0_active .bill__amount2_actives,
+.bill__tip-option .bill__amount1_activee {
+    color: #fff;
+    text-align: center;
+    font-family: "Proxima Nova", sans-serif;
+    width: 100%;
+    margin: 1rem auto 0rem;
+  }
+  .bill__tip-option .bill__amount3_actives, .bill__tip-option .bill__amount3_activee, .bill__tip-option .bill__amount3_ {
     color: #000;
     text-align: center;
     font-family: "Proxima Nova", sans-serif;
+    width: 100%;
+    margin: 0.2rem auto 0;
+  }
+  .bill__tip-option .bill__amount2_, .bill__tip-option .bill__amount1_,
+.bill__tip-option .bill__amount2_activee, .bill__tip-option .bill__amount2_activez,
+.bill__tip-option .bill__amount1_actives, .bill__tip-option .bill__amount1_activez,
+.bill__tip-option .bill__amount0_activee, .bill__tip-option .bill__amount0_activez,
+.bill__tip-option .bill__amount0_actives, .bill__tip-option .bill__amount0_ {
+    color: #000;
+    text-align: center;
+    font-family: "Proxima Nova", sans-serif;
+    width: 100%;
+    margin: 0rem auto 0;
+  }
+
+  .custom-tip {
+    height: 6.5rem;
+    min-width: 6rem;
+    margin: 0rem 1rem;
+    border-radius: 10px;
+    border: #EAEAEA solid 1px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   }
 
   .bill__custom_,
 .bill__custom_actives,
-.bill__custom_activee {
+.bill__custom_activee,
+.bill__custom_activez {
     color: #5E5E5E;
     font-weight: normal;
     font-family: "Proxima Nova", sans-serif;
@@ -287,16 +337,18 @@
   }
   .bill__custom_activez,
 .bill__custom_activesactivez,
-.bill__custom_activeeactivez {
+.bill__custom_activeeactivez,
+.bill__custom_activezactivez {
     color: #fff;
     font-weight: normal;
     font-family: "Proxima Nova", sans-serif;
     width: 100%;
-    margin: auto;
+    margin: 0.5rem auto 0rem;
     text-align: center;
   }
 
-  .bill__green1__activee,
+  .bill__green0__active,
+.bill__green1__activee,
 .bill__green2__actives,
 .bill__green3__activez {
     height: 0.8rem;
@@ -487,14 +539,15 @@
     transition: ease-in 10s;
     white-space: nowrap;
     overflow-x: scroll;
-    width: 100%;
     margin: auto;
+    overscroll-behavior-inline: contain;
     height: 2rem;
   }
   .main-nav__lists li {
     cursor: pointer;
     color: #8A8A8A;
     margin: 0 0.7rem;
+    width: 4rem;
   }
   .main-nav__lists::-webkit-scrollbar {
     display: none;
@@ -693,7 +746,7 @@
     border-radius: 3px;
     max-width: 500px;
     width: 100%;
-    height: 65%;
+    height: 69%;
     border-top-left-radius: 55px;
     border-top-right-radius: 55px;
     overflow: auto;
@@ -713,8 +766,8 @@
     height: 27%;
     margin: auto;
     overflow: auto;
-    -webkit-animation: tip 1s ease-in-out;
-            animation: tip 1s ease-in-out;
+    -webkit-animation: tip 0.4s ease-in-out;
+            animation: tip 0.4s ease-in-out;
     padding-top: 30px;
   }
   .modal__tip label {
@@ -742,7 +795,7 @@
   .modal__header {
     display: flex;
     background-color: #fff;
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     height: 2rem;
   }
 
@@ -780,7 +833,7 @@
   .modal__price {
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem auto 0.5rem;
+    margin: 1.5rem auto 0rem;
     height: 2rem;
     color: #121212;
   }
@@ -807,8 +860,8 @@
 
   .modal__input {
     width: 100%;
-    margin: 1rem auto;
-    height: 5rem;
+    margin: 1rem auto 0rem;
+    height: 3.5rem;
     font-family: "Proxima Nova", sans-serif;
     font-size: 36px;
     font-weight: bold;
@@ -819,25 +872,26 @@
   }
   .modal__input div span {
     font-size: 36px;
-    margin: auto;
-    width: 50%;
+    margin-left: 5rem;
+    width: 60%;
     border: inset 0px #ccc;
   }
-  .modal__input div span input {
+  .modal__input div span .input__split {
     border: transparent solid 0px;
     width: 70%;
     font-size: 36px;
     font-weight: 600;
     font-family: "Proxima Nova", sans-serif;
-    text-align: center;
+    text-align: start;
   }
   .modal__input div input:focus {
     outline: none;
-    text-align: center;
+    text-align: start;
   }
   .modal__input img {
-    margin: 0.5rem auto 0rem;
+    margin: -0.5rem auto 0rem;
     display: flex;
+    width: 6rem;
     justify-content: center;
   }
   .modal__input .modal__design {
@@ -967,6 +1021,13 @@
 
   .modal__final {
     height: 12rem;
+  }
+
+  .custom__buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
   }
 }
 @-webkit-keyframes transfer {
