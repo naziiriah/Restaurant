@@ -5,6 +5,7 @@ import invoice from "../images/alert.png"
 import { useNavigate } from "react-router-dom"
 import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md"
+import {BiHomeAlt} from "react-icons/bi"
 
 
 const Menu  = () => {
@@ -14,7 +15,6 @@ const Menu  = () => {
     [navBarDisplay,SetnavBarDisplay] = useState(0);
     useEffect(() => {
             window.scrollTo(0, 0);
-
     },[title])
 
 
@@ -36,7 +36,7 @@ const Menu  = () => {
             <div className="container">
                 <img className="menu__design" src={menu_header} alt="menu-header"></img>
                 <div className="header menu__header">
-                    <Icon as={MdKeyboardArrowLeft} fontSize={'30px'} onClick={() => navigation('/')}/> 
+                    <Icon as={BiHomeAlt} fontSize={'25px'} onClick={() => navigation('/')}/> 
                     <h1 className="menu__title">menu</h1>
                     <img className=" menu__invoice" src={invoice} alt="alert" onClick={() => navigation('/bill')}></img>
                 </div>
@@ -58,7 +58,7 @@ const Menu  = () => {
                             <li className="main-nav__list" id={style + '_19'} onClick={() => setStyle('style4')}>cocktail</li>
                         </ul>
 
-                    {navBarDisplay === 40 && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt="-.3rem"/>}
+                    {(navBarDisplay === 40 || navBarDisplay === 0) && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt="-.3rem"/>}
                 </nav>
             </div>
                 
