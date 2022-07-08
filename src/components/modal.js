@@ -97,7 +97,7 @@ export const PayModal = ({MyFee, Total}) => {
 export const SplitModal = ({total, myBills}) => {
     const [modal, setModal] = useState(false),
         [setMyBill] = myBills,
-        [Value, setValue] = useState(0),
+        [Value, setValue] = useState(),
         SplitCancel = () => {
             setModal(!modal)
             setMyBill(0)          
@@ -166,7 +166,7 @@ export const SplitModal = ({total, myBills}) => {
 export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
     const[modal, setModal] = useState(false),
     [Active, setActive] = active,
-    [customTip, SetCustomTip] = useState(0),
+    [customTip, SetCustomTip] = useState(),
     [Waiter,setWaiter] = waiter;
 
     useEffect(() => {

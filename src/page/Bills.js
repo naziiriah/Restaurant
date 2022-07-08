@@ -78,12 +78,6 @@ const Bills = () => {
                     <SplitModal total = {overall} myBills={[setMyBill]}/>
                 </div>
 
-{/* /The waiter arrangement and calculations
-    /the Arows in the 
-    /The split bill height
-    /the center split bill input
-*/}
-
                 <aside className="bill__waiter">
                         
 
