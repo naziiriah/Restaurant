@@ -179,7 +179,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
         <>
         {/* The tip is customised */}
             <div id={"tip-3_" + Active}
-                className='custom-tip'
+                className='bill-tips'
                 onClick ={function(){
                             setActive('activez'); 
                             setModal(!modal) ; 
@@ -191,7 +191,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                     <img src={Wingedmoney}  alt='winged money'/>
                 </div>
 
-                <div className={"bill__custom_" + Active}>custom tip</div>
+                <div className={"bill__custom_" + Active}>custom</div>
 
                 <div className={"bill__amount3_" + Active}>&#x20A6;{Number(customTip).toLocaleString("en-US")}</div>
 

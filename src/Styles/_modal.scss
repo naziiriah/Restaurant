@@ -18,7 +18,7 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .modal__content{
         position: absolute;
-        top: 90%;
+        top: 87%;
         left: 50%;
         transform: translate(-50%, -50%);
         line-height: 1.4;
@@ -74,8 +74,9 @@ $proxima: 'Proxima Nova', sans-serif;
     .modal__header{
         display: flex;
         background-color: #fff;
-        margin-top: .7rem;
-        height:2rem;
+        margin-top: .3rem;
+        height:3.7rem;
+        margin-bottom: 1.5rem;
     }
     .modal__head{
         background-color: #fff;
@@ -147,15 +148,15 @@ $proxima: 'Proxima Nova', sans-serif;
             justify-content: center;
             & span{
                 font-size: 36px;
-                margin-left: 5rem;
-                width:60%;
+                margin-left: 4rem;
+                width:70%;
                 border:inset 0px #ccc ;
             }
         }
         
         & div span .input__split{
             border:transparent solid 0px;
-            width:70%;
+            width:80%;
             font-size: 36px;
             font-weight: 600;
             font-family: $proxima;
