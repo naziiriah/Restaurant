@@ -170,7 +170,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
 
     useEffect(() => {
         if(Waiter !== customTip){
-            SetCustomTip(0)
+            SetCustomTip(0.00)
         }
     }, [Waiter])
 
