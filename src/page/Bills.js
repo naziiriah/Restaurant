@@ -30,7 +30,7 @@ const Bills = () => {
 
     return(
         <>
-            <BillHeader/>
+            <BillHeader title={'bill'}/>
             { PurchaseBill && PurchaseBill.length > 0 ? 
                 <main className="container bill menu_pages">
                

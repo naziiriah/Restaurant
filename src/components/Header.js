@@ -11,13 +11,13 @@ export const WelcomeHeader = () => {
     )   
 }
 
-export const BillHeader = () => {
+export const BillHeader = ({title}) => {
     const navigate = useNavigate()
     return(
         <header className="container bill-header header menu_pages">
         <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
                 onClick={() => navigate('/menu')}/>
-            <>bill</>
+            <>{title}</>
             <div></div>
         </header>
     )

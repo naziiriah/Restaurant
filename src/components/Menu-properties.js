@@ -3,7 +3,7 @@ import { appetizier, burger, MainDish, Wines } from "./Properties"
 import { BiMinus} from "react-icons/bi"
 import {IoMdAdd} from "react-icons/io"
 import { Icon } from "@chakra-ui/react"
-import { useDispatch} from "react-redux"
+import { useDispatch, useSelector} from "react-redux"
 import { addToCart, removeFromCart, AddQuantity, SubtractQuantity } from "../redux"
 
 
@@ -64,10 +64,10 @@ const BasicTheme = ({state, index }) => {
     const [select, SetSelect] = useState(true),
     dispatch  = useDispatch(),
     [value, setValue ]= useState(1);
-    const List = JSON.parse(localStorage.getItem('Bills'))
+    const List = useSelector((state) => state.bill.value)
      
     useEffect(() => {
-        const ItemExist = List && List.filter(stat => stat.id === state.id)
+        const ItemExist = List.filter(stat => stat.id === state.id)
         if(List && ItemExist.length > 0){
             SetSelect(false)
             setValue(ItemExist[0].quantity)
@@ -91,7 +91,6 @@ const BasicTheme = ({state, index }) => {
         SetSelect(!select)
     }
     function add(){
-
         value === 10 ? setValue(10) : setValue(value + 1)
         dispatch(AddQuantity({
             id:state.id,
@@ -100,7 +99,6 @@ const BasicTheme = ({state, index }) => {
     }
 
     function subtract(){
-
          value === 0 ? setValue(0): setValue(value - 1)
          dispatch(SubtractQuantity({
             id:state.id,

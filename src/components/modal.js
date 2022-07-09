@@ -8,8 +8,8 @@ import { useDispatch } from "react-redux"
 import { CalculateTotal } from "../redux"
 import CurrencyInput from 'react-currency-input-field';
 import doubleStroke from "../images/double.png"
-
-
+import {VscCreditCard} from "react-icons/vsc"
+import {FcMoneyTransfer} from  "react-icons/fc"
 
 export const PayModal = ({MyFee, Total}) => {
     const [showTransfer, SetShowtransfer] = useState(false),
@@ -65,7 +65,7 @@ export const PayModal = ({MyFee, Total}) => {
                         </div>
                         <div className="modal__card">
                             <div className="modal__box" onClick={() => setShowCard(!showCard)}>
-                                <Icon as={TbArrowsLeftRight} mt="0.1rem" ml="1rem" fontSize={'30px'}/>
+                                <Icon as={VscCreditCard} mt="0.1rem" ml="1rem" fontSize={'30px'}/>
                                 <h3>Pay with card</h3>
                                 <Icon as={icon2} my="0rem" ml="2rem" fontSize={'34px'}/>  
                             </div>
@@ -145,7 +145,6 @@ export const SplitModal = ({total, myBills}) => {
                                         onValueChange={(value) => setValue(value)}
                                         />
                                  </span>
-                                   
                                 </div>
                                     <img src={doubleStroke} alt="double_stroke"/>
                             </div>
@@ -200,41 +199,64 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
            { modal &&  <div className="modal">                
                             <div className="overlay"
                                 onClick={() => {setModal(!modal); setActive('')}}
-                                ></div>
+                                >
+                            </div>
+                            <section className="modal__content container">
+                                <div className="modal__header">
+                                    <h1>Tip Waiter?</h1>
+                                    <Icon as = {FcMoneyTransfer} my=".2rem" ml="2rem" mt=".5rem" fontSize={'37px'}/>
+                                </div>
 
-                                <section className="modal__tip">
-                                    <label>Enter Tip amount</label>
-                                    <CurrencyInput 
+                                <div className="modal__text"> 
+                                    <h2>
+                                        This tip goes directly
+                                        directly to the <br/>    
+                                        waiter serving you
+                                    </h2>
+                                </div>
+
+                                <div className="modal__input">
+                                    <div>
+                                    <span>
+                                        &#x20A6;
+                                        <CurrencyInput 
+                                            className="input__split"
+                                            placeholder="0.00"
+                                            name="bill"
+                                            autoFocus
                                             pattern="[0-9]*" 
                                             inputMode="numeric"
                                             type={'text'}
-                                            autoFocus
-                                            name="custom tip"
-                                            defaultValue = {customTip}
+                                            defaultValue={customTip}
                                             onValueChange={
                                                 (value) => {
                                                     SetCustomTip(value)}
-                                    }/>
+                                                }
+                                        />
+                                    </span>
+                                    </div>
+                                    <img src={doubleStroke} alt="double_stroke"/>
+                                </div>
                                 <div className="custom__buttons">
-                                    <button className="btn--dark btn__custom"
-                                        onClick={function(){
-                                           setModal(!modal);
-                                           setWaiter(customTip) 
-                                        }}>
-                                            Submit
-                                    </button>
                                     <button className="btn--light btn__custom"
                                         onClick={function(){
-                                           setModal(!modal);
-                                           setWaiter(0); 
-                                           setActive('')
+                                        setModal(!modal);
+                                        setWaiter(0); 
+                                        setActive('')
                                         }}>
                                             Cancel
                                     </button>
+                                    <button className="btn--dark btn__custom"
+                                        onClick={function(){
+                                        setModal(!modal);
+                                        setWaiter(customTip) 
+                                        }}>
+                                            Submit
+                                    </button>
                                 </div>
-                                </section>
-                            
-                        </div>}
+                            </section>                            
+                        </div>
+            }
         </>
     )
 }

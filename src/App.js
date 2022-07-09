@@ -5,6 +5,7 @@ import Bills from "./page/Bills";
 import Menu from "./page/Menu";
 import Final from "./page/Final";
 import ScrollToTop from "./components/Scroll";
+import Table from "./page/Table";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path ="/bill" element={<Bills/>} />
             <Route path ="/menu" element={<Menu/>} />
             <Route path ="/end" element={<Final/>} />
+            <Route path ="/table" element={<Table/>} />
           </Routes>
       </ScrollToTop>
     </BrowserRouter>

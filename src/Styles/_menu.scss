@@ -151,11 +151,23 @@ $proxima: 'Proxima Nova', sans-serif;
             transition: 4s ease-in;
         }
     }
+    .table__list{
+        width:100%;
+        min-height: 300px;
+        // background-color: red;
+    }
+    .table__buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+    .table__Image{
+        width:90%;
+        margin:4rem auto 1krem;
+        display: flex;
+        justify-content: center;
+    }
 }
 
-// window.onload = function() {
-//   document.getElementById("Box1").focus();
-// };
 
 @keyframes menu-item {
     from {

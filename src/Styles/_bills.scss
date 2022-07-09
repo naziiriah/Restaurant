@@ -62,6 +62,14 @@ $proxima: 'Proxima Nova', sans-serif;
         font-weight: 400;
         font-style: normal;
     }  
+    .bill__cancel{
+        text-transform: capitalize;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: $proxima;
+        font-weight: 700;
+        font-style: normal;
+    } 
     .bill__empty{
         height:10rem;
         width:100%;
@@ -75,8 +83,8 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .bill__emptyDirective{
         text-align: center;
-        font-size: 25px;
-        color:#5E5E5E;
+        font-size: 16px;
+        color:#121212;
         font-weight: lighter;
         line-height: 28px;
         margin: 4rem 0rem;

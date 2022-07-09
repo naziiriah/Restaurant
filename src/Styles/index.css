@@ -155,6 +155,15 @@
     font-style: normal;
   }
 
+  .bill__cancel {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
   .bill__empty {
     height: 10rem;
     width: 100%;
@@ -170,8 +179,8 @@
 
   .bill__emptyDirective {
     text-align: center;
-    font-size: 25px;
-    color: #5E5E5E;
+    font-size: 16px;
+    color: #121212;
     font-weight: lighter;
     line-height: 28px;
     margin: 4rem 0rem;
@@ -627,6 +636,23 @@
     margin: auto;
     transition: 4s ease-in;
   }
+
+  .table__list {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .table__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .table__Image {
+    width: 90%;
+    margin: 4rem auto 1krem;
+    display: flex;
+    justify-content: center;
+  }
 }
 @-webkit-keyframes menu-item {
   from {
@@ -1033,6 +1059,7 @@
     justify-content: space-between;
     height: 5rem;
     width: 100%;
+    margin-top: 3rem;
   }
 }
 @-webkit-keyframes transfer {

@@ -30,7 +30,7 @@ const Menu  = () => {
                 <div className="header menu__header">
                     <Icon as={MdOutlineMapsHomeWork} opacity="0.6" fontSize={'25px'} onClick={() => navigation('/')}/> 
                     <h1 className="menu__title">menu</h1>
-                    <img className=" menu__invoice" src={invoice} alt="alert" onClick={() => navigation('/bill')}></img>
+                    <img className=" menu__invoice" src={invoice} alt="alert" onClick={() => navigation('/table')}></img>
                 </div>
                 <aside className="art">
                     <div className="art__line"></div>
