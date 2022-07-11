@@ -151,7 +151,7 @@ export const Wines = [
         id:"f3",
         name:"Catena Zapata",
         description:"Mabel focused wine with black fruit, chocolate and spice",
-        price: "12,500.00",
+        price: 12500,
         image:wine3
     },
     {

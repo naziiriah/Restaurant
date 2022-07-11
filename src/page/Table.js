@@ -4,6 +4,9 @@ import { HomeLightBTN } from "../components/Buttons"
 import { BillHeader } from "../components/Header"
 import { removeFromCart } from "../redux"
 import EmptyImage from "../images/Empty-Menu.png"
+import {TiTimes} from  "react-icons/ti"
+import { Icon } from "@chakra-ui/react"
+
 
 const Table = () => {
     const tableList = useSelector((state) => state.bill.value),
@@ -24,14 +27,14 @@ const Table = () => {
                         <nav className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
                             <h2 className=" bill__title start bill__title_2">item</h2>
-                            <h2 className=" bill__title end bill__title_3"></h2>
+                            <h2 className=" bill__title end bill__title_3"> </h2>
                         </nav>
                         <div className="table__list">
                             { tableList.map((state) => (
                                         <div className="bill__items" key={state.id}>
                                             <h3 className="bill__item bill__title_1">{state.quantity}</h3>
                                             <h3 className="bill__item bill__title_2">{state.name}</h3>
-                                            <h3 className="bill__cancel bill__title_3" onClick={() => removeItem(state.id)}>x</h3>
+                                            <h3 className="bill__cancel bill__title_3" onClick={() => removeItem(state.id)}><Icon as={TiTimes} fontSize={"22px"}  mt={'-0.2rem'}/></h3>
                                         </div>
                                 )) 
                             }
