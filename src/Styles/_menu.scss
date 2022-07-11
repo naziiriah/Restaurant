@@ -5,6 +5,10 @@ $proxima: 'Proxima Nova', sans-serif;
 
 
 @media screen and (max-width:500px) { 
+    .table-design{
+        background: url('../images/menu-background.png');
+        min-height:700px;
+    }
     .menu{
         background-color: #fff;
         background: url('../images/menu-background.png');
@@ -54,6 +58,9 @@ $proxima: 'Proxima Nova', sans-serif;
         background-color: #fff;
         height:10rem;
         
+    }
+    .menu_pages{
+
     }
     .main-nav__lists{
         
@@ -153,7 +160,7 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .table__list{
         width:100%;
-        min-height: 300px;
+        min-height: 450px;
         // background-color: red;
     }
     .table__buttons{

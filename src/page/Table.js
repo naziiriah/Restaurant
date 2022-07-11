@@ -19,8 +19,8 @@ const Table = () => {
         <>
             <BillHeader title={'table'}/>
             {tableList && tableList.length > 0 ?
-                <main className="container bill menu_pages">
-                    <section className=" bill__header">
+                <main className="container table-design menu_pages">
+                    <section className="bill__header">
                         <nav className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
                             <h2 className=" bill__title start bill__title_2">item</h2>
@@ -50,7 +50,7 @@ const Table = () => {
                     </aside>
                 </main>
                 :
-                <main className="container bill menu_pages">
+                <main className="container table-design menu_pages">
                 <section>
                     <div className="bill__empty"> 
                         <img src={EmptyImage} alt="Wine and Dine" className="table__Image"/>
