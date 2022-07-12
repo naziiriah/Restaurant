@@ -100,7 +100,8 @@ export const SplitModal = ({total, myBills}) => {
         [Value, setValue] = useState(),
         SplitCancel = () => {
             setModal(!modal)
-            setMyBill(0)          
+            setMyBill(0) 
+            setValue(0)         
         };
         
     return (
@@ -131,11 +132,10 @@ export const SplitModal = ({total, myBills}) => {
                                 
                             <div className="modal__input">
                                 <div>
-                                <span>
-                                 &#x20A6;
                                   <CurrencyInput 
+                                        prefix="&#x20A6;"
                                         className="input__split"
-                                        placeholder="0.00"
+                                        placeholder="&#x20A6;0.00"
                                         name="bill"
                                         autoFocus
                                         pattern="[0-9]*" 
@@ -144,7 +144,6 @@ export const SplitModal = ({total, myBills}) => {
                                         defaultValue={Value}
                                         onValueChange={(value) => setValue(value)}
                                         />
-                                 </span>
                                 </div>
                                     <img src={doubleStroke} alt="double_stroke"/>
                             </div>
@@ -198,7 +197,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
 
            { modal &&  <div className="modal">                
                             <div className="overlay"
-                                onClick={() => {setModal(!modal); setActive('')}}
+                                onClick={() => {setModal(!modal); setActive(''); SetCustomTip(0)}}
                                 >
                             </div>
                             <section className="modal__content container">
@@ -217,9 +216,8 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
 
                                 <div className="modal__input">
                                     <div>
-                                    <span>
-                                        &#x20A6;
                                         <CurrencyInput 
+                                            prefix="&#x20A6;"
                                             className="input__split"
                                             placeholder="0.00"
                                             name="bill"
@@ -233,7 +231,6 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                                                     SetCustomTip(value)}
                                                 }
                                         />
-                                    </span>
                                     </div>
                                     <img src={doubleStroke} alt="double_stroke"/>
                                 </div>
@@ -242,6 +239,7 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                                         onClick={function(){
                                         setModal(!modal);
                                         setWaiter(0); 
+                                        SetCustomTip(0);
                                         setActive('')
                                         }}>
                                             Cancel

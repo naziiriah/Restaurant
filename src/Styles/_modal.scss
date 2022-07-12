@@ -146,25 +146,21 @@ $proxima: 'Proxima Nova', sans-serif;
         & div{
             display: flex;
             justify-content: center;
-            & span{
-                font-size: 36px;
-                margin-left: 4rem;
-                width:70%;
-                border:inset 0px #ccc ;
-            }
         }
         
-        & div span .input__split{
+        & div .input__split{
             border:transparent solid 0px;
             width:80%;
+            margin: auto;
             font-size: 36px;
             font-weight: 600;
             font-family: $proxima;
-            text-align: start;
+            text-align: center;
+
         }
         & div input:focus{
             outline: none;
-            text-align: start;
+            text-align: center;
         }
         img{
             margin:-.50rem auto 0rem;
