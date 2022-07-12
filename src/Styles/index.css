@@ -95,6 +95,7 @@
   .bill__header {
     align-self: flex-start;
     width: 100%;
+    min-height: 100vh;
   }
   .bill__flex-title {
     display: flex;
@@ -456,7 +457,6 @@
 @media screen and (max-width: 500px) {
   .table-design {
     background: url("../images/menu-background.png");
-    min-height: 700px;
   }
   .menu {
     background-color: #fff;
@@ -605,10 +605,29 @@
   .table__buttons {
     display: flex;
     justify-content: space-between;
+    align-items: end;
   }
   .table__Image {
     width: 90%;
     margin: 4rem auto 1krem;
+    display: flex;
+    justify-content: center;
+  }
+  .table__empty {
+    height: 80vh;
+    width: 100%;
+  }
+  .table__empty .table__Image1 {
+    border-top: 4.5rem solid transparent;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .table__empty .table__Image2 {
+    border-top: 0.5rem solid transparent;
+    width: 25%;
+    margin: auto;
     display: flex;
     justify-content: center;
   }

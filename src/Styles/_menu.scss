@@ -7,7 +7,6 @@ $proxima: 'Proxima Nova', sans-serif;
 @media screen and (max-width:500px) { 
     .table-design{
         background: url('../images/menu-background.png');
-        min-height:700px;
     }
     .menu{
         background-color: #fff;
@@ -166,6 +165,7 @@ $proxima: 'Proxima Nova', sans-serif;
     .table__buttons{
         display: flex;
         justify-content: space-between;
+        align-items: end;
     }
     .table__Image{
         width:90%;
@@ -173,8 +173,25 @@ $proxima: 'Proxima Nova', sans-serif;
         display: flex;
         justify-content: center;
     }
+    .table__empty{
+        height:80vh;
+        width:100%;
+        .table__Image1{
+            border-top: 4.5rem solid transparent;
+            width:40%;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+        .table__Image2{
+            border-top: .5rem solid transparent;
+            width:25%;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
-
 
 @keyframes menu-item {
     from {
