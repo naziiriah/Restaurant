@@ -55,7 +55,8 @@ $proxima: 'Proxima Nova', sans-serif;
         height:10rem;
         
     }
-    .menu_page{   
+    .menu_page{  
+        min-height:800px; 
     }
     .main-nav__lists{
         
@@ -95,7 +96,7 @@ $proxima: 'Proxima Nova', sans-serif;
 
     .dish{
         width:100%;
-        height:30rem;
+
         animation: menu-item .5s ease-in-out;
         &__image{
             display: flex;
@@ -157,13 +158,13 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .table__list{
         width:100%;
-        min-height: 600px;
+        min-height: 300px;
         // background-color: red;
     }
     .table__buttons{
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        height:3rem;
     }
     .table__Image{
         width:90%;

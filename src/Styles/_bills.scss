@@ -113,7 +113,10 @@ $proxima: 'Proxima Nova', sans-serif;
         }                   
     }  
 
-
+    .bill__section{
+        display: flex;
+        
+    }
     .bill__tip-option{
         min-height:8rem;
         display: flex;
@@ -123,12 +126,12 @@ $proxima: 'Proxima Nova', sans-serif;
         margin:0.5rem 0rem;
         .bill-tips{
             height:6.5rem;
-            margin-right: 1rem;
+            margin-right: 1.2rem;
             margin-left: .2rem;
             border-radius: 10px;
             border: #EAEAEA solid 1px;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            min-width:6.2rem;
+            min-width:5rem;
         }
         &::-webkit-scrollbar {
             display: none;

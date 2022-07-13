@@ -195,65 +195,67 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
 
             </div>
 
-           { modal &&  <div className="modal">                
-                            <div className="overlay"
-                                onClick={() => {setModal(!modal); setActive(''); SetCustomTip(0)}}
-                                >
-                            </div>
-                            <section className="modal__content container">
-                                <div className="modal__header">
-                                    <h1>Tip Waiter?</h1>
-                                    <Icon as = {FcMoneyTransfer} my=".2rem" ml="2rem" mt=".5rem" fontSize={'37px'}/>
-                                </div>
+           { modal &&  
+           
+           <div className="modal">                
+                <div className="overlay"
+                    onClick={() => {setModal(!modal); setActive(''); SetCustomTip(0)}}
+                    >
+                </div>
+                <section className="modal__content container">
+                    <div className="modal__header">
+                        <h1>Tip Waiter?</h1>
+                        <Icon as = {FcMoneyTransfer} my=".2rem" ml="2rem" mt=".5rem" fontSize={'37px'}/>
+                    </div>
 
-                                <div className="modal__text"> 
-                                    <h2>
-                                        This tip goes directly
-                                        directly to the <br/>    
-                                        waiter serving you
-                                    </h2>
-                                </div>
+                    <div className="modal__text"> 
+                        <h2>
+                            This tip goes directly
+                            directly to the <br/>    
+                            waiter serving you
+                        </h2>
+                    </div>
 
-                                <div className="modal__input">
-                                    <div>
-                                        <CurrencyInput 
-                                            prefix="&#x20A6;"
-                                            className="input__split"
-                                            placeholder="0.00"
-                                            name="bill"
-                                            autoFocus
-                                            pattern="[0-9]*" 
-                                            inputMode="numeric"
-                                            type={'text'}
-                                            defaultValue={customTip}
-                                            onValueChange={
-                                                (value) => {
-                                                    SetCustomTip(value)}
-                                                }
-                                        />
-                                    </div>
-                                    <img src={doubleStroke} alt="double_stroke"/>
-                                </div>
-                                <div className="custom__buttons">
-                                    <button className="btn--light btn__custom"
-                                        onClick={function(){
-                                        setModal(!modal);
-                                        setWaiter(0); 
-                                        SetCustomTip(0);
-                                        setActive('')
-                                        }}>
-                                            Cancel
-                                    </button>
-                                    <button className="btn--dark btn__custom"
-                                        onClick={function(){
-                                        setModal(!modal);
-                                        setWaiter(customTip) 
-                                        }}>
-                                            Submit
-                                    </button>
-                                </div>
-                            </section>                            
+                    <div className="modal__input">
+                        <div>
+                            <CurrencyInput 
+                                prefix="&#x20A6;"
+                                className="input__split"
+                                placeholder="&#x20A6;0.00"
+                                name="bill"
+                                autoFocus
+                                pattern="[0-9]*" 
+                                inputMode="numeric"
+                                type={'text'}
+                                defaultValue={customTip}
+                                onValueChange={
+                                    (value) => {
+                                        SetCustomTip(value)}
+                                    }
+                            />
                         </div>
+                        <img src={doubleStroke} alt="double_stroke"/>
+                    </div>
+                    <div className="custom__buttons">
+                        <button className="btn--light btn__custom"
+                            onClick={function(){
+                            setModal(!modal);
+                            setWaiter(0); 
+                            SetCustomTip(0);
+                            setActive('')
+                            }}>
+                                Cancel
+                        </button>
+                        <button className="btn--dark btn__custom"
+                            onClick={function(){
+                            setModal(!modal);
+                            setWaiter(customTip) 
+                            }}>
+                                Submit
+                        </button>
+                    </div>
+                </section>                            
+            </div>
             }
         </>
     )

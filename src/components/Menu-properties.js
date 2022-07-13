@@ -8,26 +8,30 @@ import { addToCart, removeFromCart, AddQuantity, SubtractQuantity } from "../red
 
 
 
-export const Appetizer = () => {
+export const Appetizer = ({isImage}) => {
     
     return(
-        <main className="menu__main menu menu_pages container">
+        <main className="menu__main menu container">
             {
                 appetizier.map((state, key) => 
-                <div key={state.id}><BasicTheme index={key} state = {state}/></div>
+                <div key={state.id}>
+                    <BasicTheme index={key} state={state} isImage ={isImage} />
+                </div>
                 )
             }
         </main>
     )
 }
 
-export const Burger= () => {
+export const Burger= ({isImage}) => {
 
     return(
         <main className="menu__main menu container">
             {
                 burger.map(
-                    (state, index) => <div key={state.id}><BasicTheme index={index} state={state} /></div>
+                    (state, index) => <div key={state.id}>
+                        <BasicTheme index={index} state={state} isImage ={isImage} />
+                    </div>
                     )
             }
         </main>
@@ -35,32 +39,36 @@ export const Burger= () => {
 }
 
 
-export const Wine = () => {
+export const Wine = ({isImage}) => {
     return(
         <main className="menu__main menu container">
                  {
                     
                     Wines.map(
-                    (state, index) => <div key={state.id}><BasicTheme index={index} state={state} /></div>
+                    (state, index) => <div key={state.id}>
+                        <BasicTheme index={index} state={state} isImage ={isImage} />
+                    </div>
                     )
             }
         </main>
     )
 }
 
-export const Main  = () => {
+export const Main  = ({isImage}) => {
     return(
         <main className="menu__main menu container">
             {
                 MainDish.map(
-                    (state, index) => <div key={state.id}><BasicTheme index={index} state={state} /></div>
+                    (state, index) => <div key={state.id}>
+                        <BasicTheme index={index} state={state} isImage ={isImage} />
+                    </div>
                     )
             }
         </main>
     )
 }
 
-const BasicTheme = ({state, index }) => {
+const BasicTheme = ({state, index, isImage }) => {
     const [select, SetSelect] = useState(true),
     dispatch  = useDispatch(),
     [value, setValue ]= useState(1);
@@ -108,7 +116,7 @@ const BasicTheme = ({state, index }) => {
 
     return(
         <section key={state.id} className="dish">
-            <img className="dish__image" src={state.image} alt={state.name}/>
+            {isImage && <img className="dish__image" src={state.image} alt={state.name}/>}
             <div className="dish__text">
                 <h2 className="dish__name">{state.name}</h2>
                 <p className="dish__descriptions">{state.description}</p>

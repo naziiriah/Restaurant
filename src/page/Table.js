@@ -25,15 +25,15 @@ const Table = () => {
             {tableList && tableList.length > 0 ?
                <>
                  <header className="table-design">
-                    <div className="container bill-header header menu_page">
+                    <div className="container bill-header header ">
                         <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
                                 onClick={() => navigate('/menu')}/>
                         <>table order</>
                         <div></div>
                     </div>
                 </header>
-                <main className="menu_page table-design">
-                    <section className="container  bill__header">
+                <main className=" table-design">
+                    <section className="container  bill__header menu_page">
                         <nav className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
                             <h2 className=" bill__title start bill__title_2">item</h2>
@@ -63,7 +63,7 @@ const Table = () => {
                 :
                 <>
                   <header className="table-design">
-                    <div className="container bill-header header menu_page">
+                    <div className="container bill-header header">
                         <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
                             onClick={() => navigate('/menu')}/>
                         <>table order</>

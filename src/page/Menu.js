@@ -3,7 +3,7 @@ import { Appetizer, Burger, Wine, Main } from "../components/Menu-properties"
 import menu_header from "../images/menu-header.png"
 import invoice from "../images/alert.png"
 import { useNavigate } from "react-router-dom"
-import { Icon, transition } from "@chakra-ui/react"
+import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 
 
@@ -13,11 +13,15 @@ const Menu  = () => {
     navigation = useNavigate(),
     [style, setStyle] = useState('style'),
     [navBarDisplay,SetnavBarDisplay] = useState(0);
+
     useEffect(() => {
             window.scrollTo(0, 0);
     },[title])
 
-
+    const SetActive = (style, type) => {
+        setTitle(type); 
+        setStyle(style) 
+    }
     const myFunction = event => {
             SetnavBarDisplay(event.currentTarget.scrollLeft)
         
@@ -40,14 +44,14 @@ const Menu  = () => {
                 <nav className="main__nav">
                    {navBarDisplay >= 40 && <Icon as={MdKeyboardArrowLeft}  fontSize={'29px'} mt="-.1rem"/>    }
                         <ul className="main-nav__lists"  onScroll={myFunction}>               
-                            <li className="main-nav__list" id={style} onClick={() => { setTitle('appetizer');setStyle('style')}}>appetizer</li>
+                            <li className="main-nav__list" id={style} onClick={() => {setTitle('appetizer');setStyle('style')}}>appetizer</li>
                             <li className="main-nav__list" id={style + '_12'} onClick={() =>{setTitle('burger'); setStyle('styler') }}>burger</li>
                             <li className="main-nav__list" id={style + '_13'} onClick={() =>{setTitle('wine');setStyle('styles') }}>wine</li>
                             <li className="main-nav__list" id={style + '_14'} onClick={() =>{setTitle('main'); setStyle('stylez')} }>main</li>
-                            <li className="main-nav__list"  id={style + '_16'} onClick={() => setStyle('style1')}>shawarma</li>
-                            <li className="main-nav__list" id={style + '_17'} onClick={() => setStyle('style2')} >dessert</li>
-                            <li className="main-nav__list" id={style + '_18'} onClick={() => setStyle('style3')}>salad</li>
-                            <li className="main-nav__list" id={style + '_19'} onClick={() => setStyle('style4')}>cocktail</li>
+                            <li className="main-nav__list"  id={style + '_16'} onClick={() => SetActive('style1', 'shawarma')}>shawarma</li>
+                            <li className="main-nav__list" id={style + '_17'} onClick={() =>  SetActive('style2', 'dessert')} >dessert</li>
+                            <li className="main-nav__list" id={style + '_18'} onClick={() => SetActive('style3', 'salad')}>salad</li>
+                            <li className="main-nav__list" id={style + '_19'} onClick={() => SetActive('style4', 'cocktail')}>cocktail</li>
                         </ul>
 
                     {navBarDisplay <= 220  && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt="-.3rem"/>}
@@ -55,10 +59,14 @@ const Menu  = () => {
             </div>
                 
         </header>
-         {title === "appetizer" && <Appetizer />}
-         {title ===  "burger" && <Burger/>}
-         {title === 'wine' && <Wine/> }
-         {title === 'main' && <Main/> }
+         {title === "appetizer" && <Appetizer isImage={true} />}
+         {title ===  "burger" && <Burger isImage={true}/>}
+         {title === 'wine' && <Wine isImage={true}/> }
+         {title === 'main' && <Main isImage={true}/> }
+         {title === 'shawarma' && <Main isImage={false}/> }
+         {title === 'dessert' && <Main isImage={false}/> }
+         {title === 'salad' && <Main isImage={false}/> }
+         {title === 'cocktail' && <Main isImage={false}/> }
          <footer className="footer menu_pages"></footer>
         </>
     )

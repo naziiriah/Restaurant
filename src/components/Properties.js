@@ -158,7 +158,7 @@ export const Wines = [
         id:"f4",
         name:"Four cousins dry white",
         description:"Classic dry white wine",
-        price: "6,000.00",
+        price: 6000,
         image:wine4
     },
     {
