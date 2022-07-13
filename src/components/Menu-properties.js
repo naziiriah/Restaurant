@@ -71,7 +71,7 @@ export const Main  = ({isImage}) => {
 const BasicTheme = ({state, index, isImage }) => {
     const [select, SetSelect] = useState(true),
     dispatch  = useDispatch(),
-    [value, setValue ]= useState(1);
+    [value, setValue ]= useState(0);
     const List = useSelector((state) => state.bill.value)
      
     useEffect(() => {
