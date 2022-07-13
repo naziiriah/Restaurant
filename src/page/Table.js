@@ -24,7 +24,7 @@ const Table = () => {
            
             {tableList && tableList.length > 0 ?
                <>
-                 <header className="">
+                 <header className="table-design">
                     <div className="container bill-header header menu_page">
                         <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
                                 onClick={() => navigate('/menu')}/>
@@ -32,7 +32,7 @@ const Table = () => {
                         <div></div>
                     </div>
                 </header>
-                <main className="menu_page">
+                <main className="menu_page table-design">
                     <section className="container  bill__header">
                         <nav className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
