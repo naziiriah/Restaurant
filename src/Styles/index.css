@@ -455,9 +455,6 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .table-design {
-    background: url("../images/menu-background.png");
-  }
   .menu {
     background-color: #fff;
     background: url("../images/menu-background.png");
@@ -507,9 +504,6 @@
     top: 0%;
     background-color: #fff;
     height: 10rem;
-  }
-  .menu_page {
-    min-height: 95vh;
   }
   .main-nav__lists {
     background-color: #fff;
@@ -601,15 +595,17 @@
     margin: auto;
     transition: 4s ease-in;
   }
+  .table-design {
+    background: url("../images/menu-background.png");
+  }
   .table__list {
     width: 100%;
-    min-height: 450px;
+    min-height: 550px;
   }
   .table__buttons {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    min-height: 10rem;
   }
   .table__Image {
     width: 90%;
@@ -620,6 +616,8 @@
   .table__empty {
     height: 80vh;
     width: 100%;
+    -webkit-animation: EmptyAnimation 1s ease-in-out;
+            animation: EmptyAnimation 1s ease-in-out;
   }
   .table__empty .table__Image1 {
     border-top: 4.5rem solid transparent;
@@ -634,6 +632,22 @@
     margin: auto;
     display: flex;
     justify-content: center;
+  }
+}
+@-webkit-keyframes EmptyAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes EmptyAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 @-webkit-keyframes menu-item {

@@ -5,9 +5,6 @@ $proxima: 'Proxima Nova', sans-serif;
 
 
 @media screen and (max-width:500px) { 
-    .table-design{
-        background: url('../images/menu-background.png');
-    }
     .menu{
         background-color: #fff;
         background: url('../images/menu-background.png');
@@ -58,8 +55,7 @@ $proxima: 'Proxima Nova', sans-serif;
         height:10rem;
         
     }
-    .menu_page{
-    min-height: 95vh      
+    .menu_page{   
     }
     .main-nav__lists{
         
@@ -156,16 +152,18 @@ $proxima: 'Proxima Nova', sans-serif;
             transition: 4s ease-in;
         }
     }
+    .table-design{
+        background: url('../images/menu-background.png');
+    }
     .table__list{
         width:100%;
-        min-height: 450px;
+        min-height: 550px;
         // background-color: red;
     }
     .table__buttons{
         display: flex;
         justify-content: space-between;
         align-items: end;
-        min-height: 10rem;
     }
     .table__Image{
         width:90%;
@@ -176,6 +174,7 @@ $proxima: 'Proxima Nova', sans-serif;
     .table__empty{
         height:80vh;
         width:100%;
+        animation:EmptyAnimation 1s ease-in-out;
         .table__Image1{
             border-top: 4.5rem solid transparent;
             width:40%;
@@ -193,6 +192,14 @@ $proxima: 'Proxima Nova', sans-serif;
     }
 }
 
+@keyframes EmptyAnimation{
+    from{
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
 @keyframes menu-item {
     from {
         opacity:0;

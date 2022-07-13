@@ -3,7 +3,7 @@ import { Appetizer, Burger, Wine, Main } from "../components/Menu-properties"
 import menu_header from "../images/menu-header.png"
 import invoice from "../images/alert.png"
 import { useNavigate } from "react-router-dom"
-import { Icon } from "@chakra-ui/react"
+import { Icon, transition } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 
 
