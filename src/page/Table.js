@@ -25,12 +25,12 @@ const Table = () => {
                 <div className="container bill-header header menu_pages">
                     <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
                             onClick={() => navigate('/menu')}/>
-                    <>table</>
+                    <>table order</>
                     <div></div>
                 </div>
             </header>
             {tableList && tableList.length > 0 ?
-                <main className="table-design menu_pages">
+                <main className="table-design menu_page">
                     <section className="container  bill__header">
                         <nav className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
@@ -58,7 +58,7 @@ const Table = () => {
                     </section>
                 </main>
                 :
-                <main className="table-design menu_pages">
+                <main className="table-design menu_page">
                 <section className="container">
                     <div className="table__empty"> 
                         <img src={EmptyImage} alt="Wine and Dine" className="table__Image1"/>

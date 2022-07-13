@@ -95,7 +95,7 @@
   .bill__header {
     align-self: flex-start;
     width: 100%;
-    min-height: 100vh;
+    min-height: 250px;
   }
   .bill__flex-title {
     display: flex;
@@ -508,6 +508,9 @@
     background-color: #fff;
     height: 10rem;
   }
+  .menu_page {
+    min-height: 95vh;
+  }
   .main-nav__lists {
     background-color: #fff;
     display: flex;
@@ -524,8 +527,8 @@
   .main-nav__lists li {
     cursor: pointer;
     color: #8A8A8A;
-    margin: 0 0.7rem;
-    width: 4rem;
+    margin: 0 0.8rem;
+    width: 6rem;
   }
   .main-nav__lists::-webkit-scrollbar {
     display: none;
@@ -606,6 +609,7 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
+    min-height: 10rem;
   }
   .table__Image {
     width: 90%;

@@ -58,8 +58,8 @@ $proxima: 'Proxima Nova', sans-serif;
         height:10rem;
         
     }
-    .menu_pages{
-
+    .menu_page{
+    min-height: 95vh      
     }
     .main-nav__lists{
         
@@ -77,8 +77,8 @@ $proxima: 'Proxima Nova', sans-serif;
         li{
             cursor: pointer;
             color: #8A8A8A;
-            margin: 0 .7rem;
-            width: 4rem;
+            margin: 0 .8rem;
+            width: 6rem;
 
         }
         &::-webkit-scrollbar {
@@ -88,14 +88,13 @@ $proxima: 'Proxima Nova', sans-serif;
 
 
     .main-nav__list{
-        
         font-weight: 400;
         font-size: 17px;
     }
     #style, #styler_12,#styles_13 , #stylez_14, #stylez_15, #style1_16, #style1_16, #style2_17, #style3_18, #style4_19{
         background-image: linear-gradient(60deg, #E21143, #FFB03A);
         background-clip: text;
-        color: transparent;   
+        color: transparent; 
     }
 
     .dish{
@@ -166,6 +165,7 @@ $proxima: 'Proxima Nova', sans-serif;
         display: flex;
         justify-content: space-between;
         align-items: end;
+        min-height: 10rem;
     }
     .table__Image{
         width:90%;
