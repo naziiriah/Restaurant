@@ -92,7 +92,7 @@ const Bills = () => {
                     </div>
 
                     <div className="bill__section">
-                    {moreDisplay > 40 && <Icon as={MdKeyboardArrowLeft} fontSize={'39px'} mt="2.5rem"/>}
+                    {moreDisplay > 40 && <Icon as={MdKeyboardArrowLeft} fontSize={'30px'} mt="2.5rem"/>}
                         <div className="bill__tip-option"  onScroll={ScrollTip}>
                             <div className='bill-tips' id={"tip-0_" + Active} onClick={()=>SetDisplay('active',500)}>
                                 <div className={"bill__green0__" +Active }></div>
@@ -120,7 +120,7 @@ const Bills = () => {
 
                             <CustomTip active={[Active, setActive]} Wingedmoney={WingedMoney} waiter={[Waiter,setWaiter]}/>
                         </div>   
-                        { moreDisplay < 70 && <Icon as={MdKeyboardArrowRight} fontSize={'39px'} mt="2.5rem" alignItems={'center'}/>}
+                        { moreDisplay < 70 && <Icon as={MdKeyboardArrowRight} fontSize={'30px'} mt="2.5rem" alignItems={'center'}/>}
                     </div>
                        
                 </aside>

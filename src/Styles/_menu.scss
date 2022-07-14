@@ -55,9 +55,7 @@ $proxima: 'Proxima Nova', sans-serif;
         height:10rem;
         
     }
-    .menu_page{  
-        min-height:800px; 
-    }
+
     .main-nav__lists{
         
         background-color: #fff;
@@ -153,54 +151,9 @@ $proxima: 'Proxima Nova', sans-serif;
             transition: 4s ease-in;
         }
     }
-    .table-design{
-        background: url('../images/menu-background.png');
-    }
-    .table__list{
-        width:100%;
-        min-height: 300px;
-        // background-color: red;
-    }
-    .table__buttons{
-        display: flex;
-        justify-content: space-between;
-        height:8rem;
-    }
-    .table__Image{
-        width:90%;
-        margin:4rem auto 1krem;
-        display: flex;
-        justify-content: center;
-    }
-    .table__empty{
-        height:80vh;
-        width:100%;
-        animation:EmptyAnimation 1s ease-in-out;
-        .table__Image1{
-            border-top: 4.5rem solid transparent;
-            width:40%;
-            margin:auto;
-            display: flex;
-            justify-content: center;
-        }
-        .table__Image2{
-            border-top: .5rem solid transparent;
-            width:25%;
-            margin:auto;
-            display: flex;
-            justify-content: center;
-        }
-    }
 }
 
-@keyframes EmptyAnimation{
-    from{
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
+
 @keyframes menu-item {
     from {
         opacity:0;

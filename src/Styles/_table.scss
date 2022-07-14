@@ -1,0 +1,54 @@
+$Caterina: CALCaterinaW01, sans-serif;
+$proxima: 'Proxima Nova', sans-serif;
+
+@media screen and (max-width: 500px) {  
+    .table-design{
+        background: url('../images/menu-background.png');
+    }
+    .table__list{
+        width:100%;
+        min-height: 400px;
+        // background-color: red;
+    }
+    .table__buttons{
+        display: flex;
+        justify-content: space-between;
+        height:8rem;
+    }
+    .table__Image{
+        width:90%;
+        margin:4rem auto 1krem;
+        display: flex;
+        justify-content: center;
+    }
+    .table__empty{
+        height:80vh;
+        width:100%;
+        animation:EmptyAnimation 1s ease-in-out;
+        .table__Image1{
+            border-top: 4.5rem solid transparent;
+            width:40%;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+        .table__Image2{
+            border-top: .5rem solid transparent;
+            width:25%;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+    }    
+    .table_page{  
+        min-height:800px; 
+    }
+}
+@keyframes EmptyAnimation{
+    from{
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
