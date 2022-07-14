@@ -5,6 +5,7 @@ import invoice from "../images/alert.png"
 import { useNavigate } from "react-router-dom"
 import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
+import { useSelector } from "react-redux"
 
 
 
@@ -12,7 +13,17 @@ const Menu  = () => {
     const [title, setTitle] = useState('appetizer'),
     navigation = useNavigate(),
     [style, setStyle] = useState('style'),
-    [navBarDisplay,SetnavBarDisplay] = useState(0);
+    [navBarDisplay,SetnavBarDisplay] = useState(0),
+    [animation, setAnimation] = useState(false),
+    table = useSelector((state) => state.bill.value);
+
+    useEffect(() => {
+        if(table.length > 0){
+            setAnimation(true)
+        }else{
+            setAnimation(false)
+        }
+    }, [table])    
 
     useEffect(() => {
             window.scrollTo(0, 0);
@@ -34,7 +45,13 @@ const Menu  = () => {
                 <div className="header menu__header">
                     <Icon as={MdOutlineMapsHomeWork} opacity="0.6" fontSize={'25px'} onClick={() => navigation('/')}/> 
                     <h1 className="menu__title">menu</h1>
-                    <img className=" menu__invoice" src={invoice} alt="alert" onClick={() => navigation('/table')}></img>
+                    <div>
+                        <img className=" menu__invoice" src={invoice} alt="alert" onClick={() => navigation('/table')}></img>
+                       {animation && <div className="dot__animation">
+                                        <div className="dot__center"></div>
+                                    </div>
+                        }
+                    </div>                   
                 </div>
                 <aside className="art">
                     <div className="art__line"></div>

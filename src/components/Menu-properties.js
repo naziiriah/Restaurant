@@ -71,7 +71,7 @@ export const Main  = ({isImage}) => {
 const BasicTheme = ({state, index, isImage }) => {
     const [select, SetSelect] = useState(true),
     dispatch  = useDispatch(),
-    [value, setValue ]= useState(0);
+    [value, setValue ]= useState(1);
     const List = useSelector((state) => state.bill.value)
      
     useEffect(() => {
@@ -87,7 +87,7 @@ const BasicTheme = ({state, index, isImage }) => {
             id:state.id
         }))
         SetSelect(!select)
-        setValue(0)
+        setValue(1)
     }
     function selectFood() {
         dispatch(addToCart({

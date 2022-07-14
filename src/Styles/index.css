@@ -597,6 +597,52 @@
     margin: auto;
     transition: 4s ease-in;
   }
+  .dot__center {
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+  }
+  .dot__animation {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(255, 0, 0, 0.212);
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    top: -2.8rem;
+    left: 0.1rem;
+    position: relative;
+    -webkit-animation: glow 1.5s infinite ease-in-out;
+            animation: glow 1.5s infinite ease-in-out;
+  }
+}
+@-webkit-keyframes glow {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    border: solid rgba(255, 0, 0, 0) 0.4rem;
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.22);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    border: solid rgba(255, 0, 0, 0) 0.4rem;
+  }
+}
+@keyframes glow {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    border: solid rgba(255, 0, 0, 0) 0.4rem;
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.22);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    border: solid rgba(255, 0, 0, 0) 0.4rem;
+  }
 }
 @-webkit-keyframes menu-item {
   from {
