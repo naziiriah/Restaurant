@@ -87,7 +87,7 @@ const BasicTheme = ({state, index, isImage }) => {
             id:state.id
         }))
         SetSelect(!select)
-        setValue(1)
+        setValue(0)
     }
     function selectFood() {
         dispatch(addToCart({

@@ -73,11 +73,20 @@ export const PayModal = ({MyFee, Total}) => {
                                 showCard && 
                                     <div className="modal__card-details">
                                         <div className="modal__card-number">
-                                            <input placeholder="1234   ****   ****  ****" type={'number'}/>
+                                            <input placeholder="1234   ****   ****  ****" 
+                                               pattern="[0-9]*" 
+                                               inputMode="numeric"
+                                               type={'text'}/>
                                         </div>
                                         <div className="modal__card-others">
-                                            <input placeholder="MM/YY" type={'number'}/>
-                                            <input placeholder="CVV" type={'number'}/>
+                                            <input placeholder="MM/YY" 
+                                               pattern="[0-9]*" 
+                                               inputMode="numeric"
+                                               type={'text'}/>
+                                            <input placeholder="CVV" 
+                                               pattern="[0-9]*" 
+                                               inputMode="numeric"
+                                               type={'text'} />
                                         </div>
                                     </div>
                             }
