@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 import { useSelector } from "react-redux"
-
+import WaiterImage from "../images/240_F_461566395_Fj4vy92CnlFhbFHoH8MLLptMQgCAOhK9.jpg"
 
 
 const Menu  = () => {
@@ -15,15 +15,24 @@ const Menu  = () => {
     [style, setStyle] = useState('style'),
     [navBarDisplay,SetnavBarDisplay] = useState(0),
     [animation, setAnimation] = useState(false),
-    table = useSelector((state) => state.bill.value);
+    table = useSelector((state) => state.bill.value),
+    [SideDisplay, SetSideDisplay] = useState(false),
+    [SideAnimation, SetSideAnimation] = useState('side__animation');
+
 
     useEffect(() => {
         if(table.length > 0){
+            SetSideAnimation('side__animation')
             setAnimation(true)
+            SetSideDisplay(true)
+            setTimeout(() => {
+                SetSideAnimation('side__static')
+            }, 2000)
         }else{
             setAnimation(false)
-        }
-    }, [table])    
+            SetSideDisplay(false)
+        }       
+    }, [table.length])    
 
     useEffect(() => {
             window.scrollTo(0, 0);
@@ -53,11 +62,11 @@ const Menu  = () => {
                         }
                     </div>                   
                 </div>
-                <aside className="art">
+                <article className="art">
                     <div className="art__line"></div>
                     <div className="art__circle"></div>
                     <div className="art__line"></div>
-                </aside>
+                </article>
                 <nav className="main__nav">
                    {navBarDisplay >= 40 && <Icon as={MdKeyboardArrowLeft}  fontSize={'29px'} mt="-.1rem"/>    }
                         <ul className="main-nav__lists"  onScroll={myFunction}>               
@@ -74,8 +83,16 @@ const Menu  = () => {
                     {navBarDisplay <= 220  && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt="-.3rem"/>}
                 </nav>
             </div>
-                
         </header>
+      
+        {SideDisplay && 
+            <aside className="aside__animation" onClick={() => navigation('/table')}>
+                    <div className={SideAnimation}>
+                        
+                    </div>
+                    <img src={WaiterImage} alt="waiter"/>
+            </aside>
+        }
          {title === "appetizer" && <Appetizer isImage={true} />}
          {title ===  "burger" && <Burger isImage={true}/>}
          {title === 'wine' && <Wine isImage={true}/> }
@@ -84,7 +101,9 @@ const Menu  = () => {
          {title === 'dessert' && <Main isImage={false}/> }
          {title === 'salad' && <Main isImage={false}/> }
          {title === 'cocktail' && <Main isImage={false}/> }
-         <footer className="footer menu_pages"></footer>
+
+  
+         <footer className="footer"></footer>
         </>
     )
 }

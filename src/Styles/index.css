@@ -617,6 +617,53 @@
     -webkit-animation: glow 1.5s infinite ease-in-out;
             animation: glow 1.5s infinite ease-in-out;
   }
+  .aside__animation {
+    width: 5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40%;
+    left: 100%;
+    bottom: 4%;
+    -webkit-animation: Side_animation alternate 0.5s ease-in;
+            animation: Side_animation alternate 0.5s ease-in;
+  }
+  .aside__animation img {
+    width: 5rem;
+  }
+  .side__animation {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    margin: -2rem 0rem;
+    -webkit-animation: 0.5s infinite mini_animatios;
+            animation: 0.5s infinite mini_animatios;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+  .side__static {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    margin: -2rem 0rem;
+  }
+}
+@-webkit-keyframes Side_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Side_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @-webkit-keyframes glow {
   0% {
@@ -676,6 +723,40 @@
   }
   to {
     margin-left: 1.5rem;
+  }
+}
+@-webkit-keyframes mini_animatios {
+  0% {
+    height: 0.4rem;
+  }
+  25% {
+    height: 0rem;
+  }
+  50% {
+    height: 0.2rem;
+  }
+  75% {
+    height: 0rem;
+  }
+  100% {
+    height: 0.4rem;
+  }
+}
+@keyframes mini_animatios {
+  0% {
+    height: 0.4rem;
+  }
+  25% {
+    height: 0rem;
+  }
+  50% {
+    height: 0.2rem;
+  }
+  75% {
+    height: 0rem;
+  }
+  100% {
+    height: 0.4rem;
   }
 }
 @media screen and (max-width: 500px) {

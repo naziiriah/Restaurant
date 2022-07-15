@@ -170,8 +170,46 @@ $proxima: 'Proxima Nova', sans-serif;
         position: relative;
         animation: glow 1.5s infinite ease-in-out;
     }
+    .aside__animation{
+        width:5rem;
+        height:2.5rem;
+        background-color: transparent;        
+        position: sticky;
+        top:40%;
+        left:100%;
+        bottom: 4%;
+        animation: Side_animation alternate .5s ease-in;
+        img{
+            width:5rem;
+        } 
+    }
+    .side__animation{
+         width:.4rem;
+         height: .4rem;
+        border-radius: 50%;         
+        margin:-2rem 0rem;
+        animation:.5s infinite mini_animatios ;
+        animation-delay: .5s;
+       
+    }
+    .side__static{
+        width:.4rem;
+        height: .4rem;
+        border-radius: 50%;         
+        margin:-2rem 0rem;
+  
+    }
+   
 }
+@keyframes Side_animation {
+    from{
+        opacity:0;
+    }    
+    to{
+        opacity:1;
 
+    }
+}
 @keyframes glow {
     0% {
         background-color: rgba(0, 0, 0, 0);
@@ -203,5 +241,22 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     to {
         margin-left:1.5rem;
+    }
+}
+@keyframes mini_animatios {
+    0%{
+        height: .4rem;
+    }
+    25%{
+        height: 0rem;
+    }
+    50%{
+        height: .2rem;
+    }
+    75%{
+        height: 0rem;
+    }
+    100%{
+        height: .4rem;
     }
 }
