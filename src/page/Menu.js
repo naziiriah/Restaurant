@@ -22,11 +22,11 @@ const Menu  = () => {
 
     useEffect(() => {
         if(table.length > 0){
-            SetSideAnimation('side__animation')
+            SetSideAnimation('image_animation')
             setAnimation(true)
             SetSideDisplay(true)
             setTimeout(() => {
-                SetSideAnimation('side__static')
+                SetSideAnimation('')
             }, 2000)
         }else{
             setAnimation(false)
@@ -87,10 +87,7 @@ const Menu  = () => {
       
         {SideDisplay && 
             <aside className="aside__animation" onClick={() => navigation('/table')}>
-                    <div className={SideAnimation}>
-                        
-                    </div>
-                    <img src={WaiterImage} alt="waiter"/>
+                    <img className={SideAnimation} src={WaiterImage} alt="waiter"/>
             </aside>
         }
          {title === "appetizer" && <Appetizer isImage={true} />}

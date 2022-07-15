@@ -179,25 +179,15 @@ $proxima: 'Proxima Nova', sans-serif;
         left:100%;
         bottom: 4%;
         animation: Side_animation alternate .5s ease-in;
+        margin-top: -2.5rem;
         img{
             width:5rem;
+            
         } 
-    }
-    .side__animation{
-         width:.4rem;
-         height: .4rem;
-        border-radius: 50%;         
-        margin:-2rem 0rem;
-        animation:.5s infinite mini_animatios ;
-        animation-delay: .5s;
-       
-    }
-    .side__static{
-        width:.4rem;
-        height: .4rem;
-        border-radius: 50%;         
-        margin:-2rem 0rem;
-  
+        .image_animation{
+            animation: 3s infinite image_animation;
+            width:5rem;
+        }
     }
    
 }
@@ -243,20 +233,27 @@ $proxima: 'Proxima Nova', sans-serif;
         margin-left:1.5rem;
     }
 }
-@keyframes mini_animatios {
+
+@keyframes image_animation {
     0%{
-        height: .4rem;
+        transform: rotate(0deg);
+    }    
+    20%{
+        transform: rotate(10deg);
+    }  
+    40%{
+        transform: rotateY(0deg);
     }
-    25%{
-        height: 0rem;
+    40%{
+        transform: rotateY(-350deg);
     }
-    50%{
-        height: .2rem;
+    60%{
+        transform: rotateY(0deg);
     }
-    75%{
-        height: 0rem;
+    80%{
+        transform: rotateY(10deg);
     }
     100%{
-        height: .4rem;
+        transform: rotateY(0deg);
     }
 }

@@ -628,25 +628,15 @@
     bottom: 4%;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
+    margin-top: -2.5rem;
   }
   .aside__animation img {
     width: 5rem;
   }
-  .side__animation {
-    width: 0.4rem;
-    height: 0.4rem;
-    border-radius: 50%;
-    margin: -2rem 0rem;
-    -webkit-animation: 0.5s infinite mini_animatios;
-            animation: 0.5s infinite mini_animatios;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-  }
-  .side__static {
-    width: 0.4rem;
-    height: 0.4rem;
-    border-radius: 50%;
-    margin: -2rem 0rem;
+  .aside__animation .image_animation {
+    -webkit-animation: 3s infinite image_animation;
+            animation: 3s infinite image_animation;
+    width: 5rem;
   }
 }
 @-webkit-keyframes Side_animation {
@@ -725,38 +715,50 @@
     margin-left: 1.5rem;
   }
 }
-@-webkit-keyframes mini_animatios {
+@-webkit-keyframes image_animation {
   0% {
-    height: 0.4rem;
+    transform: rotate(0deg);
   }
-  25% {
-    height: 0rem;
+  20% {
+    transform: rotate(10deg);
   }
-  50% {
-    height: 0.2rem;
+  40% {
+    transform: rotateY(0deg);
   }
-  75% {
-    height: 0rem;
+  40% {
+    transform: rotateY(-350deg);
+  }
+  60% {
+    transform: rotateY(0deg);
+  }
+  80% {
+    transform: rotateY(10deg);
   }
   100% {
-    height: 0.4rem;
+    transform: rotateY(0deg);
   }
 }
-@keyframes mini_animatios {
+@keyframes image_animation {
   0% {
-    height: 0.4rem;
+    transform: rotate(0deg);
   }
-  25% {
-    height: 0rem;
+  20% {
+    transform: rotate(10deg);
   }
-  50% {
-    height: 0.2rem;
+  40% {
+    transform: rotateY(0deg);
   }
-  75% {
-    height: 0rem;
+  40% {
+    transform: rotateY(-350deg);
+  }
+  60% {
+    transform: rotateY(0deg);
+  }
+  80% {
+    transform: rotateY(10deg);
   }
   100% {
-    height: 0.4rem;
+    transform: rotateY(0deg);
   }
 }
 @media screen and (max-width: 500px) {
