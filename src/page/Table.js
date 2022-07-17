@@ -2,8 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { HomeLightBTN } from "../components/Buttons"
 import { removeFromCart } from "../redux"
-import EmptyImage from "../images/DishNew.png"
-import CutleryImage from "../images/Cultery.png"
+import EmptyImage from "../images/empty2 1.png"
 import {HiOutlineTrash} from  "react-icons/hi"
 import { Icon } from "@chakra-ui/react"
 import {IoIosArrowBack} from "react-icons/io"
@@ -74,7 +73,6 @@ const Table = () => {
                 <section className="container">
                     <div className="table__empty"> 
                         <img src={EmptyImage} alt="Wine and Dine" className="table__Image1"/>
-                        <img src={CutleryImage} alt="Wine and Dine" className="table__Image2"/>
 
                         <h2 className="bill__emptyDirective">You haven't  ordered anything off the menu yet. <br/>
                             View the menu to select items.
