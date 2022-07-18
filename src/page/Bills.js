@@ -7,6 +7,8 @@ import handdrawncircle from "../images/handdrawn-cricle.png"
 import { useSelector } from "react-redux";
 import { Icon } from "@chakra-ui/react";
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from "react-icons/md";
+import { HomeLightBTN } from "../components/Buttons";
+import EmptyImage from "../images/empty2 1.png"
 
 
 const Bills = () => {
@@ -30,15 +32,14 @@ const Bills = () => {
     }
 
     const ScrollTip = event =>  {
-        // console.log(event.currentTarget.scrollWidth)
         SetMoreDisplay(event.currentTarget.scrollLeft)
-        // Checking the scroll Length of the scroll finction
     }
 
     return(
         <>
             <BillHeader title={'bill'}/>
-            <main className="container bill menu_pages">
+           { Total > 0 ?
+             <main className="container bill menu_pages">
                
                 <section className=" bill__header">
 
@@ -129,7 +130,21 @@ const Bills = () => {
                     <PayModal MyFee={myfee} Total={overall} PureBill ={myBill} /> 
                 </div>
 
-            </main> 
+            </main>
+            : 
+            <main className="table-design table_page">
+            <section className="container">
+                <div className="table__empty"> 
+                    <img src={EmptyImage} alt="Wine and Dine" className="table__Image1"/>
+
+                    <h2 className="bill__emptyDirective">You haven't  ordered anything off the menu yet. <br/>
+                        View the menu to select items.
+                    </h2>
+
+                    <HomeLightBTN text={'View menu'}/>
+                </div>
+            </section>
+        </main>}
             <footer className="footer menu_pages"></footer>
         </>
     )
