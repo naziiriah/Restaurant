@@ -11,7 +11,7 @@ import { addToCart, removeFromCart, AddQuantity, SubtractQuantity } from "../red
 export const Appetizer = ({isImage}) => {
     
     return(
-        <main className="menu__main menu container">
+        <main className="menu__main menu ">
             {
                 appetizier.map((state, key) => 
                 <div key={state.id}>
@@ -26,7 +26,7 @@ export const Appetizer = ({isImage}) => {
 export const Burger= ({isImage}) => {
 
     return(
-        <main className="menu__main menu container">
+        <main className="menu__main menu">
             {
                 burger.map(
                     (state, index) => <div key={state.id}>
@@ -41,7 +41,7 @@ export const Burger= ({isImage}) => {
 
 export const Wine = ({isImage}) => {
     return(
-        <main className="menu__main menu container">
+        <main className="menu__main menu ">
                  {
                     
                     Wines.map(
@@ -56,7 +56,7 @@ export const Wine = ({isImage}) => {
 
 export const Main  = ({isImage}) => {
     return(
-        <main className="menu__main menu container">
+        <main className="menu__main menu ">
             {
                 MainDish.map(
                     (state, index) => <div key={state.id}>
@@ -115,7 +115,7 @@ const BasicTheme = ({state, index, isImage }) => {
     }
 
     return(
-        <section key={state.id} className="dish">
+        <section key={state.id} className="dish container">
             {isImage && <img className="dish__image" src={state.image} alt={state.name}/>}
             <div className="dish__text">
                 <h2 className="dish__name">{state.name}</h2>

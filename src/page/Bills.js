@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { BillHeader } from "../components/Header"
 import { CustomTip, PayModal, SplitModal } from "../components/modal"
-import WingedMoney from "../images/money-with-wings.png"
+import MoneyIcon from "../images/33-337047_transparent-model-icon-png-give-money-illustration-png.png"
 import handdrawncircle from "../images/handdrawn-cricle.png"
 import { useSelector } from "react-redux";
 import { Icon } from "@chakra-ui/react";
@@ -11,7 +11,7 @@ import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from "react-icons/md";
 
 const Bills = () => {
     const PurchaseBill = useSelector((state) => state.bill.value),
-    Total = PurchaseBill && JSON.parse(localStorage.getItem('Total')),
+    Total = useSelector((state) => state.bill.Total),
     [myBill, setMyBill] = useState(0),
     [Waiter, setWaiter] = useState(0),
     [Active, setActive] = useState(''),
@@ -81,7 +81,7 @@ const Bills = () => {
                 </section>
 
                 <div>
-                    <SplitModal total = {overall} myBills={[setMyBill]}/>
+                    <SplitModal total = {overall} myBills={[setMyBill]} OriginalTotal = {Total}/>
                 </div>
 
                 <aside className="bill__waiter">
@@ -97,7 +97,7 @@ const Bills = () => {
                             <div className='bill-tips' id={"tip-0_" + Active} onClick={()=>SetDisplay('active',500)}>
                                 <div className={"bill__green0__" +Active }></div>
                                 <div className={"bill__img_white"}>
-                                    <img src={WingedMoney}  alt='winged money'/>
+                                    <img src={MoneyIcon}  alt='winged money'/>
                                 </div>
                                 <div className={"bill__amount0_" + Active}>&#x20A6;500</div>
                             </div>
@@ -105,7 +105,7 @@ const Bills = () => {
                             <div className='bill-tips' id={"tip-1_" + Active} onClick={()=>SetDisplay('activee',1000)}>
                                 <div className={"bill__green1__" +Active }></div>
                                 <div className={"bill__img_white"}>
-                                    <img src={WingedMoney}  alt='winged money'/>
+                                    <img src={MoneyIcon}  alt='winged money'/>
                                 </div>
                                 <div className={"bill__amount1_" + Active}>&#x20A6;1,000</div>
                             </div>
@@ -113,12 +113,12 @@ const Bills = () => {
                             <div className='bill-tips' id={"tip-2_" + Active} onClick={()=>SetDisplay('actives',2000)}>
                                 <div className={"bill__green2__" +Active }></div>
                                 <div className={"bill__img_white"}>
-                                    <img src={WingedMoney}  alt='winged money'/>
+                                    <img src={MoneyIcon}  alt='winged money'/>
                                 </div>
                                 <div className={"bill__amount2_" + Active}>&#x20A6;2,000</div>
                             </div>
 
-                            <CustomTip active={[Active, setActive]} Wingedmoney={WingedMoney} waiter={[Waiter,setWaiter]}/>
+                            <CustomTip active={[Active, setActive]} Wingedmoney={MoneyIcon} waiter={[Waiter,setWaiter]}/>
                         </div>   
                         { moreDisplay < 70 && <Icon as={MdKeyboardArrowRight} fontSize={'30px'} mt="2.5rem" alignItems={'center'}/>}
                     </div>
@@ -126,7 +126,7 @@ const Bills = () => {
                 </aside>
 
                 <div>
-                    <PayModal MyFee={myfee} Total={overall}/> 
+                    <PayModal MyFee={myfee} Total={overall} PureBill ={myBill} /> 
                 </div>
 
             </main> 

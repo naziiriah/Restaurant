@@ -54,8 +54,8 @@ const Menu  = () => {
                 <div className="header menu__header">
                     <Icon as={MdOutlineMapsHomeWork} opacity="0.6" fontSize={'25px'} onClick={() => navigation('/')}/> 
                     <h1 className="menu__title">menu</h1>
-                    <div>
-                        <img className=" menu__invoice" src={invoice} alt="alert" onClick={() => navigation('/table')}></img>
+                    <div onClick={() => navigation('/table')}>
+                        <img className=" menu__invoice" src={invoice} alt="alert" ></img>
                        {animation && <div className="dot__animation">
                                         <div className="dot__center"></div>
                                     </div>
@@ -67,7 +67,7 @@ const Menu  = () => {
                     <div className="art__circle"></div>
                     <div className="art__line"></div>
                 </article>
-                <nav className="main__nav">
+                <nav className="main__nav ">
                    {navBarDisplay >= 40 && <Icon as={MdKeyboardArrowLeft}  fontSize={'29px'} mt="-.1rem"/>    }
                         <ul className="main-nav__lists"  onScroll={myFunction}>               
                             <li className="main-nav__list" id={style} onClick={() => {setTitle('appetizer');setStyle('style')}}>appetizer</li>
@@ -98,8 +98,6 @@ const Menu  = () => {
          {title === 'dessert' && <Main isImage={false}/> }
          {title === 'salad' && <Main isImage={false}/> }
          {title === 'cocktail' && <Main isImage={false}/> }
-
-  
          <footer className="footer"></footer>
         </>
     )

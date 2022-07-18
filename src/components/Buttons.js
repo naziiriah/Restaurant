@@ -24,7 +24,7 @@ export const HomeDarkBTN = ({text}) => {
     const navigation = useNavigate()
     return(
         <button className="btn__home btn--dark"
-            onClick={() => navigation('/table')}>
+            onClick={() => navigation('/bill')}>
             {text}
         </button>
     )

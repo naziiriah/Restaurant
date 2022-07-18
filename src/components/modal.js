@@ -5,13 +5,13 @@ import { TbArrowsLeftRight, } from "react-icons/tb"
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { CalculateTotal } from "../redux"
+import { CalculateTotal, CheckBill } from "../redux"
 import CurrencyInput from 'react-currency-input-field';
 import doubleStroke from "../images/double.png"
 import {VscCreditCard} from "react-icons/vsc"
 import {FcMoneyTransfer} from  "react-icons/fc"
 
-export const PayModal = ({MyFee, Total}) => {
+export const PayModal = ({MyFee, Total, PureBill}) => {
     const [showTransfer, SetShowtransfer] = useState(false),
     [showCard, setShowCard] = useState(false),
     [modal, setModal] = useState(false),
@@ -21,13 +21,20 @@ export const PayModal = ({MyFee, Total}) => {
     const Bill = Number(MyFee) ? Number(MyFee) : Total,
     Dispatch = useDispatch(),
     
+    
     confirmPayment = () => {
         navigation('/end')
+
         Dispatch(CalculateTotal({
             total:Total,
             mySplit: Bill
+        }));
+
+        Dispatch(CheckBill({
+            MySplit:PureBill
         }))
     };
+
 
 
     return (
@@ -103,7 +110,7 @@ export const PayModal = ({MyFee, Total}) => {
     )
 }
 
-export const SplitModal = ({total, myBills}) => {
+export const SplitModal = ({total, myBills, OriginalTotal}) => {
     const [modal, setModal] = useState(false),
         [setMyBill] = myBills,
         [Value, setValue] = useState(),
@@ -132,7 +139,7 @@ export const SplitModal = ({total, myBills}) => {
                             </div>
                             <div className="modal__price">
                                 <h2> Table bill</h2>
-                                <h2> &#x20A6;{String(total.toLocaleString("en-US")) + '.00'} </h2>
+                                <h2> &#x20A6;{String(OriginalTotal.toLocaleString("en-US")) + '.00'} </h2>
                             </div>
 
                             <div className="modal__text"> 

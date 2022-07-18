@@ -1,8 +1,10 @@
+import { useSelector } from "react-redux"
 import { HomeDarkBTN, HomeLightBTN, } from "../components/Buttons"
 import  { WelcomeHeader } from "../components/Header"
 
+
 const Home = () => {
-    const Total = JSON.parse(localStorage.getItem('Total'))
+    const Total = useSelector((state) => state.bill.Total)
     return(
         <>
         <WelcomeHeader/>
@@ -30,7 +32,6 @@ const Home = () => {
                 
            </div>
         </main>
-        <footer className="footer menu_pages"></footer>
         </>
     )
 }

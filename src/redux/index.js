@@ -3,7 +3,8 @@ import {  createSlice} from "@reduxjs/toolkit";
 
 const initialState= {
     value : [],
-    Total: 0
+    Total: 0,
+    SplitBill: 0,
 };
 
 export const BillSlice = createSlice({
@@ -101,9 +102,18 @@ export const BillSlice = createSlice({
                     }
                 }
             }
+        },
+        CheckBill : (state, {payload}) => {
+            state.SplitBill = payload.MySplit
+            state.Total = state.value.reduce((total, price) => total + (price.price * price.quantity),  0)
+            
+            if(state.SplitBill > 0){
+                state.Total = state.Total - state.SplitBill 
+            }
+            
         }
     }
 })
 
-export const { addToCart, removeFromCart, AddQuantity, SubtractQuantity, CalculateTotal} = BillSlice.actions
+export const { addToCart, removeFromCart, AddQuantity, SubtractQuantity, CalculateTotal, CheckBill} = BillSlice.actions
 export default BillSlice.reducer

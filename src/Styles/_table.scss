@@ -8,18 +8,11 @@ $proxima: 'Proxima Nova', sans-serif;
     .table__list{
         width:100%;
         min-height: 400px;
-        // background-color: red;
     }
     .table__buttons{
         display: flex;
         justify-content: space-between;
         height:8rem;
-    }
-    .table__Image{
-        width:90%;
-        margin:4rem auto 1krem;
-        display: flex;
-        justify-content: center;
     }
     .table__empty{
         height:80vh;
