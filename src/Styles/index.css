@@ -259,16 +259,15 @@
     text-align: center;
   }
   .bill__tip-option .bill__img_white {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
     border-radius: 50%;
     background-color: #EAEAEA;
     margin: 0.5rem auto;
     text-align: center;
   }
   .bill__tip-option .bill__img_white img {
-    margin-top: 0.2rem;
-    width: 2rem;
+    width: 2.8rem;
     border-radius: 50%;
   }
   .bill__tip-option .bill__amount3_activez {
@@ -606,15 +605,15 @@
     border-radius: 50%;
   }
   .dot__animation {
-    width: 1rem;
-    height: 1rem;
-    background-color: rgba(255, 0, 0, 0.212);
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: rgb(255, 0, 0);
     display: flex;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    top: -2.8rem;
-    left: 0.1rem;
+    top: -2.87rem;
+    left: 0.19rem;
     position: relative;
     -webkit-animation: glow 1.5s infinite ease-in-out;
             animation: glow 1.5s infinite ease-in-out;
@@ -659,11 +658,11 @@
 }
 @-webkit-keyframes glow {
   0% {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
     border: solid rgba(255, 0, 0, 0) 0.4rem;
   }
   50% {
-    background-color: rgba(255, 0, 0, 0.22);
+    background-color: rgba(255, 0, 0, 0.6);
   }
   100% {
     background-color: rgba(0, 0, 0, 0);
@@ -672,11 +671,11 @@
 }
 @keyframes glow {
   0% {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
     border: solid rgba(255, 0, 0, 0) 0.4rem;
   }
   50% {
-    background-color: rgba(255, 0, 0, 0.22);
+    background-color: rgba(255, 0, 0, 0.6);
   }
   100% {
     background-color: rgba(0, 0, 0, 0);

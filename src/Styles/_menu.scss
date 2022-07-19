@@ -158,15 +158,15 @@ $proxima: 'Proxima Nova', sans-serif;
         border-radius: 50%;        
     }
     .dot__animation{
-        width:1rem;
-        height: 1rem;
-        background-color: rgba(255, 0, 0, 0.212);
+        width:1.4rem;
+        height: 1.4rem;
+        background-color: rgba(255, 0, 0,);
         display: flex;
         border-radius: 50%;
         justify-content: center;
         align-items: center;
-        top:-2.8rem;
-        left:.1rem;
+        top:-2.87rem;
+        left:.19rem;
         position: relative;
         animation: glow 1.5s infinite ease-in-out;
     }
@@ -202,11 +202,11 @@ $proxima: 'Proxima Nova', sans-serif;
 }
 @keyframes glow {
     0% {
-        background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(255, 0, 0, 0.0);
         border: solid  rgba(255, 0, 0, 0) .4rem;
     }
     50%{
-        background-color: rgba(255, 0, 0, 0.22);
+        background-color: rgba(255, 0, 0, 0.6);
         // border: solid rgba(255, 0, 0, 0.22) .4rem;
     }
     100%{
