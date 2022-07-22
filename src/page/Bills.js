@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BillHeader } from "../components/Header"
 import { CustomTip, PayModal, SplitModal } from "../components/modal"
 import MoneyIcon from "../images/33-337047_transparent-model-icon-png-give-money-illustration-png.png"
@@ -20,7 +20,8 @@ const Bills = () => {
     [moreDisplay, SetMoreDisplay] = useState(0),
     overall = myBill === 0? Total  + Number(Waiter) : Total,
     [style, SetStyle] = useState("welcome__tableText1"),
-    myfee = myBill === 0 ? overall : (Number(myBill) + Number(Waiter))
+    myfee = myBill === 0 ? overall : (Number(myBill) + Number(Waiter)),
+    scrollRef = useRef(null);
     
    useEffect(() => 
         {( myBill > 0) ? SetStyle('welcome__design') : SetStyle("welcome__tableText1")
@@ -33,6 +34,14 @@ const Bills = () => {
 
     const ScrollTip = event =>  {
         SetMoreDisplay(event.currentTarget.scrollLeft)
+    }
+
+    const ScrollButton = (direction) => {
+        if(direction){
+            scrollRef.current.scrollLeft -= 300;
+        }else{
+            scrollRef.current.scrollLeft += 300
+        }
     }
 
     return(
@@ -93,8 +102,8 @@ const Bills = () => {
                     </div>
 
                     <div className="bill__section">
-                    {moreDisplay > 40 && <Icon as={MdKeyboardArrowLeft} fontSize={'30px'} mt="2.5rem"/>}
-                        <div className="bill__tip-option"  onScroll={ScrollTip}>
+                    {moreDisplay > 40 && <Icon as={MdKeyboardArrowLeft} fontSize={'30px'} mt="2.5rem" onClick={() => ScrollButton(true)}/> }
+                        <div className="bill__tip-option"  onScroll={ScrollTip} ref={scrollRef}>
                             <div className='bill-tips' id={"tip-0_" + Active} onClick={()=>SetDisplay('active',500)}>
                                 <div className={"bill__green0__" +Active }></div>
                                 <div className={"bill__img_white"}>
@@ -121,7 +130,7 @@ const Bills = () => {
 
                             <CustomTip active={[Active, setActive]} Wingedmoney={MoneyIcon} waiter={[Waiter,setWaiter]}/>
                         </div>   
-                        { moreDisplay < 70 && <Icon as={MdKeyboardArrowRight} fontSize={'30px'} mt="2.5rem" alignItems={'center'}/>}
+                        { moreDisplay < 70 && <Icon as={MdKeyboardArrowRight} fontSize={'30px'} mt="2.5rem" alignItems={'center'} onClick={() => ScrollButton(false)}/>}
                     </div>
                        
                 </aside>

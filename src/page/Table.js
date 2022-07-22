@@ -59,9 +59,7 @@ const Table = () => {
                         </div>
                         <Footer/>
                     </section>
-                    
                 </main>
-                
                </>
                 :
                 <>
@@ -77,17 +75,14 @@ const Table = () => {
                 <section className="container">
                     <div className="table__empty"> 
                         <img src={EmptyImage} alt="Wine and Dine" className="table__Image1"/>
-
                         <h2 className="bill__emptyDirective">You haven't  ordered anything off the menu yet. <br/>
                             View the menu to select items.
                         </h2>
-
                         <HomeLightBTN text={'View menu'}/>
                     </div>
                 </section>
                 <Footer/>
                 </main>
-                
             </>
             }
         </>

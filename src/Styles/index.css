@@ -496,8 +496,6 @@
     cursor: pointer;
   }
   .main__nav {
-    background-color: #fff;
-    height: 1.5rem;
     margin-top: -1rem;
     width: 100%;
     display: flex;
@@ -507,20 +505,19 @@
     position: sticky;
     top: 0%;
     background-color: #fff;
-    height: 10rem;
+    height: 8rem;
   }
   .main-nav__lists {
-    background-color: #fff;
     display: flex;
     justify-content: space-between;
     list-style: none;
     text-transform: capitalize;
-    transition: ease-in 10s;
     white-space: nowrap;
     overflow-x: scroll;
     margin: auto;
     overscroll-behavior-inline: contain;
-    height: 2rem;
+    height: 1rem;
+    background-color: #fff;
   }
   .main-nav__lists li {
     cursor: pointer;
@@ -624,7 +621,7 @@
     background-color: transparent;
     position: -webkit-sticky;
     position: sticky;
-    top: 40%;
+    top: 70%;
     left: 100%;
     bottom: 4%;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
@@ -634,9 +631,18 @@
   .aside__animation img {
     width: 5rem;
   }
+  .aside__animation #image_animation {
+    width: 0.7rem;
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: #E21143;
+    -webkit-animation: animation__glow 1s infinite;
+            animation: animation__glow 1s infinite;
+  }
   .aside__animation .image_animation {
-    -webkit-animation: 3s infinite image_animation;
-            animation: 3s infinite image_animation;
     width: 5rem;
   }
 }
@@ -720,60 +726,103 @@
   0% {
     transform: rotate(0deg);
   }
+  10% {
+    transform: rotate(5deg);
+  }
   20% {
-    transform: rotate(10deg);
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
   }
   40% {
-    transform: rotateY(0deg);
+    transform: rotate(-5deg);
   }
-  40% {
-    transform: rotateY(-350deg);
+  50% {
+    transform: rotate(5deg);
   }
   60% {
-    transform: rotateY(0deg);
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(5deg);
   }
   80% {
-    transform: rotateY(10deg);
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform: rotate(5deg);
   }
   100% {
-    transform: rotateY(0deg);
+    transform: rotate(0deg);
   }
 }
 @keyframes image_animation {
   0% {
     transform: rotate(0deg);
   }
+  10% {
+    transform: rotate(5deg);
+  }
   20% {
-    transform: rotate(10deg);
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
   }
   40% {
-    transform: rotateY(0deg);
+    transform: rotate(-5deg);
   }
-  40% {
-    transform: rotateY(-350deg);
+  50% {
+    transform: rotate(5deg);
   }
   60% {
-    transform: rotateY(0deg);
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(5deg);
   }
   80% {
-    transform: rotateY(10deg);
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform: rotate(5deg);
   }
   100% {
-    transform: rotateY(0deg);
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes animation__glow {
+  0% {
+    background-color: rgba(255, 0, 0, 0);
+  }
+  50% {
+    background-color: rgb(255, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes animation__glow {
+  0% {
+    background-color: rgba(255, 0, 0, 0);
+  }
+  50% {
+    background-color: rgb(255, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 @media screen and (max-width: 500px) {
-  .final__header {
-    height: 10rem;
-  }
   .main__final {
     width: 100%;
   }
   .final__image {
     -webkit-animation-name: design;
             animation-name: design;
-    -webkit-animation-duration: 2.3s;
-            animation-duration: 2.3s;
+    -webkit-animation-duration: 4.5s;
+            animation-duration: 4.5s;
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
     width: 20rem;
@@ -783,6 +832,23 @@
     margin: auto;
     display: flex;
     justify-content: center;
+  }
+  .final__illustration {
+    width: 100%;
+    margin: 2rem auto;
+  }
+  .final__illustration h2 {
+    color: rgb(37, 214, 37);
+    text-align: center;
+    transform: rotate(-6deg);
+  }
+  .final__giphy {
+    transform: rotate(6deg);
+    width: 50%;
+    margin: 2rem auto;
+    justify-content: center;
+    display: flex;
+    height: 10rem;
   }
 }
 @-webkit-keyframes design {
@@ -1350,10 +1416,10 @@
     font-weight: 400;
   }
   .footer img {
-    margin-top: -2.5rem;
-    margin-left: -1.4rem;
-    width: 8rem;
-    height: 6rem;
+    margin-top: -3.2rem;
+    margin-left: -1.9rem;
+    width: 9.5rem;
+    height: 7.4rem;
   }
 }
 @-webkit-keyframes home__main__animation {

@@ -1,4 +1,4 @@
-import { useEffect, useState, } from "react"
+import { useEffect, useRef, useState, } from "react"
 import { Appetizer, Burger, Wine, Main } from "../components/Menu-properties"
 import menu_header from "../images/menu-header.png"
 import invoice from "../images/alert.png"
@@ -18,7 +18,8 @@ const Menu  = () => {
     [animation, setAnimation] = useState(false),
     table = useSelector((state) => state.bill.value),
     [SideDisplay, SetSideDisplay] = useState(false),
-    [SideAnimation, SetSideAnimation] = useState('side__animation');
+    [SideAnimation, SetSideAnimation] = useState('side__animation'),
+    scrollRef = useRef(null);
 
 
     useEffect(() => {
@@ -28,7 +29,7 @@ const Menu  = () => {
             SetSideDisplay(true)
             setTimeout(() => {
                 SetSideAnimation('')
-            }, 2000)
+            }, 1000)
         }else{
             setAnimation(false)
             SetSideDisplay(false)
@@ -44,9 +45,18 @@ const Menu  = () => {
         setStyle(style) 
     }
     const myFunction = event => {
-            SetnavBarDisplay(event.currentTarget.scrollLeft)
+            SetnavBarDisplay(event.currentTarget.scrollLeft)        
+    }
+
+    const ScrollButton = (direction) => {
+        if(direction){
+            scrollRef.current.scrollLeft -= 200;
+        }else{
+            scrollRef.current.scrollLeft += 200
+        }
         
     }
+  
     return(
         <>
         <header className="menu__fixed menu_pages ">
@@ -69,25 +79,26 @@ const Menu  = () => {
                     <div className="art__line"></div>
                 </article>
                 <nav className="main__nav ">
-                   {navBarDisplay >= 40 && <Icon as={MdKeyboardArrowLeft}  fontSize={'29px'} mt="-.1rem"/>    }
-                        <ul className="main-nav__lists"  onScroll={myFunction}>               
+                   {navBarDisplay >= 40 && <Icon as={MdKeyboardArrowLeft}  fontSize={'29px'} mt=".1rem" onClick={() => ScrollButton(true)}/>    }
+                        <ul className="main-nav__lists" ref = {scrollRef}  onScroll={myFunction}>               
                             <li className="main-nav__list" id={style} onClick={() => {setTitle('appetizer');setStyle('style')}}>appetizer</li>
                             <li className="main-nav__list" id={style + '_12'} onClick={() =>{setTitle('burger'); setStyle('styler') }}>burger</li>
                             <li className="main-nav__list" id={style + '_13'} onClick={() =>{setTitle('wine');setStyle('styles') }}>wine</li>
                             <li className="main-nav__list" id={style + '_14'} onClick={() =>{setTitle('main'); setStyle('stylez')} }>main</li>
-                            <li className="main-nav__list"  id={style + '_16'} onClick={() => SetActive('style1', 'shawarma')}>shawarma</li>
+                            <li className="main-nav__list"  id={style + '_16'}  onClick={() => SetActive('style1', 'shawarma')}>shawarma</li>
                             <li className="main-nav__list" id={style + '_17'} onClick={() =>  SetActive('style2', 'dessert')} >dessert</li>
                             <li className="main-nav__list" id={style + '_18'} onClick={() => SetActive('style3', 'salad')}>salad</li>
                             <li className="main-nav__list" id={style + '_19'} onClick={() => SetActive('style4', 'cocktail')}>cocktail</li>
                         </ul>
 
-                    {navBarDisplay <= 220  && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt="-.3rem"/>}
+                    {navBarDisplay <= 220  && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt=".1rem" onClick={() => ScrollButton(false)}/>}
                 </nav>
             </div>
         </header>
       
         {SideDisplay && 
             <aside className="aside__animation" onClick={() => navigation('/table')}>
+                    <div id={SideAnimation}></div>
                     <img className={SideAnimation} src={WaiterImage} alt="waiter"/>
             </aside>
         }
@@ -99,7 +110,7 @@ const Menu  = () => {
          {title === 'dessert' && <Main isImage={false}/> }
          {title === 'salad' && <Main isImage={false}/> }
          {title === 'cocktail' && <Main isImage={false}/> }
-         
+
         </>
     )
 }
