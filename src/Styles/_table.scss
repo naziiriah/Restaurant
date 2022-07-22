@@ -7,12 +7,12 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .table__list{
         width:100%;
-        min-height: 400px;
+        min-height: 370px;
     }
     .table__buttons{
         display: flex;
         justify-content: space-between;
-        height:8rem;
+        height:6rem;
     }
     .table__empty{
         height:80vh;
@@ -20,7 +20,7 @@ $proxima: 'Proxima Nova', sans-serif;
         animation:EmptyAnimation 1s ease-in-out;
         .table__Image1{
             border-top: 4.5rem solid transparent;
-            width:65%;
+            width:55%;
             margin:auto;
             display: flex;
             justify-content: center;
@@ -34,7 +34,7 @@ $proxima: 'Proxima Nova', sans-serif;
         }
     }    
     .table_page{  
-        min-height:800px; 
+        min-height:650px; 
     }
 }
 @keyframes EmptyAnimation{

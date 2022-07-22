@@ -6,6 +6,7 @@ import EmptyImage from "../images/empty2 1.png"
 import {HiOutlineTrash} from  "react-icons/hi"
 import { Icon } from "@chakra-ui/react"
 import {IoIosArrowBack} from "react-icons/io"
+import Footer from "../components/Footer"
 
 
 const Table = () => {
@@ -56,12 +57,15 @@ const Table = () => {
                                 Send to waiter
                             </button>
                         </div>
+                        <Footer/>
                     </section>
+                    
                 </main>
+                
                </>
                 :
                 <>
-                  <header className="table-design">
+                <header className="table-design">
                     <div className="container bill-header header">
                         <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
                             onClick={() => navigate('/menu')}/>
@@ -81,7 +85,9 @@ const Table = () => {
                         <HomeLightBTN text={'View menu'}/>
                     </div>
                 </section>
-            </main>
+                <Footer/>
+                </main>
+                
             </>
             }
         </>
