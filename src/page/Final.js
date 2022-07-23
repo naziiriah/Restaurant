@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import finalImage from "../images/success.png"
-
+import gif from "../images/hkbkj (2).gif"
 const Final = () => {
     const navigate = useNavigate();
     
     useEffect(() => {
-        setTimeout(() => navigate('/'), 7000)
+        setTimeout(() => navigate('/'), 4500)
     }, [ navigate])
     return (
         <>
@@ -17,8 +17,7 @@ const Final = () => {
                 </section>
                 <section className="final__illustration">
                     <h2>Payment Successful!!</h2>
-                    <iframe title="drake" src="https://giphy.com/embed/5xaOcLDE64VMF4LqqrK" 
-                    frameBorder="0" allowFullScreen className="final__giphy"></iframe>
+                    <img src ={gif} alt ="clapping_gif" className="final__giphy"/>
                 </section>
             </main>
             <footer className="footer final"></footer>

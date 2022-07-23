@@ -4,7 +4,7 @@
         width:100%;
     }
     .final__image{
-        animation: design 7.5s infinite;
+        animation: design 5s;
         width:20rem;
         margin: auto;
     }
@@ -25,12 +25,12 @@
 
     }
     .final__giphy{
-        transform: rotate(6deg);
-        width:60%;
+        transform: rotate(1deg);
+        width:70%;
         margin:2rem auto;
         justify-content: center;
         display: flex;
-        height: 25rem;
+        height: 15rem;
     }
 }   
 
@@ -40,7 +40,7 @@
         transform: rotate(-350deg)
     }
     50%  {
-        opacity:0.75;
+        opacity:1;
         transform: rotate(40deg)
     }
     75% {
