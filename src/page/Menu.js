@@ -79,7 +79,7 @@ const Menu  = () => {
                     <div className="art__line"></div>
                 </article>
                 <nav className="main__nav ">
-                   {navBarDisplay >= 40 && <Icon as={MdKeyboardArrowLeft}  fontSize={'29px'} mt=".1rem" onClick={() => ScrollButton(true)}/>    }
+                   {navBarDisplay >= 40 && <Icon as={MdKeyboardArrowLeft}  fontSize={'29px'} mt="0rem" onClick={() => ScrollButton(true)}/>    }
                         <ul className="main-nav__lists" ref = {scrollRef}  onScroll={myFunction}>               
                             <li className="main-nav__list" id={style} onClick={() => {setTitle('appetizer');setStyle('style')}}>appetizer</li>
                             <li className="main-nav__list" id={style + '_12'} onClick={() =>{setTitle('burger'); setStyle('styler') }}>burger</li>
@@ -91,7 +91,7 @@ const Menu  = () => {
                             <li className="main-nav__list" id={style + '_19'} onClick={() => SetActive('style4', 'cocktail')}>cocktail</li>
                         </ul>
 
-                    {navBarDisplay <= 220  && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt=".1rem" onClick={() => ScrollButton(false)}/>}
+                    {navBarDisplay <= 220  && <Icon as={MdKeyboardArrowRight} fontSize={'29px'} mt="0rem" onClick={() => ScrollButton(false)}/>}
                 </nav>
             </div>
         </header>
