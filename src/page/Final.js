@@ -6,7 +6,7 @@ const Final = () => {
     const navigate = useNavigate();
     
     useEffect(() => {
-        // setTimeout(() => navigate('/'), 4500)
+        setTimeout(() => navigate('/'), 4500)
     }, [ navigate])
     return (
         <>
