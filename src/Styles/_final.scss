@@ -31,6 +31,8 @@
         justify-content: center;
         display: flex;
         height: 15rem;
+        animation-name: gif;
+        animation-duration: 2s;
     }
 }   
 
@@ -50,4 +52,12 @@
     100%{
         opacity: 0;
     }
+  }
+  @keyframes gif {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
   }

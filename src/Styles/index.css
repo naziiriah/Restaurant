@@ -844,6 +844,10 @@
     justify-content: center;
     display: flex;
     height: 15rem;
+    -webkit-animation-name: gif;
+            animation-name: gif;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
 }
 @-webkit-keyframes design {
@@ -878,6 +882,22 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@-webkit-keyframes gif {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes gif {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media screen and (max-width: 500px) {
