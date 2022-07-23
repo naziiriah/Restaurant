@@ -4,9 +4,7 @@
         width:100%;
     }
     .final__image{
-        animation-name: design;
-        animation-duration: 4.5s;
-        animation-iteration-count: 1;
+        animation: design 7.5s infinite;
         width:20rem;
         margin: auto;
     }
@@ -28,11 +26,11 @@
     }
     .final__giphy{
         transform: rotate(6deg);
-        width:50%;
+        width:60%;
         margin:2rem auto;
         justify-content: center;
         display: flex;
-        height: 10rem;
+        height: 25rem;
     }
 }   
 

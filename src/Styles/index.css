@@ -516,7 +516,6 @@
     overflow-x: scroll;
     margin: auto;
     overscroll-behavior-inline: contain;
-    height: 1rem;
     background-color: #fff;
   }
   .main-nav__lists li {
@@ -819,12 +818,8 @@
     width: 100%;
   }
   .final__image {
-    -webkit-animation-name: design;
-            animation-name: design;
-    -webkit-animation-duration: 4.5s;
-            animation-duration: 4.5s;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
+    -webkit-animation: design 7.5s infinite;
+            animation: design 7.5s infinite;
     width: 20rem;
     margin: auto;
   }
@@ -844,11 +839,11 @@
   }
   .final__giphy {
     transform: rotate(6deg);
-    width: 50%;
+    width: 60%;
     margin: 2rem auto;
     justify-content: center;
     display: flex;
-    height: 10rem;
+    height: 25rem;
   }
 }
 @-webkit-keyframes design {
