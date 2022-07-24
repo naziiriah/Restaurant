@@ -2,7 +2,8 @@
 
     .main__final{
         width:100%;
-        animation: menu_pages 1s;
+        animation: final_page 1.5s;
+        transition: 5000s;
     }
     .final__image{
         animation: design 3s;
@@ -63,3 +64,14 @@
             opacity: 1;
         }
   }
+@keyframes final_page {
+    0%{
+        transform: translateX(100%);
+        opacity :0;
+        
+    }
+    100%{
+        transform: translateX(0%);
+        opacity :1;   
+    }
+}

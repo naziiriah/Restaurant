@@ -816,8 +816,9 @@
 @media screen and (max-width: 500px) {
   .main__final {
     width: 100%;
-    -webkit-animation: menu_pages 1s;
-            animation: menu_pages 1s;
+    -webkit-animation: final_page 1.5s;
+            animation: final_page 1.5s;
+    transition: 5000s;
   }
   .final__image {
     -webkit-animation: design 3s;
@@ -901,6 +902,26 @@
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes final_page {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes final_page {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
     opacity: 1;
   }
 }
