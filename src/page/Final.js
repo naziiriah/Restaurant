@@ -1,7 +1,7 @@
 import { useEffect, } from "react"
 import { useNavigate } from "react-router-dom"
 import finalImage from "../images/success.png"
-import gif from "../images/200 (2).webp"
+import gif from "../images/he.gif"
 const Final = () => {
     
     const navigate = useNavigate();
