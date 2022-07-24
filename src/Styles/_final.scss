@@ -2,9 +2,10 @@
 
     .main__final{
         width:100%;
+        animation: menu_pages 1s;
     }
     .final__image{
-        animation: design 5s;
+        animation: design 3s;
         width:20rem;
         margin: auto;
     }
@@ -42,7 +43,7 @@
         transform: rotate(-350deg)
     }
     50%  {
-        opacity:1;
+        opacity:0.75;
         transform: rotate(40deg)
     }
     75% {
@@ -50,7 +51,8 @@
         transform: rotate(0deg)
     }
     100%{
-        opacity: 0;
+        opacity: 1;
+        transform: rotate(0deg)
     }
   }
   @keyframes gif {
