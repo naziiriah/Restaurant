@@ -2,8 +2,7 @@
 
     .main__final{
         width:100%;
-        animation: final_page 1.5s;
-        transition: 5000s;
+        
     }
     .final__image{
         animation: design 3s;
@@ -18,6 +17,8 @@
     .final__illustration{
         width:100%;
         margin:2rem auto;
+        animation: final_page 1s;
+
 
         h2{
             color:rgb(37, 214, 37);

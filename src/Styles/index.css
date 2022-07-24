@@ -816,9 +816,6 @@
 @media screen and (max-width: 500px) {
   .main__final {
     width: 100%;
-    -webkit-animation: final_page 1.5s;
-            animation: final_page 1.5s;
-    transition: 5000s;
   }
   .final__image {
     -webkit-animation: design 3s;
@@ -834,6 +831,8 @@
   .final__illustration {
     width: 100%;
     margin: 2rem auto;
+    -webkit-animation: final_page 1s;
+            animation: final_page 1s;
   }
   .final__illustration h2 {
     color: rgb(37, 214, 37);
