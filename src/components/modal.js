@@ -5,7 +5,7 @@ import { TbArrowsLeftRight, } from "react-icons/tb"
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { CalculateTotal, CheckBill } from "../redux"
+import { CalculateTotal,} from "../redux"
 import CurrencyInput from 'react-currency-input-field';
 import doubleStroke from "../images/double.png"
 import {VscCreditCard} from "react-icons/vsc"
@@ -27,12 +27,8 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
 
         Dispatch(CalculateTotal({
             total:Total,
-            mySplit: Bill
+            mySplit: PureBill
         }));
-
-        Dispatch(CheckBill({
-            MySplit:PureBill
-        }))
     };
 
 

@@ -82,15 +82,13 @@ export const BillSlice = createSlice({
             localStorage.setItem('Total', JSON.stringify(state.Total))
         },
         CalculateTotal: (state, {payload}) => {
-           Number(payload.mySplit) === Number(payload.total)? 
+           Number(payload.mySplit) >= Number(payload.total) || Number(payload.mySplit) === 0 ? 
                                 state.Total = 0 :
                                 state.Total = (payload.total - payload.mySplit)
                                 
 
             state.Total === 0 && (state.value = [] )
 
-            localStorage.setItem('Bills', JSON.stringify(state.value))
-            localStorage.setItem('Total', JSON.stringify(state.Total))
         },
         UpdateSelectedStatus : (state, {payload}) => {
             const existingState = state.value.filter(state => state.id === payload.id)
@@ -103,17 +101,8 @@ export const BillSlice = createSlice({
                 }
             }
         },
-        CheckBill : (state, {payload}) => {
-            state.SplitBill = payload.MySplit
-            state.Total = state.value.reduce((total, price) => total + (price.price * price.quantity),  0)
-            
-            if(state.SplitBill > 0){
-                state.Total = state.Total - state.SplitBill 
-            }
-            
-        }
     }
 })
 
-export const { addToCart, removeFromCart, AddQuantity, SubtractQuantity, CalculateTotal, CheckBill} = BillSlice.actions
+export const { addToCart, removeFromCart, AddQuantity, SubtractQuantity, CalculateTotal} = BillSlice.actions
 export default BillSlice.reducer
