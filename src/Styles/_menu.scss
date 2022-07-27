@@ -203,7 +203,7 @@ $proxima: 'Proxima Nova', sans-serif;
 
 // medium sized tablet
 
-@media screen and (max-width:850px) and (min-width:501px) {
+@media screen and (max-width:800px) and (min-width:501px) {
     .menu{
         background-color: #fff;
         background: url('../images/menu-background.png');
@@ -396,7 +396,203 @@ $proxima: 'Proxima Nova', sans-serif;
             animation:animation__glow 1s infinite;
         }
         .image_animation{
-            // animation: 1s infinite image_animation;
+            width:5rem;
+        }
+    }
+    
+}
+@media (min-device-width: 801px) and (max-device-width: 1280px) {
+    .menu{
+        background-color: #fff;
+        background: url('../images/menu-background.png');
+        &_pages {
+            animation: menu_pages .75s;
+        }
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            font-family: 400;
+            line-height: 32px;
+            padding-top: 3rem;
+            width:100%;
+            margin-bottom: .5rem;
+        }
+        &__design{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 2rem auto -2rem ;
+            height: 2rem;
+
+        }
+        &__title{
+            text-align: start;
+            margin-left: 13px;
+            font-size: 40px;
+            font-family: $Caterina;
+            font-weight: 200;
+        }
+        &__invoice{
+            margin-top: .2rem;
+            width:23px;
+            height: 23px;
+            cursor: pointer;
+        }
+    }  
+    .main__nav{
+      
+        margin-top: .5rem;
+        width:100%;
+        display: flex;
+    } 
+    .menu__fixed{
+        position: sticky;
+        top:0%;
+        background-color: #fff;
+        height:10.8rem;
+        
+    }
+
+    .main-nav__lists{
+        
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        text-transform: capitalize;
+
+        white-space:nowrap;
+        overflow-x:scroll;
+        margin:auto;
+        overscroll-behavior-inline: contain;
+        background-color: #fff;
+        li{
+            cursor: pointer;
+            color: #8A8A8A;
+            margin: 0 2rem;
+
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+
+    .main-nav__list{
+        font-weight: 400;
+        font-size: 28px;
+    }
+    #style, #styler_12,#styles_13 , #stylez_14, #stylez_15, #style1_16, #style1_16, #style2_17, #style3_18, #style4_19{
+        background-image: linear-gradient(60deg, #E21143, #FFB03A);
+        background-clip: text;
+        color: transparent; 
+    }
+
+    .dish{
+        width:70%;
+        margin:auto;
+
+        animation: menu-item .5s ease-in-out;
+        &__image{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0rem auto;
+            width:25rem;
+        }
+        &__text{
+            text-align: center;
+
+        }
+        &__name{
+            font-family: $Caterina;
+            font-weight: 600;
+            letter-spacing: 1px;
+            line-height: 40px;
+            font-size:38px;    
+            margin: 0rem 0rem 0.5rem;
+        }
+        &__descriptions{
+            color: #2D2D2D;
+            font-weight: lighter;
+            font-size: 22px;
+            line-height: 25px;
+        }
+        &__price{
+            font-style: $proxima;
+            line-height: 35px;
+            font-size:30px;
+            margin: .8rem 0rem;
+        }
+        &__purchase{
+            width:90%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 1.5rem auto 1.7rem ;
+        }
+        &__calculator{
+            background-color: #000;
+            height:3rem;
+            width:40%;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__calc{
+            color:#fff;
+            width:33%;
+            padding-top: 9px;
+            font-size: 28px;
+            text-align: center;
+            height:100%;
+            margin: auto;
+            transition: 4s ease-in;
+        }
+    }
+    .dot__center{
+        width: .3rem;
+        height:.3rem;
+        background-color: rgba(255, 0, 0,);
+        border-radius: 50%;        
+    }
+    .dot__animation{
+        width:1.4rem;
+        height: 1.4rem;
+        background-color: rgba(255, 0, 0,);
+        display: flex;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        top:-2.87rem;
+        left:.19rem;
+        position: relative;
+        animation: glow 1.5s infinite ease-in-out;
+    }
+    .aside__animation{
+        width:5rem;
+        height:2.5rem;
+        background-color: transparent;        
+        position: sticky;
+        top:70%;
+        left:100%;
+        bottom: 4%;
+        animation: Side_animation alternate .5s ease-in;
+        margin-top: -2.5rem;
+        img{
+            width:5rem; 
+        } 
+        #image_animation
+        // div
+        {
+            width:.7rem;
+            position: absolute;
+            top:1rem;
+            left:0.5rem;
+            height:.7rem;
+            border-radius: 50%;
+            background-color: #E21143;
+            animation:animation__glow 1s infinite;
+        }
+        .image_animation{
             width:5rem;
         }
     }
@@ -482,6 +678,7 @@ $proxima: 'Proxima Nova', sans-serif;
         transform: rotate(0deg);
     }
 }
+
 @keyframes animation__glow  {
     0% {
         background-color: rgba(255, 0, 0, 0.0);

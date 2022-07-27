@@ -45,7 +45,7 @@ $proxima: 'Proxima Nova', sans-serif;
         opacity:1;
     }
 }
-@media screen and (min-width:501px) and (max-width:850px) {
+@media screen and (min-width:501px) and (max-width:800px) {
     .table-design{
         background: url('../images/menu-background.png');
     }
@@ -60,6 +60,42 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .table__empty{
         height:80vh;
+        width:100%;
+        animation:EmptyAnimation 1s ease-in-out;
+        .table__Image1{
+            border-top: 4.5rem solid transparent;
+            width:55%;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+        .table__Image2{
+            border-top: .5rem solid transparent;
+            width:25%;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+    }    
+    .table_page{  
+        min-height:650px; 
+    }    
+}
+@media (min-device-width: 801px) and (max-device-width: 1280px) {
+    .table-design{
+        background: url('../images/menu-background.png');
+    }
+    .table__list{
+        width:100%;
+        min-height: 650px;
+    }
+    .table__buttons{
+        display: flex;
+        justify-content: space-between;
+        height:6rem;
+    }
+    .table__empty{
+        height:87vh;
         width:100%;
         animation:EmptyAnimation 1s ease-in-out;
         .table__Image1{

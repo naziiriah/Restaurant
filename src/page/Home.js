@@ -21,14 +21,14 @@ const Home = () => {
                 </p>
 
                 <article className="welcome__article">
-                    <HomeLightBTN text={'view menu'}/>
+                    <HomeLightBTN text={'View menu'}/>
 
                     <div className="welcome__tableBill">
                         <h2 className="welcome__tableText1">Table bill</h2>
                         <h2 className="welcome__tableText1">&#x20A6;{String(Number(Total).toLocaleString("en-US")) + '.00'}</h2>
                     </div>
 
-                    <HomeDarkBTN text={'view bill'}/>
+                    <HomeDarkBTN text={'View bill'}/>
                 </article>
                 
            </div>

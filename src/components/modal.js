@@ -43,13 +43,14 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
             { modal && 
                 <div className="modal">
                     <div className="overlay" onClick={() => setModal(!modal)}></div>
-                    <section className="modal__content container">
+                    <section className="modal__content ">
+                        <div className="container">
                         <div className="modal__head">
                             <h1>Pay bill</h1>       
                             <h2>&#x20A6;{String(Bill.toLocaleString("en-US")) + '.00'}</h2>
                         </div>
 
-                        <div className="modal__transfer">
+                        <div className="modal__transfer ">
 
                             <div className="modal__box" onClick={() => SetShowtransfer(!showTransfer)}>
                                 <Icon as={TbArrowsLeftRight} mt="0.1rem" ml="1rem" fontSize={'30px'}/>
@@ -66,7 +67,7 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
                             }
 
                         </div>
-                        <div className="modal__card">
+                        <div className="modal__card ">
                             <div className="modal__box" onClick={() => setShowCard(!showCard)}>
                                 <Icon as={VscCreditCard} mt="0.1rem" ml="1rem" fontSize={'30px'}/>
                                 <h3>Pay with card</h3>
@@ -94,9 +95,10 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
                                     </div>
                             }
                         </div>
-                        <div className="modal__final">
+                        <div className="modal__final ">
                             { showCard && 
                                 <button className="btn btn--dark" onClick={confirmPayment} >Proceed</button>}
+                        </div>
                         </div>
                     </section>
                 </div>
@@ -128,7 +130,8 @@ export const SplitModal = ({total, myBills, OriginalTotal}) => {
                         onClick={() => setModal(!modal)}
                         >
                     </div>
-                        <section className="modal__content container">
+                        <section className="modal__content">
+                            <div className="container">
                             <div className="modal__header">
                                 <h1>Split bill</h1>
                                 <Icon as = {IoMdPaper} my=".2rem" ml="2rem" fontSize={'37px'}/>
@@ -165,6 +168,7 @@ export const SplitModal = ({total, myBills, OriginalTotal}) => {
                                     onClick={SplitCancel}>cancel</button>
                                 <button className="btn--dark  btn__modal"
                                     onClick={() => {setModal(!modal); setMyBill(Number(Value));}}>confirm</button>
+                            </div>
                             </div>
                         </section>
                     </div>
@@ -214,7 +218,8 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                     onClick={() => {setModal(!modal); setActive(''); SetCustomTip(0)}}
                     >
                 </div>
-                <section className="modal__content container">
+                <section className="modal__content">
+                    <div className="container">
                     <div className="modal__header">
                         <h1>Tip Waiter?</h1>
                         <Icon as = {FcMoneyTransfer} my=".2rem" ml="2rem" mt=".5rem" fontSize={'37px'}/>
@@ -266,6 +271,8 @@ export const CustomTip = ({active, Wingedmoney, waiter}) =>  {
                                 Submit
                         </button>
                     </div>
+                    </div>
+                   
                 </section>                            
             </div>
             }

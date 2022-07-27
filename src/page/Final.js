@@ -1,13 +1,13 @@
 import { useEffect, } from "react"
 import { useNavigate } from "react-router-dom"
 import finalImage from "../images/success.png"
-import gif from "../images/he.gif"
+import gif from "../images/the origina.gif"
 const Final = () => {
     
     const navigate = useNavigate();
     
     useEffect(() => {
-        setTimeout(() => navigate('/'), 4400)
+        setTimeout(() => navigate('/'), 4200)
     }, [ navigate])
     return (
         <>
