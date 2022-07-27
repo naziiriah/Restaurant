@@ -7,7 +7,6 @@ import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 import { useSelector } from "react-redux"
 import WaiterImage from "../images/240_F_461566395_Fj4vy92CnlFhbFHoH8MLLptMQgCAOhK9.jpg"
-import Footer from "../components/Footer"
 
 
 const Menu  = () => {

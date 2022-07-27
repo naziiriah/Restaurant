@@ -38,7 +38,46 @@
         animation-duration: 2s;
     }
 }   
+@media screen and (min-width:501px) and (max-width:850px) {
+ 
+    .main__final{
+        width:100%;
+        
+    }
+    .final__image{
+        animation: design 3s;
+        width:40rem;
+        margin: auto;
+    }
+    .final__section{
+        margin:auto;
+        display: flex;
+        justify-content: center;
+    }
+    .final__illustration{
+        width:100%;
+        margin:2rem auto;
+        animation: final_page 1s;
 
+
+        h2{
+            color:rgb(37, 214, 37);
+            text-align: center;
+            transform: rotate(-6deg);
+        }
+
+    }
+    .final__giphy{
+        transform: rotate(1deg);
+        width:70%;
+        margin:2rem auto;
+        justify-content: center;
+        display: flex;
+        height: 15rem;
+        animation-name: gif;
+        animation-duration: 2s;
+    }   
+}
 @keyframes design{
     0%   { 
         opacity:0;
