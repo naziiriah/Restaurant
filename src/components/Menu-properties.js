@@ -104,19 +104,23 @@ const BasicTheme = ({state, index, isImage }) => {
         SetSelect(!select)
     }
     function add(){
-        value === 10 ? setValue(10) : setValue(value + 1)
-        dispatch(AddQuantity({
-            id:state.id,
-            quantity:value
-        }))
+        if(value < 10){
+            setValue(value + 1)
+            dispatch(AddQuantity({
+                id:state.id,
+                quantity:value
+            })) 
+        }
     }
 
     function subtract(){
-         value === 0 ? setValue(0): setValue(value - 1)
+        if(value > 1){
          dispatch(SubtractQuantity({
             id:state.id,
             quantity:value
         }))    
+    }
+        
     }
 
     return(
