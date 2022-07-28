@@ -124,7 +124,7 @@ const BasicTheme = ({state, index, isImage }) => {
     }
 
     return(
-        <section key={state.id} className="dish ">
+        <section key={state.id} className="dish container ">
             {isImage && <img className="dish__image" src={state.image} alt={state.name}/>}
             <div className="dish__text">
                 <h2 className="dish__name">{state.name}</h2>
