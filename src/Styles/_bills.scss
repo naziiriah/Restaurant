@@ -883,17 +883,17 @@ $proxima: 'Proxima Nova', sans-serif;
         min-height:11rem;
         display: flex;
         font-family: $proxima;
-        overflow-x:auto;
-        overscroll-behavior-inline: contain;
-        margin:0.5rem 0rem;
+        width:100%;
+        justify-content: space-between;
+        margin:0.5rem auto;
         .bill-tips{
             height:9.5rem;
-            margin-right: 1.7rem;
+            
             margin-left: .2rem;
             border-radius: 10px;
             border: #EAEAEA solid 1px;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            min-width:12rem;
+            width:22%;
         }
         &::-webkit-scrollbar {
             display: none;
@@ -1143,6 +1143,9 @@ $proxima: 'Proxima Nova', sans-serif;
 #welcome__design{
     font-size: 21px;
     font-weight: 600;
+}
+.arrowState{
+    display: none;
 }
 }
 @keyframes bill {

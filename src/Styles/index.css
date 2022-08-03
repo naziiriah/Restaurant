@@ -1059,18 +1059,17 @@
     min-height: 11rem;
     display: flex;
     font-family: "Proxima Nova", sans-serif;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    margin: 0.5rem 0rem;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0.5rem auto;
   }
   .bill__tip-option .bill-tips {
     height: 9.5rem;
-    margin-right: 1.7rem;
     margin-left: 0.2rem;
     border-radius: 10px;
     border: #EAEAEA solid 1px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    min-width: 12rem;
+    width: 22%;
   }
   .bill__tip-option::-webkit-scrollbar {
     display: none;
@@ -1307,6 +1306,9 @@
   #welcome__design {
     font-size: 21px;
     font-weight: 600;
+  }
+  .arrowState {
+    display: none;
   }
 }
 @-webkit-keyframes bill {
@@ -2427,7 +2429,7 @@
   }
   .modal__box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 2.5rem;
     padding-top: 0.5rem;
     width: 100%;
@@ -2445,7 +2447,7 @@
     height: 5rem;
     text-align: center;
     margin: 1rem auto;
-    background-color: rgb(231, 226, 226);
+    background-color: #fff;
     padding-top: 0.5rem;
     -webkit-animation: 0.2s ease-in transfer;
             animation: 0.2s ease-in transfer;
@@ -2492,7 +2494,7 @@
     height: 3rem;
     font-family: "Proxima Nova", sans-serif;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     font-size: 20px;
     text-align: center;
@@ -2503,7 +2505,7 @@
   }
   .modal__card-others {
     width: 100%;
-    margin: 1rem auto;
+    margin: 2rem auto 0rem;
     display: flex;
     justify-content: space-between;
   }
@@ -2514,7 +2516,7 @@
     display: flex;
     height: 3rem;
     width: 47%;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     font-size: 20px;
     line-height: 22px;
@@ -2712,7 +2714,7 @@
   }
   .modal__box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 2.5rem;
     padding-top: 0.5rem;
     width: 100%;
@@ -2727,10 +2729,10 @@
   }
   .modal__account {
     width: 90%;
-    height: 5rem;
+    height: 4rem;
     text-align: center;
     margin: 1rem auto;
-    background-color: rgb(231, 226, 226);
+    background-color: #fff;
     padding-top: 0.5rem;
     -webkit-animation: 0.2s ease-in transfer;
             animation: 0.2s ease-in transfer;
@@ -2746,7 +2748,7 @@
     font-size: 21px;
     font-weight: bold;
     line-height: 24px;
-    margin-top: 0.7rem;
+    margin-top: 1.4rem;
   }
   .btn__modal {
     height: 3rem;
@@ -2998,7 +3000,7 @@
   }
   .modal__box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 2.5rem;
     padding-top: 0.5rem;
     width: 100%;
@@ -3016,7 +3018,7 @@
     height: 5rem;
     text-align: center;
     margin: 1rem auto;
-    background-color: rgb(231, 226, 226);
+    background-color: #fff;
     padding-top: 0.5rem;
     -webkit-animation: 0.2s ease-in transfer;
             animation: 0.2s ease-in transfer;
@@ -3215,6 +3217,24 @@
   .table_page {
     min-height: 650px;
   }
+  .main__transfer {
+    width: 80%;
+    height: 10rem;
+    margin: auto;
+    position: absolute;
+    top: 10rem;
+    left: 10%;
+    background-color: #fff;
+    box-shadow: 4px 4px rgba(128, 128, 128, 0.39);
+    border-radius: 10px;
+  }
+  .transfer__container {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 25rem;
+    left: 10%;
+  }
 }
 @-webkit-keyframes EmptyAnimation {
   from {
@@ -3268,6 +3288,24 @@
   .table_page {
     min-height: 650px;
   }
+  .main__transfer {
+    width: 80%;
+    height: 10rem;
+    margin: auto;
+    position: absolute;
+    top: 10rem;
+    left: 10%;
+    background-color: #fff;
+    box-shadow: 4px 4px rgba(128, 128, 128, 0.39);
+    border-radius: 10px;
+  }
+  .transfer__container {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 25rem;
+    left: 10%;
+  }
 }
 @media (min-device-width: 801px) and (max-device-width: 1280px) {
   .table-design {
@@ -3283,7 +3321,7 @@
     height: 6rem;
   }
   .table__empty {
-    height: 87vh;
+    height: 80vh;
     width: 100%;
     -webkit-animation: EmptyAnimation 1s ease-in-out;
             animation: EmptyAnimation 1s ease-in-out;
@@ -3303,7 +3341,25 @@
     justify-content: center;
   }
   .table_page {
-    min-height: 650px;
+    min-height: 50rem;
+  }
+  .main__transfer {
+    width: 80%;
+    height: 10rem;
+    margin: auto;
+    position: absolute;
+    top: 10rem;
+    left: 10%;
+    background-color: #fff;
+    box-shadow: 4px 4px rgba(128, 128, 128, 0.39);
+    border-radius: 10px;
+  }
+  .transfer__container {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 25rem;
+    left: 10%;
   }
 }
 .container {

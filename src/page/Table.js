@@ -32,7 +32,7 @@ const Table = () => {
                         <div></div>
                     </div>
                 </header>
-                <main className=" table-design">
+                <main className=" table-design table_page">
                     <section className="container  bill__header table_page">
                         <nav className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
@@ -57,9 +57,12 @@ const Table = () => {
                                 Send to waiter
                             </button>
                         </div>
-                        <Footer/>
+                        
                     </section>
                 </main>
+                <footer className="table-design">
+                    <Footer/>
+                </footer>
                </>
                 :
                 <>
@@ -81,8 +84,11 @@ const Table = () => {
                         <HomeLightBTN text={'View menu'}/>
                     </div>
                 </section>
-                <Footer/>
+                
                 </main>
+                <footer className="table-design">
+                    <Footer/>
+                </footer>
             </>
             }
         </>

@@ -2,33 +2,29 @@ import {   useEffect, useState } from "react"
 import {IoMdPaper} from "react-icons/io"
 import { Icon } from "@chakra-ui/react"
 import { TbArrowsLeftRight, } from "react-icons/tb"
-import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp} from "react-icons/md"
 import { useNavigate } from "react-router-dom"
-import { useDispatch } from "react-redux"
-import { CalculateTotal,} from "../redux"
 import CurrencyInput from 'react-currency-input-field';
 import doubleStroke from "../images/double.png"
 import {VscCreditCard} from "react-icons/vsc"
 import {FcMoneyTransfer} from  "react-icons/fc"
 
 export const PayModal = ({MyFee, Total, PureBill}) => {
-    const [showTransfer, SetShowtransfer] = useState(false),
-    [showCard, setShowCard] = useState(false),
-    [modal, setModal] = useState(false),
+    const [modal, setModal] = useState(false),
     navigation = useNavigate();
-    let icon = showTransfer ? MdOutlineKeyboardArrowUp : MdOutlineKeyboardArrowDown
-    let icon2 = showCard ? MdOutlineKeyboardArrowUp : MdOutlineKeyboardArrowDown
     const Bill = Number(MyFee) ? Number(MyFee) : Total,
-    Dispatch = useDispatch(),
     
-    
-    confirmPayment = () => {
-        navigation('/end')
-
-        Dispatch(CalculateTotal({
+    confirmPayment = (type) => {
+       if(type === 'transfer'){
+            navigation("/pay-by-transfer", {state:{
+                total:Total,
+                mySplit: PureBill
+            }})
+       }else if(type === "card"){
+        navigation("/pay-with-card", {state:{
             total:Total,
             mySplit: PureBill
-        }));
+        }})
+       }
     };
 
 
@@ -52,52 +48,19 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
 
                         <div className="modal__transfer ">
 
-                            <div className="modal__box" onClick={() => SetShowtransfer(!showTransfer)}>
-                                <Icon as={TbArrowsLeftRight} mt="0.1rem" ml="1rem" fontSize={'30px'}/>
+                            <div className="modal__box" onClick={() =>confirmPayment('transfer')}>
                                 <h3>Pay by bank transfer</h3>
-                                <Icon as={icon} mt="-0.1rem" ml="2rem" fontSize={'34px'} />  
+                                <Icon as={TbArrowsLeftRight} mt="0.4rem" ml="1rem" fontSize={'20px'}/>                                                                
                             </div>
-
-                            {showTransfer &&
-                                <div className="modal__account">
-                                        <h4>Transfer your bill to the 
-                                            account<br/> number below</h4>
-                                        <h1>1234 5678 0987</h1>
-                                </div>
-                            }
 
                         </div>
                         <div className="modal__card ">
-                            <div className="modal__box" onClick={() => setShowCard(!showCard)}>
-                                <Icon as={VscCreditCard} mt="0.1rem" ml="1rem" fontSize={'30px'}/>
+                            <div className="modal__box" onClick={() =>confirmPayment('card') }>
                                 <h3>Pay with card</h3>
-                                <Icon as={icon2} my="0rem" ml="2rem" fontSize={'34px'}/>  
+                                <Icon as={VscCreditCard} mt="0.4rem" ml="1rem" fontSize={'20px'}/>                                                                
                             </div>
-                            {
-                                showCard && 
-                                    <div className="modal__card-details">
-                                        <div className="modal__card-number">
-                                            <input placeholder="1234   ****   ****  ****" 
-                                               pattern="[0-9]*" 
-                                               inputMode="numeric"
-                                               type={'text'}/>
-                                        </div>
-                                        <div className="modal__card-others">
-                                            <input placeholder="MM/YY" 
-                                               pattern="[0-9]*" 
-                                               inputMode="numeric"
-                                               type={'text'}/>
-                                            <input placeholder="CVV" 
-                                               pattern="[0-9]*" 
-                                               inputMode="numeric"
-                                               type={'text'} />
-                                        </div>
-                                    </div>
-                            }
                         </div>
                         <div className="modal__final ">
-                            { showCard && 
-                                <button className="btn btn--dark" onClick={confirmPayment} >Proceed</button>}
                         </div>
                         </div>
                     </section>

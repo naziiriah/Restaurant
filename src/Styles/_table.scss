@@ -36,6 +36,25 @@ $proxima: 'Proxima Nova', sans-serif;
     .table_page{  
         min-height:650px; 
     }
+    .main__transfer{
+        width:80%;
+        height:10rem;
+        margin: auto;
+        position:absolute;
+        top:10rem;
+        left:10%;
+        background-color: #fff;
+        box-shadow: 4px 4px rgba(128, 128, 128, 0.39);
+        border-radius: 10px;
+    }
+    .transfer__container{
+        width:80%;
+        margin:auto;
+        position:absolute;
+        top:25rem;
+        left:10%;
+    }
+
 }
 @keyframes EmptyAnimation{
     from{
@@ -79,7 +98,25 @@ $proxima: 'Proxima Nova', sans-serif;
     }    
     .table_page{  
         min-height:650px; 
-    }    
+    }  
+    .main__transfer{
+        width:80%;
+        height:10rem;
+        margin: auto;
+        position:absolute;
+        top:10rem;
+        left:10%;
+        background-color: #fff;
+        box-shadow: 4px 4px rgba(128, 128, 128, 0.39);
+        border-radius: 10px;
+    }
+    .transfer__container{
+        width:80%;
+        margin:auto;
+        position:absolute;
+        top:25rem;
+        left:10%;
+    }  
 }
 @media (min-device-width: 801px) and (max-device-width: 1280px) {
     .table-design{
@@ -95,7 +132,7 @@ $proxima: 'Proxima Nova', sans-serif;
         height:6rem;
     }
     .table__empty{
-        height:87vh;
+        height:80vh;
         width:100%;
         animation:EmptyAnimation 1s ease-in-out;
         .table__Image1{
@@ -114,6 +151,24 @@ $proxima: 'Proxima Nova', sans-serif;
         }
     }    
     .table_page{  
-        min-height:650px; 
-    }    
+        min-height:50rem 
+    }  
+    .main__transfer{
+        width:80%;
+        height:10rem;
+        margin: auto;
+        position:absolute;
+        top:10rem;
+        left:10%;
+        background-color: #fff;
+        box-shadow: 4px 4px rgba(128, 128, 128, 0.39);
+        border-radius: 10px;
+    }
+    .transfer__container{
+        width:80%;
+        margin:auto;
+        position:absolute;
+        top:25rem;
+        left:10%;
+    }  
 }

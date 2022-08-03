@@ -188,7 +188,7 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .modal__box{
         display: flex;
-        justify-content: space-between; 
+        justify-content: center;
         height:2.5rem;
         padding-top: .5rem;
         width:100%;
@@ -206,7 +206,7 @@ $proxima: 'Proxima Nova', sans-serif;
         height:5rem;
         text-align: center;
         margin:1rem auto;
-        background-color: rgb(231, 226, 226);
+        background-color: #fff;
         padding-top: .5rem;
         animation: .2s ease-in transfer;
         & h4{
@@ -253,7 +253,7 @@ $proxima: 'Proxima Nova', sans-serif;
             height: 3rem;
             font-family: $proxima;
             width: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
             text-align: center;
             font-size: 20px;
             text-align: center;
@@ -265,7 +265,7 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .modal__card-others{
         width:100%;
-        margin: 1rem auto;
+        margin: 2rem auto 0rem;
         display: flex;
         justify-content: space-between;
         & input{
@@ -275,7 +275,7 @@ $proxima: 'Proxima Nova', sans-serif;
             display: flex;
             height: 3rem;
             width: 47%;
-            border-radius: 10px;
+            border-radius: 5px;
             text-align: center;
             font-size: 20px;
             line-height: 22px;
@@ -485,7 +485,7 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .modal__box{
         display: flex;
-        justify-content: space-between; 
+        justify-content: center;
         height:2.5rem;
         padding-top: .5rem;
         width:100%;
@@ -500,10 +500,10 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .modal__account{
         width:90%;        
-        height:5rem;
+        height:4rem;
         text-align: center;
         margin:1rem auto;
-        background-color: rgb(231, 226, 226);
+        background-color: #fff;
         padding-top: .5rem;
         animation: .2s ease-in transfer;
         & h4{
@@ -517,7 +517,7 @@ $proxima: 'Proxima Nova', sans-serif;
             font-size: 21px;   
             font-weight: bold;
             line-height: 24px;
-            margin-top: .7rem;
+            margin-top: 1.4rem;
         }
     }
     .btn__modal{
@@ -782,7 +782,7 @@ $proxima: 'Proxima Nova', sans-serif;
 }
 .modal__box{
     display: flex;
-    justify-content: space-between; 
+    justify-content: center;
     height:2.5rem;
     padding-top: .5rem;
     width:100%;
@@ -800,7 +800,7 @@ $proxima: 'Proxima Nova', sans-serif;
     height:5rem;
     text-align: center;
     margin:1rem auto;
-    background-color: rgb(231, 226, 226);
+    background-color: #fff;
     padding-top: .5rem;
     animation: .2s ease-in transfer;
     & h4{

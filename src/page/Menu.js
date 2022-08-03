@@ -7,7 +7,7 @@ import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 import { useSelector } from "react-redux"
 import WaiterImage from "../images/240_F_461566395_Fj4vy92CnlFhbFHoH8MLLptMQgCAOhK9.jpg"
-
+import Footer from "../components/Footer"
 
 const Menu  = () => {
     const [title, setTitle] = useState('appetizer'),
@@ -97,8 +97,6 @@ const Menu  = () => {
       
         {SideDisplay && 
             <aside className="aside__animation" onClick={() => navigation('/table')}>
-                    <div id={SideAnimation}></div>
-                    <img className={SideAnimation} src={WaiterImage} alt="waiter"/>
             </aside>
         }
          {title === "appetizer" && <Appetizer isImage={true} />}
@@ -109,7 +107,9 @@ const Menu  = () => {
          {title === 'dessert' && <Main isImage={false}/> }
          {title === 'salad' && <Main isImage={false}/> }
          {title === 'cocktail' && <Main isImage={false}/> }
-
+         <footer className="table-design">
+            <Footer/>
+        </footer>
         </>
     )
 }

@@ -102,7 +102,7 @@ const Bills = () => {
                     </div>
 
                     <div className="bill__section">
-                    {moreDisplay > 40 && <Icon as={MdKeyboardArrowLeft} fontSize={'30px'} mt="2.5rem" onClick={() => ScrollButton(true)}/> }
+                    {moreDisplay > 40 && <div className="arrowState"><Icon as={MdKeyboardArrowLeft} fontSize={'30px'} mt="2.5rem" onClick={() => ScrollButton(true)}/> </div>}
                         <div className="bill__tip-option"  onScroll={ScrollTip} ref={scrollRef}>
                             <div className='bill-tips' id={"tip-0_" + Active} onClick={()=>SetDisplay('active',500)}>
                                 <div className={"bill__green0__" +Active }></div>
@@ -130,7 +130,7 @@ const Bills = () => {
 
                             <CustomTip active={[Active, setActive]} Wingedmoney={MoneyIcon} waiter={[Waiter,setWaiter]}/>
                         </div>   
-                        { moreDisplay < 70 && <Icon as={MdKeyboardArrowRight} fontSize={'30px'} mt="2.5rem" alignItems={'center'} onClick={() => ScrollButton(false)}/>}
+                        { moreDisplay < 70 && <div className="arrowState"><Icon as={MdKeyboardArrowRight} className="arrowState" fontSize={'30px'} display={["block","block","none","block"]} mt="2.5rem" alignItems={'center'} onClick={() => ScrollButton(false)}/></div>}
                     </div>
                        
                 </aside>

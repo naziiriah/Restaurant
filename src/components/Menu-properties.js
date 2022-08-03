@@ -104,7 +104,7 @@ const BasicTheme = ({state, index, isImage }) => {
         SetSelect(!select)
     }
     function add(){
-        if(value < 10){
+        if(value > 0){
             setValue(value + 1)
             dispatch(AddQuantity({
                 id:state.id,
