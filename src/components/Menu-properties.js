@@ -5,7 +5,6 @@ import {IoMdAdd} from "react-icons/io"
 import { Icon } from "@chakra-ui/react"
 import { useDispatch, useSelector} from "react-redux"
 import { addToCart, removeFromCart, AddQuantity, SubtractQuantity } from "../redux"
-import Footer from "./Footer"
 
 
 
@@ -20,7 +19,6 @@ export const Appetizer = ({isImage}) => {
                 </div>
                 )
             }
-            <Footer/>
         </main>
     )
 }
@@ -36,7 +34,6 @@ export const Burger= ({isImage}) => {
                     </div>
                     )
             }
-            <Footer/>
         </main>
     )
 }
@@ -53,7 +50,6 @@ export const Wine = ({isImage}) => {
                     </div>
                     )
             }
-            <Footer/>
         </main>
     )
 }
@@ -68,7 +64,6 @@ export const Main  = ({isImage}) => {
                     </div>
                     )
             }
-            <Footer/>
         </main>
     )
 }

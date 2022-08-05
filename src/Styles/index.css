@@ -1352,7 +1352,7 @@
   .menu__design {
     display: flex;
     justify-content: space-evenly;
-    margin: 2rem auto -2rem;
+    margin: 0rem auto -2rem;
     height: 2rem;
   }
   .menu__title {
@@ -1491,17 +1491,24 @@
     width: 5rem;
     height: 2.5rem;
     background-color: transparent;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 70%;
-    left: 100%;
     bottom: 4%;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
   }
-  .aside__animation img {
-    width: 5rem;
+  .aside__animation .notepng {
+    position: fixed;
+    left: 61%;
+    width: 23%;
+    top: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  .aside__animation .arrowpng {
+    position: fixed;
+    top: 1rem;
+    left: 80%;
+    width: 10%;
   }
   .aside__animation #image_animation {
     width: 0.7rem;
@@ -1540,7 +1547,7 @@
   .menu__design {
     display: flex;
     justify-content: space-evenly;
-    margin: 2rem auto -2rem;
+    margin: 0rem auto -2rem;
     height: 2rem;
   }
   .menu__title {
@@ -1690,8 +1697,19 @@
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
   }
-  .aside__animation img {
-    width: 5rem;
+  .aside__animation .notepng {
+    position: fixed;
+    left: 66%;
+    width: 7rem;
+    top: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  .aside__animation .arrowpng {
+    position: fixed;
+    top: 1rem;
+    left: 80%;
+    width: 10%;
   }
   .aside__animation #image_animation {
     width: 0.7rem;
@@ -1730,7 +1748,7 @@
   .menu__design {
     display: flex;
     justify-content: space-evenly;
-    margin: 2rem auto -2rem;
+    margin: 0rem auto -2rem;
     height: 2rem;
   }
   .menu__title {
@@ -1870,17 +1888,23 @@
     width: 5rem;
     height: 2.5rem;
     background-color: transparent;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 70%;
-    left: 100%;
-    bottom: 4%;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
   }
-  .aside__animation img {
-    width: 5rem;
+  .aside__animation .notepng {
+    position: fixed;
+    left: 67%;
+    width: 8rem;
+    top: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  .aside__animation .arrowpng {
+    position: fixed;
+    top: 1rem;
+    left: 80%;
+    width: 10%;
   }
   .aside__animation #image_animation {
     width: 0.7rem;

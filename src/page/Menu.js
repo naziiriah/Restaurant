@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom"
 import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 import { useSelector } from "react-redux"
-import WaiterImage from "../images/240_F_461566395_Fj4vy92CnlFhbFHoH8MLLptMQgCAOhK9.jpg"
+import notePNG from "../images/note.png"
 import Footer from "../components/Footer"
+import arrowPNG from "../images/arrowHead.png"
 
 const Menu  = () => {
     const [title, setTitle] = useState('appetizer'),
@@ -17,18 +18,13 @@ const Menu  = () => {
     [animation, setAnimation] = useState(false),
     table = useSelector((state) => state.bill.value),
     [SideDisplay, SetSideDisplay] = useState(false),
-    [SideAnimation, SetSideAnimation] = useState('side__animation'),
     scrollRef = useRef(null);
 
 
     useEffect(() => {
         if(table.length > 0){
-            SetSideAnimation('image_animation')
             setAnimation(true)
             SetSideDisplay(true)
-            setTimeout(() => {
-                SetSideAnimation('')
-            }, 1000)
         }else{
             setAnimation(false)
             SetSideDisplay(false)
@@ -97,6 +93,8 @@ const Menu  = () => {
       
         {SideDisplay && 
             <aside className="aside__animation" onClick={() => navigation('/table')}>
+                <img src={arrowPNG} className="arrowpng" alt ="directoin"/>
+                <img src={notePNG} className="notepng" alt ="table order"/>
             </aside>
         }
          {title === "appetizer" && <Appetizer isImage={true} />}

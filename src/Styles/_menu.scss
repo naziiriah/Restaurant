@@ -23,7 +23,7 @@ $proxima: 'Proxima Nova', sans-serif;
         &__design{
             display: flex;
             justify-content: space-evenly;
-            margin: 2rem auto -2rem ;
+            margin: 0rem auto -2rem ;
             height: 2rem;
 
         }
@@ -172,15 +172,26 @@ $proxima: 'Proxima Nova', sans-serif;
         width:5rem;
         height:2.5rem;
         background-color: transparent;        
-        position: sticky;
-        top:70%;
-        left:100%;
+      
+        
         bottom: 4%;
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
-        img{
-            width:5rem; 
+        .notepng{
+            position: fixed;
+            left:61%;
+            width:23%;
+            top:2rem;
+            height:2rem;
+            border-radius: 50%;
         } 
+        .arrowpng{
+            position: fixed;
+            top:1rem;
+            left:80%;
+            width:10%;
+            
+        }
         #image_animation
         // div
         {
@@ -223,7 +234,7 @@ $proxima: 'Proxima Nova', sans-serif;
         &__design{
             display: flex;
             justify-content: space-evenly;
-            margin: 2rem auto -2rem ;
+            margin: 0rem auto -2rem ;
             height: 2rem;
 
         }
@@ -380,9 +391,21 @@ $proxima: 'Proxima Nova', sans-serif;
         bottom: 4%;
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
-        img{
-            width:5rem; 
+        .notepng{
+            position: fixed;
+            left:66%;
+            width:7rem;
+            top:2rem;
+            height:2rem;
+            border-radius: 50%;
         } 
+        .arrowpng{
+            position: fixed;
+            top:1rem;
+            left:80%;
+            width:10%;
+            
+        }
         #image_animation
         // div
         {
@@ -421,7 +444,7 @@ $proxima: 'Proxima Nova', sans-serif;
         &__design{
             display: flex;
             justify-content: space-evenly;
-            margin: 2rem auto -2rem ;
+            margin: 0rem auto -2rem ;
             height: 2rem;
 
         }
@@ -571,15 +594,24 @@ $proxima: 'Proxima Nova', sans-serif;
         width:5rem;
         height:2.5rem;
         background-color: transparent;        
-        position: sticky;
-        top:70%;
-        left:100%;
-        bottom: 4%;
+       
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
-        img{
-            width:5rem; 
+        .notepng{
+            position: fixed;
+            left:67%;
+            width:8rem;
+            top:2rem;
+            height:2rem;
+            border-radius: 50%;
         } 
+        .arrowpng{
+            position: fixed;
+            top:1rem;
+            left:80%;
+            width:10%;
+            
+        }
         #image_animation
         // div
         {
