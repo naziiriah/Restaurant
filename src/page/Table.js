@@ -4,9 +4,9 @@ import { HomeLightBTN } from "../components/Buttons"
 import { removeFromCart } from "../redux"
 import EmptyImage from "../images/empty2 1.png"
 import {HiOutlineTrash} from  "react-icons/hi"
-import { Icon } from "@chakra-ui/react"
+import { Icon, TabList } from "@chakra-ui/react"
 import {IoIosArrowBack} from "react-icons/io"
-import Footer from "../components/Footer"
+import {Footer, FooterSection} from "../components/Footer"
 
 
 const Table = () => {
@@ -61,7 +61,7 @@ const Table = () => {
                     </section>
                 </main>
                 <footer className="table-design">
-                    <Footer/>
+                    {tableList.length < 10 ?  <Footer/> : <FooterSection/>}
                 </footer>
                </>
                 :

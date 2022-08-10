@@ -7,7 +7,7 @@ import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 import { useSelector } from "react-redux"
 import notePNG from "../images/note.png"
-import Footer from "../components/Footer"
+import { FooterSection} from "../components/Footer"
 import arrowPNG from "../images/arrowHead.png"
 
 const Menu  = () => {
@@ -106,7 +106,7 @@ const Menu  = () => {
          {title === 'salad' && <Main isImage={false}/> }
          {title === 'cocktail' && <Main isImage={false}/> }
          <footer className="table-design">
-            <Footer/>
+            <FooterSection/>
         </footer>
         </>
     )
