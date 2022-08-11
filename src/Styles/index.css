@@ -1,6 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/proxima-nova-2");
 @import url("https://db.onlinewebfonts.com/t/15f829bee3e1d2bdf3fd9ab7e488ab80.ttf");
 @import url("https://db.onlinewebfonts.com/c/3f495639499d4d097ef146630f9c9eb9?family=CALCaterinaW01");
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -1489,40 +1490,21 @@
   }
   .aside__animation {
     width: 5rem;
-    height: 2.5rem;
+    height: 7rem;
     background-color: transparent;
-    bottom: 4%;
+    position: fixed;
+    left: 83%;
+    top: 30rem;
+    background-color: #fff;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
   }
-  .aside__animation .notepng {
-    position: fixed;
-    left: 61%;
-    width: 23%;
-    top: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-  }
-  .aside__animation .arrowpng {
-    position: fixed;
-    top: 1rem;
-    left: 80%;
-    width: 10%;
-  }
-  .aside__animation #image_animation {
-    width: 0.7rem;
-    position: absolute;
-    top: 1rem;
-    left: 0.5rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    background-color: #E21143;
-    -webkit-animation: animation__glow 1s infinite;
-            animation: animation__glow 1s infinite;
-  }
-  .aside__animation .image_animation {
-    width: 5rem;
+  .aside__animation h1 {
+    font-family: "Mansalva", cursive;
+    transform: rotate(18deg);
+    color: rgb(16, 117, 175);
+    line-height: 1.8rem;
   }
 }
 @media screen and (max-width: 800px) and (min-width: 501px) {

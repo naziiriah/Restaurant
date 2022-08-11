@@ -4,7 +4,7 @@ import { HomeLightBTN } from "../components/Buttons"
 import { removeFromCart } from "../redux"
 import EmptyImage from "../images/empty2 1.png"
 import {HiOutlineTrash} from  "react-icons/hi"
-import { Icon, TabList } from "@chakra-ui/react"
+import { Icon} from "@chakra-ui/react"
 import {IoIosArrowBack} from "react-icons/io"
 import {Footer, FooterSection} from "../components/Footer"
 

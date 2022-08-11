@@ -93,8 +93,7 @@ const Menu  = () => {
       
         {SideDisplay && 
             <aside className="aside__animation" onClick={() => navigation('/table')}>
-                <img src={arrowPNG} className="arrowpng" alt ="directoin"/>
-                <img src={notePNG} className="notepng" alt ="table order"/>
+                    <h1>View <br/> Table Order </h1>
             </aside>
         }
          {title === "appetizer" && <Appetizer isImage={true} />}
