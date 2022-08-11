@@ -3223,7 +3223,7 @@
   }
   .table__list {
     width: 100%;
-    min-height: 650px;
+    min-height: 350px;
   }
   .table__buttons {
     display: flex;
@@ -3278,7 +3278,7 @@
   }
   .table__list {
     width: 100%;
-    min-height: 650px;
+    min-height: 350px;
   }
   .table__buttons {
     display: flex;
