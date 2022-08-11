@@ -138,7 +138,9 @@ const Bills = () => {
                 <div>
                     <PayModal MyFee={myfee} Total={overall} PureBill ={myBill} /> 
                 </div>
+                <div className="art">
 
+                </div>
             </main>
             : 
             <main className="table-design table_page">

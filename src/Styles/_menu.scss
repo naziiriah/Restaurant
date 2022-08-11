@@ -360,45 +360,22 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .aside__animation{
         width:5rem;
-        height:2.5rem;
+        height:7rem;
         background-color: transparent;        
-        position: sticky;
-        top:70%;
-        left:100%;
-        bottom: 4%;
+        position: fixed;
+        left:90%;
+        top:30rem;
+        background-color: #fff;
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
-        .notepng{
-            position: fixed;
-            left:66%;
-            width:7rem;
-            top:2rem;
-            height:2rem;
-            border-radius: 50%;
-        } 
-        .arrowpng{
-            position: fixed;
-            top:1rem;
-            left:80%;
-            width:10%;
-            
+
+        h1{
+            font-family: 'Mansalva', cursive;
+            transform: rotate(18deg);
+            color:rgb(16, 117, 175);  
+            line-height: 1.8rem; 
         }
-        #image_animation
-        // div
-        {
-            width:.7rem;
-            position: absolute;
-            top:1rem;
-            left:0.5rem;
-            height:.7rem;
-            border-radius: 50%;
-            background-color: #E21143;
-            animation:animation__glow 1s infinite;
-        }
-        .image_animation{
-            width:5rem;
-        }
-    }
+}
     
 }
 @media (min-device-width: 801px) and (max-device-width: 1280px) {
@@ -569,43 +546,22 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .aside__animation{
         width:5rem;
-        height:2.5rem;
+        height:7rem;
         background-color: transparent;        
-       
+        position: fixed;
+        left:91%;
+        top:30rem;
+        background-color: #fff;
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
-        .notepng{
-            position: fixed;
-            left:67%;
-            width:8rem;
-            top:2rem;
-            height:2rem;
-            border-radius: 50%;
-        } 
-        .arrowpng{
-            position: fixed;
-            top:1rem;
-            left:80%;
-            width:10%;
-            
-        }
-        #image_animation
-        // div
-        {
-            width:.7rem;
-            position: absolute;
-            top:1rem;
-            left:0.5rem;
-            height:.7rem;
-            border-radius: 50%;
-            background-color: #E21143;
-            animation:animation__glow 1s infinite;
-        }
-        .image_animation{
-            width:5rem;
+
+        h1{
+            font-family: 'Mansalva', cursive;
+            transform: rotate(18deg);
+            color:rgb(16, 117, 175);  
+            line-height: 1.8rem; 
         }
     }
-    
 }
 @keyframes Side_animation {
     from{

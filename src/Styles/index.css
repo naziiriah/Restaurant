@@ -1668,44 +1668,21 @@
   }
   .aside__animation {
     width: 5rem;
-    height: 2.5rem;
+    height: 7rem;
     background-color: transparent;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 70%;
-    left: 100%;
-    bottom: 4%;
+    position: fixed;
+    left: 90%;
+    top: 30rem;
+    background-color: #fff;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
   }
-  .aside__animation .notepng {
-    position: fixed;
-    left: 66%;
-    width: 7rem;
-    top: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-  }
-  .aside__animation .arrowpng {
-    position: fixed;
-    top: 1rem;
-    left: 80%;
-    width: 10%;
-  }
-  .aside__animation #image_animation {
-    width: 0.7rem;
-    position: absolute;
-    top: 1rem;
-    left: 0.5rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    background-color: #E21143;
-    -webkit-animation: animation__glow 1s infinite;
-            animation: animation__glow 1s infinite;
-  }
-  .aside__animation .image_animation {
-    width: 5rem;
+  .aside__animation h1 {
+    font-family: "Mansalva", cursive;
+    transform: rotate(18deg);
+    color: rgb(16, 117, 175);
+    line-height: 1.8rem;
   }
 }
 @media (min-device-width: 801px) and (max-device-width: 1280px) {
@@ -1868,39 +1845,21 @@
   }
   .aside__animation {
     width: 5rem;
-    height: 2.5rem;
+    height: 7rem;
     background-color: transparent;
+    position: fixed;
+    left: 91%;
+    top: 30rem;
+    background-color: #fff;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
   }
-  .aside__animation .notepng {
-    position: fixed;
-    left: 67%;
-    width: 8rem;
-    top: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-  }
-  .aside__animation .arrowpng {
-    position: fixed;
-    top: 1rem;
-    left: 80%;
-    width: 10%;
-  }
-  .aside__animation #image_animation {
-    width: 0.7rem;
-    position: absolute;
-    top: 1rem;
-    left: 0.5rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    background-color: #E21143;
-    -webkit-animation: animation__glow 1s infinite;
-            animation: animation__glow 1s infinite;
-  }
-  .aside__animation .image_animation {
-    width: 5rem;
+  .aside__animation h1 {
+    font-family: "Mansalva", cursive;
+    transform: rotate(18deg);
+    color: rgb(16, 117, 175);
+    line-height: 1.8rem;
   }
 }
 @-webkit-keyframes Side_animation {
