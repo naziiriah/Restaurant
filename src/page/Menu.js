@@ -6,9 +6,7 @@ import { useNavigate } from "react-router-dom"
 import { Icon } from "@chakra-ui/react"
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMapsHomeWork } from "react-icons/md"
 import { useSelector } from "react-redux"
-import notePNG from "../images/note.png"
 import { FooterSection} from "../components/Footer"
-import arrowPNG from "../images/arrowHead.png"
 
 const Menu  = () => {
     const [title, setTitle] = useState('appetizer'),

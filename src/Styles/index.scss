@@ -276,23 +276,41 @@ $openSans: 'Open Sans', sans-serif;
      }
   }
   .footer{
-     width:100%;
-     height:4rem;
-     display: flex;
-     justify-content: center;
-        h3{
-           margin-left: 1.5rem;
-           font-style: $Caterina;
-           font-size: 24px;
-           font-weight: 400;
-        }
-        img{
-           margin-top: -4.5rem;
-           margin-left: -2.3rem;
-           width:15.5rem;
-           height:10.4rem;
-        }
-  }
+   width:100%;
+   display: flex;
+   position: fixed;
+   bottom:1rem;
+   justify-content: center;
+      h3{
+         margin-left: 1.5rem;
+         font-style: $Caterina;
+         font-size: 14px;
+         font-weight: 400;
+      }
+      img{
+         margin-top: -1rem;
+         margin-left: .4rem;
+         width:7.5rem;
+         height:2.4rem;
+      }
+}
+.foot{
+   width:100%;
+   display: flex;
+   justify-content: center;
+      h3{
+         margin-left: 1.5rem;
+         font-style: $Caterina;
+         font-size: 14px;
+         font-weight: 400;
+      }
+      img{
+         margin-top: -1rem;
+         margin-left: .4rem;
+         width:7.5rem;
+         height:2.4rem;
+      }
+}
  }
  @media (min-device-width: 801px) and (max-device-width: 1280px) {
    .header{
@@ -399,23 +417,41 @@ $openSans: 'Open Sans', sans-serif;
      }
   }
   .footer{
-     width:100%;
-     height:4rem;
-     display: flex;
-     justify-content: center;
-        h3{
-           margin-left: 1.5rem;
-           font-style: $Caterina;
-           font-size: 24px;
-           font-weight: 400;
-        }
-        img{
-           margin-top: -4.5rem;
-           margin-left: -2.3rem;
-           width:15.5rem;
-           height:10.4rem;
-        }
-  }
+   width:100%;
+   display: flex;
+   position: fixed;
+   bottom:1rem;
+   justify-content: center;
+      h3{
+         margin-left: 1.5rem;
+         font-style: $Caterina;
+         font-size: 14px;
+         font-weight: 400;
+      }
+      img{
+         margin-top: -1rem;
+         margin-left: .4rem;
+         width:7.5rem;
+         height:2.4rem;
+      }
+}
+.foot{
+   width:100%;
+   display: flex;
+   justify-content: center;
+      h3{
+         margin-left: 1.5rem;
+         font-style: $Caterina;
+         font-size: 14px;
+         font-weight: 400;
+      }
+      img{
+         margin-top: -1rem;
+         margin-left: .4rem;
+         width:7.5rem;
+         height:2.4rem;
+      }
+}
 }
 @keyframes home__main__animation { 
    from {
