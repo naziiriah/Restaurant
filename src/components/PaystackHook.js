@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom"
 import { useDispatch } from 'react-redux';
 import { CalculateTotal } from '../redux';
 
+const date  =  new Date()
 
-const PaystackHookButton = ({amount, Total, MySplit,}) => {
+
+const PaystackHookButton = ({amount, Total, MySplit}) => {
     const config = {
-        reference: (new Date()).getTime().toString(),
+        reference: date.getTime().toString,
         email: "user@example.com",
         amount: amount* 100,
         publicKey: 'pk_test_d239b30e93303d6f4475c2464de72bc402fad437',

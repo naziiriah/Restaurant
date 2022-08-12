@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { BillHeader } from "../components/Header"
-import { CustomTip, PayModal, SplitModal } from "../components/modal"
+import { CustomTip, PayModal, SplitModal } from "../components/Modal"
 import MoneyIcon from "../images/33-337047_transparent-model-icon-png-give-money-illustration-png.png"
 import handdrawncircle from "../images/handdrawn-cricle.png"
 import { useSelector } from "react-redux";

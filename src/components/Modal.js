@@ -5,8 +5,8 @@ import { TbArrowsLeftRight, } from "react-icons/tb"
 import { useNavigate } from "react-router-dom"
 import CurrencyInput from 'react-currency-input-field';
 import doubleStroke from "../images/double.png"
-import {VscCreditCard} from "react-icons/vsc"
 import {FcMoneyTransfer} from  "react-icons/fc"
+import PaystackHookButton from "./PaystackHook"
 
 export const PayModal = ({MyFee, Total, PureBill}) => {
     const [modal, setModal] = useState(false),
@@ -55,10 +55,7 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
 
                         </div>
                         <div className="modal__card ">
-                            <div className="modal__box" onClick={() =>confirmPayment('card') }>
-                                <h3>Pay with card</h3>
-                                <Icon as={VscCreditCard} mt="0.4rem" ml="1rem" fontSize={'20px'}/>                                                                
-                            </div>
+                            <PaystackHookButton amount={Bill} Total ={Total} MySplit={PureBill}/>
                         </div>
                         <div className="modal__final ">
                         </div>
