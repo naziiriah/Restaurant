@@ -170,20 +170,26 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .aside__animation{
         width:5rem;
-        height:7rem;
+        height:6.4rem;
         background-color: transparent;        
         position: fixed;
-        left:83%;
+        left:80%;
         top:30rem;
         background-color: #fff;
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
+        border: rgba(128, 128, 128, 0.411) solid 4px;
+        border-radius: 10px;
+        transform: rotate(15deg);
+        box-shadow: 2px 2px #2D2D2D ;
 
         h1{
             font-family: 'Mansalva', cursive;
-            transform: rotate(18deg);
+            text-align: center;
             color:rgb(16, 117, 175);  
             line-height: 1.8rem; 
+            margin-top: 8px;
+            margin-left: 5px;
         }
     }
    
@@ -358,8 +364,8 @@ $proxima: 'Proxima Nova', sans-serif;
         position: relative;
         animation: glow 1.5s infinite ease-in-out;
     }
-    .aside__animation{
-        width:5rem;
+.aside__animation{
+    width:5rem;
         height:7rem;
         background-color: transparent;        
         position: fixed;
@@ -368,13 +374,19 @@ $proxima: 'Proxima Nova', sans-serif;
         background-color: #fff;
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
+    border: rgba(128, 128, 128, 0.411) solid 4px;
+    border-radius: 10px;
+    transform: rotate(15deg);
+    box-shadow: 2px 2px #2D2D2D ;
 
-        h1{
-            font-family: 'Mansalva', cursive;
-            transform: rotate(18deg);
-            color:rgb(16, 117, 175);  
-            line-height: 1.8rem; 
-        }
+    h1{
+        font-family: 'Mansalva', cursive;
+        text-align: center;
+        color:rgb(16, 117, 175);  
+        line-height: 1.8rem; 
+        margin-top: 8px;
+        margin-left: 5px;
+    }
 }
     
 }
@@ -549,17 +561,23 @@ $proxima: 'Proxima Nova', sans-serif;
         height:7rem;
         background-color: transparent;        
         position: fixed;
-        left:91%;
+        left:90%;
         top:30rem;
         background-color: #fff;
         animation: Side_animation alternate .5s ease-in;
         margin-top: -2.5rem;
-
+        border: rgba(128, 128, 128, 0.411) solid 4px;
+        border-radius: 10px;
+        transform: rotate(15deg);
+        box-shadow: 2px 2px #2D2D2D ;
+    
         h1{
             font-family: 'Mansalva', cursive;
-            transform: rotate(18deg);
+            text-align: center;
             color:rgb(16, 117, 175);  
             line-height: 1.8rem; 
+            margin-top: 8px;
+            margin-left: 5px;
         }
     }
 }

@@ -1490,21 +1490,27 @@
   }
   .aside__animation {
     width: 5rem;
-    height: 7rem;
+    height: 6.4rem;
     background-color: transparent;
     position: fixed;
-    left: 83%;
+    left: 80%;
     top: 30rem;
     background-color: #fff;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
+    border: rgba(128, 128, 128, 0.411) solid 4px;
+    border-radius: 10px;
+    transform: rotate(15deg);
+    box-shadow: 2px 2px #2D2D2D;
   }
   .aside__animation h1 {
     font-family: "Mansalva", cursive;
-    transform: rotate(18deg);
+    text-align: center;
     color: rgb(16, 117, 175);
     line-height: 1.8rem;
+    margin-top: 8px;
+    margin-left: 5px;
   }
 }
 @media screen and (max-width: 800px) and (min-width: 501px) {
@@ -1677,12 +1683,18 @@
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
+    border: rgba(128, 128, 128, 0.411) solid 4px;
+    border-radius: 10px;
+    transform: rotate(15deg);
+    box-shadow: 2px 2px #2D2D2D;
   }
   .aside__animation h1 {
     font-family: "Mansalva", cursive;
-    transform: rotate(18deg);
+    text-align: center;
     color: rgb(16, 117, 175);
     line-height: 1.8rem;
+    margin-top: 8px;
+    margin-left: 5px;
   }
 }
 @media (min-device-width: 801px) and (max-device-width: 1280px) {
@@ -1848,18 +1860,24 @@
     height: 7rem;
     background-color: transparent;
     position: fixed;
-    left: 91%;
+    left: 90%;
     top: 30rem;
     background-color: #fff;
     -webkit-animation: Side_animation alternate 0.5s ease-in;
             animation: Side_animation alternate 0.5s ease-in;
     margin-top: -2.5rem;
+    border: rgba(128, 128, 128, 0.411) solid 4px;
+    border-radius: 10px;
+    transform: rotate(15deg);
+    box-shadow: 2px 2px #2D2D2D;
   }
   .aside__animation h1 {
     font-family: "Mansalva", cursive;
-    transform: rotate(18deg);
+    text-align: center;
     color: rgb(16, 117, 175);
     line-height: 1.8rem;
+    margin-top: 8px;
+    margin-left: 5px;
   }
 }
 @-webkit-keyframes Side_animation {
@@ -3180,7 +3198,7 @@
     justify-content: center;
   }
   .table_page {
-    min-height: 20px;
+    min-height: 81vh;
   }
   .main__transfer {
     width: 80%;
@@ -3364,6 +3382,7 @@
     color: #121212;
     -webkit-animation: home__animation 1s;
             animation: home__animation 1s;
+    min-height: 42vh;
   }
   .welcome__title {
     font-weight: 600;
