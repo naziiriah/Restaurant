@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import { HomeDarkBTN, HomeLightBTN, } from "../components/Buttons"
-import{ Footer }from "../components/Footer"
+import{  FooterSection }from "../components/Footer"
 import  { WelcomeHeader } from "../components/Header"
 
 
@@ -33,7 +33,7 @@ const Home = () => {
                 
            </div>
         </main>
-        <Footer/>
+        <FooterSection/>
         </>
     )
 }

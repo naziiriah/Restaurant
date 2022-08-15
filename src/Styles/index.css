@@ -306,7 +306,7 @@
     color: #121212;
     font-weight: lighter;
     line-height: 28px;
-    margin: 4rem 0rem;
+    margin: 4rem 0rem 1rem;
   }
   .bill__waiter {
     width: 100%;
@@ -3180,7 +3180,7 @@
     justify-content: center;
   }
   .table_page {
-    min-height: 650px;
+    min-height: 20px;
   }
   .main__transfer {
     width: 80%;
@@ -3237,7 +3237,7 @@
             animation: EmptyAnimation 1s ease-in-out;
   }
   .table__empty .table__Image1 {
-    border-top: 4.5rem solid transparent;
+    border-top: 2.5rem solid transparent;
     width: 55%;
     margin: auto;
     display: flex;
@@ -3448,10 +3448,10 @@
     font-weight: 400;
   }
   .footer img {
-    margin-top: -1rem;
+    margin-top: -0.5rem;
     margin-left: 0.4rem;
-    width: 7.5rem;
-    height: 2.4rem;
+    width: 6.5rem;
+    height: 1.8rem;
   }
   .foot {
     width: 100%;
@@ -3465,10 +3465,10 @@
     font-weight: 400;
   }
   .foot img {
-    margin-top: -1rem;
+    margin-top: -0.5rem;
     margin-left: 0.4rem;
-    width: 7.5rem;
-    height: 2.4rem;
+    width: 6.5rem;
+    height: 1.8rem;
   }
 }
 @media screen and (min-width: 501px) and (max-width: 800px) {

@@ -34,7 +34,7 @@ $proxima: 'Proxima Nova', sans-serif;
         }
     }    
     .table_page{  
-        min-height:650px; 
+        min-height:20px; 
     }
     .main__transfer{
         width:80%;
@@ -82,7 +82,7 @@ $proxima: 'Proxima Nova', sans-serif;
         width:100%;
         animation:EmptyAnimation 1s ease-in-out;
         .table__Image1{
-            border-top: 4.5rem solid transparent;
+            border-top: 2.5rem solid transparent;
             width:55%;
             margin:auto;
             display: flex;

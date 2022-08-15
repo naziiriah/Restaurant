@@ -33,7 +33,7 @@ const Table = () => {
                     </div>
                 </header>
                 <main className=" table-design table_page">
-                    <section className="container  bill__header table_page">
+                    <section className="container  bill__header">
                         <nav className="bill__flex-title">
                             <h2 className=" bill__title bill__title_1">qty</h2>
                             <h2 className=" bill__title start bill__title_2">item</h2>
@@ -61,7 +61,7 @@ const Table = () => {
                     </section>
                 </main>
                 <footer className="table-design">
-                    {tableList.length < 10 ?  <Footer/> : <FooterSection/>}
+                    <FooterSection/>
                 </footer>
                </>
                 :
@@ -87,7 +87,7 @@ const Table = () => {
                 
                 </main>
                 <footer className="table-design">
-                    <Footer/>
+                    <FooterSection/>
                 </footer>
             </>
             }
