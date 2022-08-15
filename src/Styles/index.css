@@ -3170,7 +3170,7 @@
   }
   .table__list {
     width: 100%;
-    min-height: 380px;
+    min-height: 300px;
   }
   .table__buttons {
     display: flex;
