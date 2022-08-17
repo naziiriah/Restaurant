@@ -7,12 +7,13 @@ $proxima: 'Proxima Nova', sans-serif;
     }
     .table__list{
         width:100%;
-        min-height: 380px;
+        min-height: 390px;
     }
     .table__buttons{
         display: flex;
         justify-content: space-between;
         height:6rem;
+        margin-bottom: -1rem;
     }
     .table__empty{
         height:80vh;

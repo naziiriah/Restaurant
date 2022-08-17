@@ -49,15 +49,18 @@ const Table = () => {
                                 )) 
                             }
                         </div>
-                        <div className="table__buttons">
+                        
+                            
+                    </section>
+                    <section className="container">
+                    <div className="table__buttons">
                             <button className="btn__custom btn--light" onClick={() => navigate('/menu')}>
                                 change order
                             </button>
                             <button className="btn__custom btn--dark" onClick={() => navigate('/bill')}>
                                 Send to waiter
-                            </button>
+                            </button>   
                         </div>
-                        
                     </section>
                 </main>
                 <footer className="table-design">
