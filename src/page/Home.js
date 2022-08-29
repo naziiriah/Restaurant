@@ -30,7 +30,6 @@ const Home = () => {
 
                     <HomeDarkBTN text={'View bill'}/>
                 </article>
-                
            </div>
         </main>
         <FooterSection/>

@@ -6,7 +6,6 @@ import Menu from "./page/Menu";
 import Final from "./page/Final";
 import ScrollToTop from "./components/Scroll";
 import Table from "./page/Table";
-import PayByCard from "./page/PayByCard";
 import PayByTransfer from "./page/PayByTransfer";
 
 
@@ -20,7 +19,6 @@ function App() {
             <Route path ="/menu" element={<Menu/>} />
             <Route path ="/end" element={<Final/>} />
             <Route path ="/table" element={<Table/>} />
-            <Route path ="/pay-with-card" element={<PayByCard/>} />
             <Route path ="/pay-by-transfer" element={<PayByTransfer/>} />
           </Routes>
       </ScrollToTop>
