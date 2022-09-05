@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import { Icon } from "@chakra-ui/react";
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from "react-icons/md";
 import { HomeLightBTN } from "../components/Buttons";
-import EmptyImage from "../images/empty2 1.png"
+import EmptyImage from "../images/food-delivery-icon-set-transportation-vector-32156989 1.png"
 
 
 const Bills = () => {
