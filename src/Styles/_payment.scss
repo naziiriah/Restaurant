@@ -3,7 +3,7 @@ $proxima: 'Proxima Nova', sans-serif;
 $textcolor: #121212;
 @media screen and (max-width:500px) { 
     .transfer__section {
-        animation: menu-item .5s ease-in-out;
+        animation: menu-item 1s ease-in-out;
         h3 {
             text-align: center;
             width: 100%;

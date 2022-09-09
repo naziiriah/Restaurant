@@ -3348,8 +3348,8 @@
 }
 @media screen and (max-width: 500px) {
   .transfer__section {
-    -webkit-animation: menu-item 0.5s ease-in-out;
-            animation: menu-item 0.5s ease-in-out;
+    -webkit-animation: menu-item 1s ease-in-out;
+            animation: menu-item 1s ease-in-out;
   }
   .transfer__section h3 {
     text-align: center;
