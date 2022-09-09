@@ -1,5 +1,3 @@
-import { Icon } from "@chakra-ui/react"
-import {IoIosArrowBack} from "react-icons/io"
 import { useNavigate } from "react-router-dom"
 
 
@@ -15,8 +13,8 @@ export const BillHeader = ({title}) => {
     const navigate = useNavigate()
     return(
         <header className="container bill-header header menu_pages">
-        <Icon as={IoIosArrowBack} ml="-.5rem" color="#000"
-                onClick={() => navigate('/menu')}/>
+        <i className="fa-solid fa-angle-left"
+                onClick={() => navigate('/menu')}></i>
             <>{title}</>
             <div></div>
         </header>

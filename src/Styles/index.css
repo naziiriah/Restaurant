@@ -3346,6 +3346,141 @@
     left: 10%;
   }
 }
+@media screen and (max-width: 500px) {
+  .transfer__section {
+    -webkit-animation: menu-item 0.5s ease-in-out;
+            animation: menu-item 0.5s ease-in-out;
+  }
+  .transfer__section h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    font-family: "Proxima Nova", sans-serif;
+    color: #121212;
+    font-weight: 500;
+    line-height: 2rem;
+    margin: 1.2rem 0rem 0.7rem;
+  }
+  .transfer__h4 {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Proxima Nova", sans-serif;
+    color: #121212;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  .transfer__h3 {
+    word-spacing: 1px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    color: #121212;
+    text-align: center;
+    width: 100%;
+  }
+  .transfer__account--number {
+    width: 80%;
+    height: 4.5rem;
+    border-radius: 8px;
+    margin: 0.5rem auto 1.5rem;
+    background-color: #e3e3e3;
+  }
+  .transfer__account--number h4 {
+    letter-spacing: 10px;
+    line-height: 3rem;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    color: #121212;
+    text-align: center;
+    width: 100%;
+  }
+  .transfer__account--number div {
+    display: flex;
+    justify-content: center;
+  }
+  .transfer__account--number div h5 {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Proxima Nova", sans-serif;
+    color: #121212;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  .transfer__button {
+    width: 90%;
+    margin: auto;
+  }
+  .transfer__button button {
+    text-transform: none;
+  }
+  .transfer__account--property {
+    height: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .transfer__account--property h4 {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Proxima Nova", sans-serif;
+    color: #121212;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: -14px;
+  }
+  .transfer__account--property h3 {
+    line-height: 23px;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: "Proxima Nova", sans-serif;
+  }
+  .transfer__expires {
+    width: 100%;
+    height: 6rem;
+    margin: 3rem 0rem 0rem;
+  }
+  .transfer__expires .transfer__expires--timer {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+  }
+  .transfer__expires .transfer__expires--timer h4 {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Proxima Nova", sans-serif;
+    color: #121212;
+    font-weight: 500;
+    margin-right: 5px;
+    color: #121212;
+  }
+  .transfer__expires .transfer__expires--timer span {
+    color: #0089CD;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .transfer__expires .transfer__expires--note {
+    width: 85%;
+    margin: auto;
+    font-size: 16px;
+    font-family: "Proxima Nova", sans-serif;
+    color: #121212;
+    font-weight: 500;
+    text-align: center;
+  }
+  .transfer__expires .transfer__expires--note span {
+    color: #D31E1A;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
 .container {
   width: 90%;
   margin: auto;
