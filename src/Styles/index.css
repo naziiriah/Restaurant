@@ -3361,6 +3361,9 @@
     line-height: 2rem;
     margin: 1.2rem 0rem 0.7rem;
   }
+  .transfer__section h3 span {
+    font-weight: 800;
+  }
   .transfer__h4 {
     text-align: center;
     width: 100%;

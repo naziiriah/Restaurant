@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import {Footer} from "../components/Footer"
 import { CalculateTotal } from "../redux";
 
 
@@ -15,6 +14,7 @@ const PayByTransfer = () => {
     seconds = Math.floor(delay % 60),
     bankNumber = 1234567089,
     [copied, setCopied] =useState(false),
+    myBill = Location.state.mySplit === 0 ?  Location.state.total : Location.state.mySplit ,
 
     copy = async () => {
     await navigator.clipboard.writeText(bankNumber);
@@ -60,7 +60,7 @@ const PayByTransfer = () => {
             </header>
             <main>
                 <section className="transfer__section">
-                    <h3>Transfer your bill to the account details below</h3>
+                    <h3>Transfer <span>&#x20A6;{myBill}</span> to the account details below</h3>
                     <h4 className="transfer__h4">account details</h4>
                     <div className="transfer__account--number" onClick={copy}>
                         <h4>{bankNumber}</h4>
@@ -97,7 +97,6 @@ const PayByTransfer = () => {
                 </section>
             </main>
             <footer>
-                    <Footer/>
             </footer>
         </>
     )

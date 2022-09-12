@@ -13,6 +13,9 @@ $textcolor: #121212;
             font-weight: 500;
             line-height: 2rem;
             margin:1.2rem 0rem 0.7rem;
+            span {
+                font-weight: 800;
+            }
         }
       
     }
@@ -27,7 +30,6 @@ $textcolor: #121212;
     }
     .transfer__h3 { 
         word-spacing: 1px;
-        // line-height: 24px;
         font-family: $proxima;
         font-size: 23px;
         font-weight: bold;
