@@ -14,7 +14,7 @@ const PayByTransfer = () => {
     seconds = Math.floor(delay % 60),
     bankNumber = 1234567089,
     [copied, setCopied] =useState(false),
-    myBill = Location.state.mySplit === 0 ?  Location.state.total : Location.state.mySplit ,
+    myBill = Location.state.myTotalSplit === 0 ?  Location.state.total : Location.state.myTotalSplit,
 
     copy = async () => {
     await navigator.clipboard.writeText(bankNumber);

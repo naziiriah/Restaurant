@@ -17,12 +17,14 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
        if(type === 'transfer'){
             navigation("/pay-by-transfer", {state:{
                 total:Total,
-                mySplit: PureBill
+                mySplit: PureBill,
+                myTotalSplit: MyFee,
             }})
        }else if(type === "card"){
         navigation("/pay-with-card", {state:{
             total:Total,
-            mySplit: PureBill
+            mySplit: PureBill,
+            myTotalSplit: MyFee,
         }})
        }
     };
