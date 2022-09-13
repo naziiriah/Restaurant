@@ -96,8 +96,6 @@ const PayByTransfer = () => {
                     <button className="btn btn--light" onClick={confirmPayment}>I've transfered the money</button>
                 </section>
             </main>
-            <footer>
-            </footer>
         </>
     )
 }

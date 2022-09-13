@@ -13,20 +13,12 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
     navigation = useNavigate();
     const Bill = Number(MyFee) ? Number(MyFee) : Total,
     
-    confirmPayment = (type) => {
-       if(type === 'transfer'){
+    confirmPayment = () => {
             navigation("/pay-by-transfer", {state:{
                 total:Total,
                 mySplit: PureBill,
                 myTotalSplit: MyFee,
             }})
-       }else if(type === "card"){
-        navigation("/pay-with-card", {state:{
-            total:Total,
-            mySplit: PureBill,
-            myTotalSplit: MyFee,
-        }})
-       }
     };
 
 
@@ -50,7 +42,7 @@ export const PayModal = ({MyFee, Total, PureBill}) => {
 
                         <div className="modal__transfer ">
 
-                            <div className="modal__box" onClick={() =>confirmPayment('transfer')}>
+                            <div className="modal__box" onClick={confirmPayment}>
                                 <h3>Pay by bank transfer</h3>
                                 <Icon as={TbArrowsLeftRight} mt="0.4rem" ml="1rem" fontSize={'20px'}/>                                                                
                             </div>
