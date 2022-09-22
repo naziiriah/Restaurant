@@ -60,7 +60,7 @@ const PayByTransfer = () => {
             </header>
             <main>
                 <section className="transfer__section">
-                    <h3>Transfer <span>&#x20A6;{myBill}</span> to the account details below</h3>
+                    <h3>Transfer <span>&#x20A6;{myBill.toLocaleString("en-US")}</span> to the account details below</h3>
                     <h4 className="transfer__h4">account details</h4>
                     <div className="transfer__account--number" onClick={copy}>
                         <h4>{bankNumber}</h4>
