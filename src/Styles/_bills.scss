@@ -399,7 +399,7 @@ $proxima: 'Proxima Nova', sans-serif;
     .bill__header{
         align-self: flex-start;
         width:100%;
-        min-height: 400px;
+        min-height: 200px;
     }
     .bill__flex-title{
         display: flex;
@@ -501,17 +501,15 @@ $proxima: 'Proxima Nova', sans-serif;
         min-height:11rem;
         display: flex;
         font-family: $proxima;
-        overflow-x:auto;
-        overscroll-behavior-inline: contain;
         margin:0.5rem 0rem;
         .bill-tips{
-            height:9.5rem;
-            margin-right: 1.7rem;
-            margin-left: .2rem;
+            height:7.5rem;
+            margin-right: 5%;
+            margin-left: 5%;
             border-radius: 10px;
             border: #EAEAEA solid 1px;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            min-width:12rem;
+            min-width:7rem;
         }
         &::-webkit-scrollbar {
             display: none;
@@ -572,15 +570,16 @@ $proxima: 'Proxima Nova', sans-serif;
        
 
         .bill__img_white{
-            width:5.5rem;
-            height:5.5rem;
+            width:3.7rem;
+            height:3.7rem;
             border-radius: 50%;
             background-color: #EAEAEA;
             margin:.5rem auto;
             text-align: center;
             img{
-                width:5.5rem;
+                width:3.4rem;
                 border-radius: 50%;
+                margin-top: .1rem;
             }
         }
         .bill__amount3_activez{
@@ -588,6 +587,7 @@ $proxima: 'Proxima Nova', sans-serif;
             text-align:center;  
             font-family: $proxima;
             width:100%;
+            font-size: 18px;
         }
         .bill__amount0_active,
         .bill__amount2_actives, 
@@ -597,7 +597,7 @@ $proxima: 'Proxima Nova', sans-serif;
             font-family: $proxima;
             width:100%;
             margin: 1rem auto 0rem;
-            font-size: 23px;
+            font-size: 18px;
             //  display whenthe amount to be given to the waiter is selected  When selected 
         }
         .bill__amount3_actives,
@@ -609,7 +609,7 @@ $proxima: 'Proxima Nova', sans-serif;
             font-family: $proxima;
             width:100%;
             margin: 0.2rem auto 0;
-            font-size: 23px;
+            font-size: 18px;
         }
         .bill__amount1_active,.bill__amount2_active, .bill__amount3_active,
          .bill__amount2_, .bill__amount1_,
@@ -623,7 +623,7 @@ $proxima: 'Proxima Nova', sans-serif;
             font-family: $proxima;
             width:100%;
             margin: 0rem auto 0;
-            font-size: 23px;
+            font-size: 18px;
         }
     } 
     .custom-tip{

@@ -102,7 +102,7 @@ const Bills = () => {
                     </div>
 
                     <div className="bill__section">
-                    {moreDisplay > 40 && <div className="arrowState"><Icon as={MdKeyboardArrowLeft} fontSize={'30px'} mt="2.5rem" onClick={() => ScrollButton(true)}/> </div>}
+                    {moreDisplay > 40 && <div className="arrowState"><i class="fa-solid fa-chevron-left" onClick={() => ScrollButton(true)} ></i> </div>}
                         <div className="bill__tip-option"  onScroll={ScrollTip} ref={scrollRef}>
                             <div className='bill-tips' id={"tip-0_" + Active} onClick={()=>SetDisplay('active',500)}>
                                 <div className={"bill__green0__" +Active }></div>

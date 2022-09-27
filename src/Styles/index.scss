@@ -40,8 +40,7 @@ $openSans: 'Open Sans', sans-serif;
 }
  .welcome__header{
     width:100%;
-    max-width: 500px;
-    height:19rem;
+    height:40vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image:url('../images/IMG_9094.JPG');
@@ -57,11 +56,11 @@ $openSans: 'Open Sans', sans-serif;
  
  .welcome__main{
    width:90%;
-   margin:1rem auto 1rem;
+   margin:1rem auto 1vh;
    background-color: #fff;
    color:$black; 
    animation: home__animation 1s ;
-   min-height:42vh;
+   height:50vh;
  }
  .welcome__title{
     font-weight: 600;
@@ -138,8 +137,7 @@ $openSans: 'Open Sans', sans-serif;
 .footer{
    width:100%;
    display: flex;
-   position: fixed;
-   bottom:1rem;
+   height: 5vh;
    justify-content: center;
       h3{
          margin-left: 1.5rem;
@@ -156,6 +154,7 @@ $openSans: 'Open Sans', sans-serif;
 }
 .foot{
    width:100%;
+   height: 5vh;
    display: flex;
    justify-content: center;
       h3{
@@ -184,7 +183,7 @@ $openSans: 'Open Sans', sans-serif;
   }
    .welcome__header{
       width:100%;
-      height:38rem;
+      height:43vh;
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-image:url('../images/IMG_9094.JPG');
@@ -199,7 +198,8 @@ $openSans: 'Open Sans', sans-serif;
    
    .welcome__main{
      width:85%;
-     margin:1rem auto 2rem;
+     height: 50vh;
+     margin:1vh auto 2vh;
      background-color: #fff;
      color:$black; 
      animation: home__animation 1s ;
@@ -208,8 +208,8 @@ $openSans: 'Open Sans', sans-serif;
       font-weight: 600;
       font-family:$Caterina;
       text-transform: capitalize;
-      font-size: 54px;
-      line-height: 60px;
+      font-size: 44px;
+      line-height: 26px;
       margin-top: 1rem;
       margin-bottom: 1rem;
       letter-spacing: 1px;
@@ -280,8 +280,7 @@ $openSans: 'Open Sans', sans-serif;
   .footer{
    width:100%;
    display: flex;
-   position: fixed;
-   bottom:1rem;
+   height: 5vh;
    justify-content: center;
       h3{
          margin-left: 1.5rem;
@@ -290,16 +289,17 @@ $openSans: 'Open Sans', sans-serif;
          font-weight: 400;
       }
       img{
-         margin-top: -1rem;
+         margin-top: -.5rem;
          margin-left: .4rem;
-         width:7.5rem;
-         height:2.4rem;
+         width:5.2rem;
+         height:1.8rem;
       }
 }
 .foot{
    width:100%;
    display: flex;
    justify-content: center;
+   height: 5vh;
       h3{
          margin-left: 1.5rem;
          font-style: $Caterina;
@@ -307,10 +307,10 @@ $openSans: 'Open Sans', sans-serif;
          font-weight: 400;
       }
       img{
-         margin-top: -1rem;
+         margin-top: -.5rem;
          margin-left: .4rem;
-         width:7.5rem;
-         height:2.4rem;
+         width:5.2rem;
+         height:1.8rem;
       }
 }
  }
@@ -325,7 +325,7 @@ $openSans: 'Open Sans', sans-serif;
   }
    .welcome__header{
       width:100%;
-      height:38rem;
+      height:40vh;
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-image:url('../images/IMG_9094.JPG');
@@ -343,25 +343,25 @@ $openSans: 'Open Sans', sans-serif;
      margin:1rem auto 2rem;
      background-color: #fff;
      color:$black; 
+     height: 50vh;
      animation: home__animation 1s ;
    }
    .welcome__title{
       font-weight: 600;
       font-family:$Caterina;
       text-transform: capitalize;
-      font-size: 54px;
-      line-height: 60px;
-      margin-top: 1rem;
+      font-size: 40px;
+      line-height: 42px;
       margin-bottom: 1rem;
       letter-spacing: 1px;
       width: 100%;
    }
    .welcome__extras{
       font-weight: 300;
-      line-height: 30px;
+      line-height: 20px;
       text-transform: none;
       font-family: $openSans;
-      font-size: 24px;
+      font-size: 20px;
    }
    .welcome__article{
       width:100%;
@@ -373,7 +373,7 @@ $openSans: 'Open Sans', sans-serif;
       height:5em;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0rem;
       margin-top: 0.5em;
       align-items: center;
   
@@ -381,8 +381,8 @@ $openSans: 'Open Sans', sans-serif;
    .welcome__tableText1{
       color:$black;
       font-family: $roboto;
-      font-size: 24px;
-      line-height: 30px;
+      font-size: 20px;
+      line-height: 24px;
    }
    .welcome__tableText2{
       color:$black;
@@ -421,8 +421,7 @@ $openSans: 'Open Sans', sans-serif;
   .footer{
    width:100%;
    display: flex;
-   position: fixed;
-   bottom:1rem;
+   height: 5vh;
    justify-content: center;
       h3{
          margin-left: 1.5rem;
@@ -431,16 +430,17 @@ $openSans: 'Open Sans', sans-serif;
          font-weight: 400;
       }
       img{
-         margin-top: -1rem;
+         margin-top: -.5rem;
          margin-left: .4rem;
-         width:7.5rem;
-         height:2.4rem;
+         width:5.2rem;
+         height:1.8rem;
       }
 }
 .foot{
    width:100%;
    display: flex;
    justify-content: center;
+   height: 5vh;
       h3{
          margin-left: 1.5rem;
          font-style: $Caterina;
@@ -448,10 +448,10 @@ $openSans: 'Open Sans', sans-serif;
          font-weight: 400;
       }
       img{
-         margin-top: -1rem;
+         margin-top: -.5rem;
          margin-left: .4rem;
-         width:7.5rem;
-         height:2.4rem;
+         width:5.2rem;
+         height:1.8rem;
       }
 }
 }
