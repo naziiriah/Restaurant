@@ -1,313 +1,308 @@
 $Caterina: CALCaterinaW01, sans-serif;
 $proxima: 'Proxima Nova', sans-serif;
 
-@media screen and (max-width:500px) {
-    .icon {
-        margin-top: 3rem;
-        padding: 0rem 0.4rem;
-    }
-    .bill{
-        width:100%;
+@media screen and (max-width: 500px) {
+  .icon {
+    margin-top: 3rem;
+    padding: 0rem 0.4rem;
+  }
+  .bill {
+    width: 100%;
+  }
+  .bill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-family: $Caterina;
+    line-height: 32px;
+    padding-top: 3rem;
+    width: 100%;
+  }
+  .bill__header {
+    align-self: flex-start;
+    width: 100%;
+    min-height: 250px;
+  }
+  .bill__flex-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bill__title {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 17px;
+    font-family: $proxima;
+  }
+  .bill__title_1 {
+    width: 20%;
+  }
+  .bill__title_2 {
+    width: 50%;
+    text-align: start;
+  }
+  .bill__title_3 {
+    width: 30%;
+    text-align: end;
+  }
+  .bill__content {
+    width: 100%;
+  }
 
+  .bill__items {
+    display: flex;
+    justify-content: space-between;
+    height: 1.4rem;
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+  .bill__item {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $proxima;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .bill__cancel {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $proxima;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .bill__empty {
+    height: 10rem;
+    width: 100%;
+  }
+  .bill__emptyText {
+    text-align: center;
+    font-size: 33px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    line-height: 35px;
+  }
+  .bill__emptyDirective {
+    text-align: center;
+    font-size: 16px;
+    color: #121212;
+    font-weight: lighter;
+    line-height: 28px;
+    margin: 4rem 0rem 1rem;
+  }
+  .bill__waiter {
+    width: 100%;
+  }
+  .bill__waiter-text {
+    height: 4rem;
+    width: 100%;
+    margin: 2.5rem 0 0rem 0rem;
+    &-1 {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: normal;
+      font-family: $proxima;
     }
-    .bill-header{
-        display: flex;
-        justify-content: space-between;
-        font-size: 30px;
-        font-family: $Caterina;
-        line-height: 32px;
-        padding-top: 3rem;
-        width:100%;
-        
+    &-2 {
+      font-size: 14px;
+      line-height: 16px;
+      color: #5e5e5e;
+      font-weight: 500;
+      margin-top: 0.4rem;
+      font-family: $proxima;
     }
-    .bill__header{
-        align-self: flex-start;
-        width:100%;
-        min-height: 250px;
-    }
-    .bill__flex-title{
-        display: flex;
-        justify-content: space-between;
-    }
-    .bill__title{
-        text-transform: capitalize;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 17px;
-        font-family: $proxima;
-    }
-    .bill__title_1{
-        width:20%;
-    }
-    .bill__title_2{
-        width:50%;
-        text-align: start;
-    }
-    .bill__title_3{
-        width:30%;
-        text-align: end;
-    }
-    .bill__content{
-        width:100%;
-    }
-    
-    .bill__items{
-        display: flex;
-        justify-content: space-between;
-        height: 1.4rem;
-        width: 100%;
-        margin:1rem 0rem;
-    } 
-    .bill__item{
-        text-transform: capitalize;
-        font-size: 16px;
-        line-height: 19px;
-        font-family: $proxima;
-        font-weight: 400;
-        font-style: normal;
-    }  
-    .bill__cancel{
-        text-transform: capitalize;
-        font-size: 16px;
-        line-height: 19px;
-        font-family: $proxima;
-        font-weight: 700;
-        font-style: normal;
-    } 
-    .bill__empty{
-        height:10rem;
-        width:100%;
-    }
-    .bill__emptyText{
-        text-align: center;
-        font-size: 33px;
-        text-transform: capitalize;
-        font-weight: bolder;
-        line-height: 35px;
-    }
-    .bill__emptyDirective{
-        text-align: center;
-        font-size: 16px;
-        color:#121212;
-        font-weight: lighter;
-        line-height: 28px;
-        margin: 4rem 0rem 1rem;
-    }
-    .bill__waiter{
-        width:100%;
-    }
-    .bill__waiter-text{
-        height:4rem;
-        width:100%;
-        margin:2.5rem 0 0rem 0rem;
-        &-1{
-            font-size: 18px;
-            line-height: 21px ; 
-            font-weight:normal;
-            font-family: $proxima;
+  }
 
-        }
-        &-2{
-            font-size: 14px;
-            line-height: 16px;
-            color:#5E5E5E;
-            font-weight:500;
-            margin-top: .4rem;
-            font-family: $proxima;
-        }                   
-    }  
-
-    .bill__section{
-        display: flex;
-        
+  .bill__section {
+    display: flex;
+  }
+  .bill__tip-option {
+    min-height: 8rem;
+    display: flex;
+    font-family: $proxima;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin: 0.5rem 0rem;
+    .bill-tips {
+      height: 6.5rem;
+      margin-right: 1.2rem;
+      margin-left: 0.2rem;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      min-width: 5rem;
     }
-    .bill__tip-option{
-        min-height:8rem;
-        display: flex;
-        font-family: $proxima;
-        overflow-x:auto;
-        overscroll-behavior-inline: contain;
-        margin:0.5rem 0rem;
-        .bill-tips{
-            height:6.5rem;
-            margin-right: 1.2rem;
-            margin-left: .2rem;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            min-width:5rem;
-        }
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        #tip-0_active{
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        //  display whenthe amount to be given to the waiter is selected  When selected
-        }
-        
-        #tip-1_activee,
-        #tip-2_actives
-        {
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        }
-        #tip-3_activez{
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        }
-        #tip-3_,
-        #tip-3_active,
-        #tip-3_actives,
-        #tip-3_activee{
-            background-color: #FAFAFA;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-        }
-        #tip-0_,
-        #tip-0_actives,
-        #tip-0_activez,
-        #tip-0_activee,
-        #tip-1_,
-        #tip-1_active,
-        #tip-1_actives,
-        #tip-1_activez,
-        #tip-2_,
-        #tip-2_active,
-        #tip-2_activee,
-        #tip-2_activez
-        {
-            background-color: #FAFAFA;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            text-align: center;
-        }
-       
-
-        .bill__img_white{
-            width:2.8rem;
-            height:2.8rem;
-            border-radius: 50%;
-            background-color: #EAEAEA;
-            margin:.5rem auto;
-            text-align: center;
-            img{
-                width:2.8rem;
-                border-radius: 50%;
-            }
-        }
-        .bill__amount3_activez{
-            color:#fff;
-            text-align:center;  
-            font-family: $proxima;
-            width:100%;
-        }
-        .bill__amount0_active
-        .bill__amount2_actives, 
-        .bill__amount1_activee{
-            color:#fff;
-            text-align:center;  
-            font-family: $proxima;
-            width:100%;
-            margin: 1rem auto 0rem;
-            //  display whenthe amount to be given to the waiter is selected  When selected 
-        }
-        .bill__amount3_actives,
-        .bill__amount3_active,
-        .bill__amount3_activee,
-        .bill__amount3_{
-            color:#000;
-            text-align: center;   
-            font-family: $proxima;
-            width:100%;
-            margin: 0.2rem auto 0;
-        }
-
-         .bill__amount2_, .bill__amount1_,
-        .bill__amount2_activee,.bill__amount2_activez, 
-        .bill__amount1_actives, .bill__amount1_activez,
-        .bill__amount0_activee, .bill__amount0_activez, 
-        .bill__amount0_actives, .bill__amount0_
-        {
-            color:#000;
-            text-align: center;   
-            font-family: $proxima;
-            width:100%;
-            margin: 0rem auto 0;
-        }
-    } 
-    .custom-tip{
-        height:6.5rem;
-        min-width:6rem;
-        margin:0rem 1rem;
-        border-radius: 10px;
-        border: #EAEAEA solid 1px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    &::-webkit-scrollbar {
+      display: none;
     }
-    .bill__custom_,
-    .bill__custom_active,
-    .bill__custom_actives, 
-    .bill__custom_activee,
-    .bill__custom_activez {
-        color:#5E5E5E;   
-        font-weight: normal;
-        font-family: $proxima;
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        // NOT  selected 
-        &activez {
-           color:#fff;   
-           font-weight: normal;
-           font-family: $proxima;
-           width: 100%;
-           margin: .5rem auto 0rem;
-           text-align: center;
-           //  display whenthe amount to be given to the waiter is selected  When selected 
-        }
-    }
-    .bill__green0__active,
-    .bill__green1__activee,
-    .bill__green2__actives, 
-    .bill__green3__activez {
-        height:.8rem;
-        width:.8rem;
-        border-radius:50%;
-        background-color: green;
-        margin-left: 80%;
-        margin-top: .1rem;
-        margin-bottom: -.5rem;
-        //  display the  green notification amount to be given to the waiter is selected  When selected 
-        }
-    .bill__footer{
-        width:100%;
-        height:2rem;
-    }
-    .bill__flex{
-        width: 100%;
-        // height:5rem;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: .5rem;
-        margin-top: .5rem;
-        align-items: center;
-        animation: .2s bill ease-in;
-        font-family: $proxima;
+    #tip-0_active {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+      //  display whenthe amount to be given to the waiter is selected  When selected
     }
 
+    #tip-1_activee,
+    #tip-2_actives {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+    }
+    #tip-3_activez {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+    }
+    #tip-3_,
+    #tip-3_active,
+    #tip-3_actives,
+    #tip-3_activee {
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+    #tip-0_,
+    #tip-0_actives,
+    #tip-0_activez,
+    #tip-0_activee,
+    #tip-1_,
+    #tip-1_active,
+    #tip-1_actives,
+    #tip-1_activez,
+    #tip-2_,
+    #tip-2_active,
+    #tip-2_activee,
+    #tip-2_activez {
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
 
-.welcome__tableText1{
+    .bill__img_white {
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      background-color: #eaeaea;
+      margin: 0.5rem auto;
+      text-align: center;
+      img {
+        width: 2.8rem;
+        border-radius: 50%;
+      }
+    }
+    .bill__amount3_activez {
+      color: #fff;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+    }
+    .bill__amount0_active .bill__amount2_actives,
+    .bill__amount1_activee {
+      color: #fff;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 1rem auto 0rem;
+      //  display whenthe amount to be given to the waiter is selected  When selected
+    }
+    .bill__amount3_actives,
+    .bill__amount3_active,
+    .bill__amount3_activee,
+    .bill__amount3_ {
+      color: #000;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0.2rem auto 0;
+    }
+
+    .bill__amount2_,
+    .bill__amount1_,
+    .bill__amount2_activee,
+    .bill__amount2_activez,
+    .bill__amount1_actives,
+    .bill__amount1_activez,
+    .bill__amount0_activee,
+    .bill__amount0_activez,
+    .bill__amount0_actives,
+    .bill__amount0_ {
+      color: #000;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0rem auto 0;
+    }
+  }
+  .custom-tip {
+    height: 6.5rem;
+    min-width: 6rem;
+    margin: 0rem 1rem;
+    border-radius: 10px;
+    border: #eaeaea solid 1px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bill__custom_,
+  .bill__custom_active,
+  .bill__custom_actives,
+  .bill__custom_activee,
+  .bill__custom_activez {
+    color: #5e5e5e;
+    font-weight: normal;
+    font-family: $proxima;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    // NOT  selected
+    &activez {
+      color: #fff;
+      font-weight: normal;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0.5rem auto 0rem;
+      text-align: center;
+      //  display whenthe amount to be given to the waiter is selected  When selected
+    }
+  }
+  .bill__green0__active,
+  .bill__green1__activee,
+  .bill__green2__actives,
+  .bill__green3__activez {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 80%;
+    margin-top: 0.1rem;
+    margin-bottom: -0.5rem;
+    //  display the  green notification amount to be given to the waiter is selected  When selected
+  }
+  .bill__footer {
+    width: 100%;
+    height: 2rem;
+  }
+  .bill__flex {
+    width: 100%;
+    // height:5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    animation: 0.2s bill ease-in;
+    font-family: $proxima;
+  }
+
+  .welcome__tableText1 {
     height: 1rem;
     font-size: 22px;
     font-family: $proxima;
@@ -315,383 +310,379 @@ $proxima: 'Proxima Nova', sans-serif;
     line-height: 29px;
     text-align: end;
     padding-top: 1rem;
-}
-.welcome__tablePrice1__welcome__tableText1{
+  }
+  .welcome__tablePrice1__welcome__tableText1 {
     font-family: $proxima;
     font-weight: bold;
     font-size: 22px;
-    height:4rem;
-    h2{
-        height: 1rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+    height: 4rem;
+    h2 {
+      height: 1rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        width:8rem;
-        height:3rem;
-        margin-top: -7rem;
-        margin-right: -1rem;
+    img {
+      width: 8rem;
+      height: 3rem;
+      margin-top: -7rem;
+      margin-right: -1rem;
     }
-}
-.welcome__tablePrice1__welcome__design{
-    background-image: url('../images/double2.png');   
+  }
+  .welcome__tablePrice1__welcome__design {
+    background-image: url('../images/double2.png');
     background-repeat: no-repeat;
     background-size: 5rem;
     background-position: bottom;
     font-family: $proxima;
     font-weight: bold;
     font-size: 22px;
-    h2{
-        height: 2rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+    h2 {
+      height: 2rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        display: none;
+    img {
+      display: none;
     }
-    
-}
-.welcome__tableText2{
-    h2{
-        height: 1rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+  }
+  .welcome__tableText2 {
+    h2 {
+      height: 1rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        width:8rem;
-        margin-top: -3rem;
-        margin-right: -1rem;
+    img {
+      width: 8rem;
+      margin-top: -3rem;
+      margin-right: -1rem;
     }
-}
-.welcome__design__img{
+  }
+  .welcome__design__img {
     margin-left: -4rem;
-    margin-bottom: -.4rem;
-}
-#welcome__design{
+    margin-bottom: -0.4rem;
+  }
+  #welcome__design {
     font-size: 21px;
     font-weight: 600;
+  }
 }
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .icon {
+    display: none;
+  }
+  .bill {
+    width: 100%;
+  }
+  .bill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-family: $Caterina;
+    line-height: 32px;
+    padding-top: 3rem;
+    width: 100%;
+  }
+  .bill__header {
+    align-self: flex-start;
+    width: 100%;
+    min-height: 200px;
+  }
+  .bill__flex-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bill__title {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 17px;
+    font-family: $proxima;
+  }
+  .bill__title_1 {
+    width: 20%;
+  }
+  .bill__title_2 {
+    width: 50%;
+    text-align: start;
+  }
+  .bill__title_3 {
+    width: 30%;
+    text-align: end;
+  }
+  .bill__content {
+    width: 100%;
+  }
 
-}
-@media screen and (min-width:501px) and (max-width:800px) {
-    .icon {
-        display: none;
+  .bill__items {
+    display: flex;
+    justify-content: space-between;
+    height: 2.8rem;
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+  .bill__item {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $proxima;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .bill__cancel {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $proxima;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .bill__empty {
+    height: 10rem;
+    width: 100%;
+  }
+  .bill__emptyText {
+    text-align: center;
+    font-size: 33px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    line-height: 35px;
+  }
+  .bill__emptyDirective {
+    text-align: center;
+    font-size: 16px;
+    color: #121212;
+    font-weight: lighter;
+    line-height: 28px;
+    margin: 4rem 0rem;
+  }
+  .bill__waiter {
+    width: 100%;
+  }
+  .bill__waiter-text {
+    height: 4rem;
+    width: 100%;
+    margin: 2.5rem 0 0rem 0rem;
+    &-1 {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: normal;
+      font-family: $proxima;
     }
-    .bill{
-        width:100%;
+    &-2 {
+      font-size: 14px;
+      line-height: 16px;
+      color: #5e5e5e;
+      font-weight: 500;
+      margin-top: 0.4rem;
+      font-family: $proxima;
+    }
+  }
 
-    }
-    .bill-header{
-        display: flex;
-        justify-content: space-between;
-        font-size: 30px;
-        font-family: $Caterina;
-        line-height: 32px;
-        padding-top: 3rem;
-        width:100%;
-        
-    }
-    .bill__header{
-        align-self: flex-start;
-        width:100%;
-        min-height: 200px;
-    }
-    .bill__flex-title{
-        display: flex;
-        justify-content: space-between;
-    }
-    .bill__title{
-        text-transform: capitalize;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 17px;
-        font-family: $proxima;
-    }
-    .bill__title_1{
-        width:20%;
-    }
-    .bill__title_2{
-        width:50%;
-        text-align: start;
-    }
-    .bill__title_3{
-        width:30%;
-        text-align: end;
-    }
-    .bill__content{
-        width:100%;
-    }
-    
-    .bill__items{
-        display: flex;
-        justify-content: space-between;
-        height: 2.8rem;
-        width: 100%;
-        margin:1rem 0rem;
-    } 
-    .bill__item{
-        text-transform: capitalize;
-        font-size: 16px;
-        line-height: 19px;
-        font-family: $proxima;
-        font-weight: 400;
-        font-style: normal;
-    }  
-    .bill__cancel{
-        text-transform: capitalize;
-        font-size: 16px;
-        line-height: 19px;
-        font-family: $proxima;
-        font-weight: 700;
-        font-style: normal;
-    } 
-    .bill__empty{
-        height:10rem;
-        width:100%;
-    }
-    .bill__emptyText{
-        text-align: center;
-        font-size: 33px;
-        text-transform: capitalize;
-        font-weight: bolder;
-        line-height: 35px;
-    }
-    .bill__emptyDirective{
-        text-align: center;
-        font-size: 16px;
-        color:#121212;
-        font-weight: lighter;
-        line-height: 28px;
-        margin: 4rem 0rem;
-    }
-    .bill__waiter{
-        width:100%;
-    }
-    .bill__waiter-text{
-        height:4rem;
-        width:100%;
-        margin:2.5rem 0 0rem 0rem;
-        &-1{
-            font-size: 18px;
-            line-height: 21px ; 
-            font-weight:normal;
-            font-family: $proxima;
+  .bill__section {
+    display: flex;
+  }
+  .bill__tip-option {
+    min-height: 11rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: $proxima;
+    margin: 0.5rem 0rem;
+    width: 100%;
+    .bill-tips {
+      height: 7.5rem;
 
-        }
-        &-2{
-            font-size: 14px;
-            line-height: 16px;
-            color:#5E5E5E;
-            font-weight:500;
-            margin-top: .4rem;
-            font-family: $proxima;
-        }                   
-    }  
-
-    .bill__section{
-        display: flex;
-        
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      width: 7rem;
     }
-    .bill__tip-option{
-        min-height:11rem;
-        display: flex;
-        justify-content: space-between;
-        font-family: $proxima;
-        margin:0.5rem 0rem;
-        width:100%;
-        .bill-tips{
-            height:7.5rem;
-
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            width:7rem;
-        }
-        #tip-0_active{
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        //  display whenthe amount to be given to the waiter is selected  When selected
-        }
-        
-        #tip-1_activee,
-        #tip-2_actives
-        {
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        }
-        #tip-3_activez{
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        }
-        #tip-3_,
-        #tip-3_active,
-        #tip-3_actives,
-        #tip-3_activee{
-            background-color: #FAFAFA;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-        }
-        #tip-0_,
-        #tip-0_actives,
-        #tip-0_activez,
-        #tip-0_activee,
-        #tip-1_,
-        #tip-1_active,
-        #tip-1_actives,
-        #tip-1_activez,
-        #tip-2_,
-        #tip-2_active,
-        #tip-2_activee,
-        #tip-2_activez
-        {
-            background-color: #FAFAFA;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            text-align: center;
-        }
-       
-
-        .bill__img_white{
-            width:3.7rem;
-            height:3.7rem;
-            border-radius: 50%;
-            background-color: #EAEAEA;
-            margin:.5rem auto;
-            text-align: center;
-            img{
-                width:3.4rem;
-                border-radius: 50%;
-                margin-top: .1rem;
-            }
-        }
-        .bill__amount3_activez{
-            color:#fff;
-            text-align:center;  
-            font-family: $proxima;
-            width:100%;
-            font-size: 18px;
-        }
-        .bill__amount0_active,
-        .bill__amount2_actives, 
-        .bill__amount1_activee{
-            color:#fff;
-            text-align:center;  
-            font-family: $proxima;
-            width:100%;
-            margin: 1rem auto 0rem;
-            font-size: 18px;
-            //  display whenthe amount to be given to the waiter is selected  When selected 
-        }
-        .bill__amount3_actives,
-        .bill__amount3_active,
-        .bill__amount3_activee,
-        .bill__amount3_{
-            color:#000;
-            text-align: center;   
-            font-family: $proxima;
-            width:100%;
-            margin: 0.2rem auto 0;
-            font-size: 18px;
-        }
-        .bill__amount1_active,.bill__amount2_active, .bill__amount3_active,
-         .bill__amount2_, .bill__amount1_,
-        .bill__amount2_activee,.bill__amount2_activez, 
-        .bill__amount1_actives, .bill__amount1_activez,
-        .bill__amount0_activee, .bill__amount0_activez, 
-        .bill__amount0_actives, .bill__amount0_
-        {
-            color:#000;
-            text-align: center;   
-            font-family: $proxima;
-            width:100%;
-            margin: 0rem auto 0;
-            font-size: 18px;
-        }
-    } 
-    .custom-tip{
-        height:6.5rem;
-        min-width:6rem;
-        margin:0rem 1rem;
-        border-radius: 10px;
-        border: #EAEAEA solid 1px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    }
-    .bill__custom_,
-    .bill__custom_active,
-    .bill__custom_actives, 
-    .bill__custom_activee,
-    .bill__custom_activez {
-        color:#5E5E5E;   
-        font-weight: normal;
-        font-family: $proxima;
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        // NOT  selected 
-        &activez {
-           color:#fff;   
-           font-weight: normal;
-           font-family: $proxima;
-           width: 100%;
-           margin: .5rem auto 0rem;
-           text-align: center;
-           //  display whenthe amount to be given to the waiter is selected  When selected 
-        }
-    }
-    .bill__green0__active,
-    .bill__green1__activee,
-    .bill__green2__actives, 
-    .bill__green3__activez {
-        height:.8rem;
-        width:.8rem;
-        border-radius:50%;
-        background-color: green;
-        margin-left: 80%;
-        margin-top: .1rem;
-        margin-bottom: -.5rem;
-        //  display the  green notification amount to be given to the waiter is selected  When selected 
-        }
-    .bill__footer{
-        width:100%;
-        height:2rem;
-    }
-    .bill__flex{
-        width: 100%;
-        // height:5rem;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: .5rem;
-        margin-top: .5rem;
-        align-items: center;
-        animation: .2s bill ease-in;
-        font-family: $proxima;
+    #tip-0_active {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+      //  display whenthe amount to be given to the waiter is selected  When selected
     }
 
+    #tip-1_activee,
+    #tip-2_actives {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+    }
+    #tip-3_activez {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+    }
+    #tip-3_,
+    #tip-3_active,
+    #tip-3_actives,
+    #tip-3_activee {
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+    #tip-0_,
+    #tip-0_actives,
+    #tip-0_activez,
+    #tip-0_activee,
+    #tip-1_,
+    #tip-1_active,
+    #tip-1_actives,
+    #tip-1_activez,
+    #tip-2_,
+    #tip-2_active,
+    #tip-2_activee,
+    #tip-2_activez {
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
 
-.welcome__tableText1{
+    .bill__img_white {
+      width: 3.7rem;
+      height: 3.7rem;
+      border-radius: 50%;
+      background-color: #eaeaea;
+      margin: 0.5rem auto;
+      text-align: center;
+      img {
+        width: 3.4rem;
+        border-radius: 50%;
+        margin-top: 0.1rem;
+      }
+    }
+    .bill__amount3_activez {
+      color: #fff;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      font-size: 18px;
+    }
+    .bill__amount0_active,
+    .bill__amount2_actives,
+    .bill__amount1_activee {
+      color: #fff;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 1rem auto 0rem;
+      font-size: 18px;
+      //  display whenthe amount to be given to the waiter is selected  When selected
+    }
+    .bill__amount3_actives,
+    .bill__amount3_active,
+    .bill__amount3_activee,
+    .bill__amount3_ {
+      color: #000;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0.2rem auto 0;
+      font-size: 18px;
+    }
+    .bill__amount1_active,
+    .bill__amount2_active,
+    .bill__amount3_active,
+    .bill__amount2_,
+    .bill__amount1_,
+    .bill__amount2_activee,
+    .bill__amount2_activez,
+    .bill__amount1_actives,
+    .bill__amount1_activez,
+    .bill__amount0_activee,
+    .bill__amount0_activez,
+    .bill__amount0_actives,
+    .bill__amount0_ {
+      color: #000;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0rem auto 0;
+      font-size: 18px;
+    }
+  }
+  .custom-tip {
+    height: 6.5rem;
+    min-width: 6rem;
+    margin: 0rem 1rem;
+    border-radius: 10px;
+    border: #eaeaea solid 1px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bill__custom_,
+  .bill__custom_active,
+  .bill__custom_actives,
+  .bill__custom_activee,
+  .bill__custom_activez {
+    color: #5e5e5e;
+    font-weight: normal;
+    font-family: $proxima;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    // NOT  selected
+    &activez {
+      color: #fff;
+      font-weight: normal;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0.5rem auto 0rem;
+      text-align: center;
+      //  display whenthe amount to be given to the waiter is selected  When selected
+    }
+  }
+  .bill__green0__active,
+  .bill__green1__activee,
+  .bill__green2__actives,
+  .bill__green3__activez {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 80%;
+    margin-top: 0.1rem;
+    margin-bottom: -0.5rem;
+    //  display the  green notification amount to be given to the waiter is selected  When selected
+  }
+  .bill__footer {
+    width: 100%;
+    height: 2rem;
+  }
+  .bill__flex {
+    width: 100%;
+    // height:5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    animation: 0.2s bill ease-in;
+    font-family: $proxima;
+  }
+
+  .welcome__tableText1 {
     height: 1rem;
     font-size: 22px;
     font-family: $proxima;
@@ -699,381 +690,378 @@ $proxima: 'Proxima Nova', sans-serif;
     line-height: 29px;
     text-align: end;
     padding-top: 1rem;
-}
-.welcome__tablePrice1__welcome__tableText1{
+  }
+  .welcome__tablePrice1__welcome__tableText1 {
     font-family: $proxima;
     font-weight: bold;
     font-size: 22px;
-    height:4rem;
-    h2{
-        height: 1rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+    height: 4rem;
+    h2 {
+      height: 1rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        width:8rem;
-        height:3rem;
-        margin-top: -7rem;
-        margin-right: -1rem;
+    img {
+      width: 8rem;
+      height: 3rem;
+      margin-top: -7rem;
+      margin-right: -1rem;
     }
-}
-.welcome__tablePrice1__welcome__design{
-    background-image: url('../images/double2.png');   
+  }
+  .welcome__tablePrice1__welcome__design {
+    background-image: url('../images/double2.png');
     background-repeat: no-repeat;
     background-size: 5rem;
     background-position: bottom;
     font-family: $proxima;
     font-weight: bold;
     font-size: 22px;
-    h2{
-        height: 2rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+    h2 {
+      height: 2rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        display: none;
+    img {
+      display: none;
     }
-    
-}
-.welcome__tableText2{
-    h2{
-        height: 1rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+  }
+  .welcome__tableText2 {
+    h2 {
+      height: 1rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        width:8rem;
-        margin-top: -3rem;
-        margin-right: -1rem;
+    img {
+      width: 8rem;
+      margin-top: -3rem;
+      margin-right: -1rem;
     }
-}
-.welcome__design__img{
+  }
+  .welcome__design__img {
     margin-left: -4rem;
-    margin-bottom: -.4rem;
-}
-#welcome__design{
+    margin-bottom: -0.4rem;
+  }
+  #welcome__design {
     font-size: 21px;
     font-weight: 600;
-}
+  }
 }
 @media (min-device-width: 801px) and (max-device-width: 1280px) {
-    .bill{
-        width:100%;
+  .bill {
+    width: 100%;
+  }
+  .bill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-family: $Caterina;
+    line-height: 32px;
+    padding-top: 3rem;
+    width: 100%;
+  }
+  .bill__header {
+    align-self: flex-start;
+    width: 100%;
+    min-height: 400px;
+  }
+  .bill__flex-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bill__title {
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: $proxima;
+  }
+  .bill__title_1 {
+    width: 20%;
+  }
+  .bill__title_2 {
+    width: 50%;
+    text-align: start;
+  }
+  .bill__title_3 {
+    width: 30%;
+    text-align: end;
+  }
+  .bill__content {
+    width: 100%;
+  }
 
+  .bill__items {
+    display: flex;
+    justify-content: space-between;
+    height: 2.8rem;
+    width: 100%;
+    margin: 0rem 0rem;
+  }
+  .bill__item {
+    text-transform: capitalize;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $proxima;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .bill__cancel {
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $proxima;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .bill__empty {
+    height: 10rem;
+    width: 100%;
+  }
+  .bill__emptyText {
+    text-align: center;
+    font-size: 33px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    line-height: 35px;
+  }
+  .bill__emptyDirective {
+    text-align: center;
+    font-size: 30px;
+    color: #121212;
+    font-weight: lighter;
+    line-height: 38px;
+    margin: 4rem 0rem;
+  }
+  .bill__waiter {
+    width: 100%;
+  }
+  .bill__waiter-text {
+    height: 5rem;
+    width: 100%;
+    margin: 2.5rem 0 0rem 0rem;
+    &-1 {
+      font-size: 25px;
+      line-height: 25px;
+      font-weight: normal;
+      font-family: $proxima;
     }
-    .bill-header{
-        display: flex;
-        justify-content: space-between;
-        font-size: 30px;
-        font-family: $Caterina;
-        line-height: 32px;
-        padding-top: 3rem;
-        width:100%;
-        
+    &-2 {
+      font-size: 20px;
+      line-height: 22px;
+      color: #5e5e5e;
+      font-weight: 500;
+      margin-top: 0.4rem;
+      font-family: $proxima;
     }
-    .bill__header{
-        align-self: flex-start;
-        width:100%;
-        min-height: 400px;
-    }
-    .bill__flex-title{
-        display: flex;
-        justify-content: space-between;
-    }
-    .bill__title{
-        text-transform: capitalize;
-        font-size: 26px;
-        font-weight: bold;
-        line-height: 30px;
-        font-family: $proxima;
-    }
-    .bill__title_1{
-        width:20%;
-    }
-    .bill__title_2{
-        width:50%;
-        text-align: start;
-    }
-    .bill__title_3{
-        width:30%;
-        text-align: end;
-    }
-    .bill__content{
-        width:100%;
-    }
-    
-    .bill__items{
-        display: flex;
-        justify-content: space-between;
-        height: 2.8rem;
-        width: 100%;
-        margin:0rem 0rem;
-    } 
-    .bill__item{
-        text-transform: capitalize;
-        font-size: 24px;
-        line-height: 30px;
-        font-family: $proxima;
-        font-weight: 400;
-        font-style: normal;
-    }  
-    .bill__cancel{
-        text-transform: capitalize;
-        font-size: 16px;
-        line-height: 19px;
-        font-family: $proxima;
-        font-weight: 700;
-        font-style: normal;
-    } 
-    .bill__empty{
-        height:10rem;
-        width:100%;
-    }
-    .bill__emptyText{
-        text-align: center;
-        font-size: 33px;
-        text-transform: capitalize;
-        font-weight: bolder;
-        line-height: 35px;
-    }
-    .bill__emptyDirective{
-        text-align: center;
-        font-size: 30px;
-        color:#121212;
-        font-weight: lighter;
-        line-height: 38px;
-        margin: 4rem 0rem;
-    }
-    .bill__waiter{
-        width:100%;
-    }
-    .bill__waiter-text{
-        height:5rem;
-        width:100%;
-        margin:2.5rem 0 0rem 0rem;
-        &-1{
-            font-size: 25px;
-            line-height: 25px ; 
-            font-weight:normal;
-            font-family: $proxima;
+  }
 
-        }
-        &-2{
-            font-size: 20px;
-            line-height: 22px;
-            color:#5E5E5E;
-            font-weight:500;
-            margin-top: .4rem;
-            font-family: $proxima;
-        }                   
-    }  
+  .bill__section {
+    display: flex;
+  }
+  .bill__tip-option {
+    min-height: 11rem;
+    display: flex;
+    font-family: $proxima;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0.5rem auto;
+    .bill-tips {
+      height: 9.5rem;
 
-    .bill__section{
-        display: flex;
-        
+      margin-left: 0.2rem;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      width: 22%;
     }
-    .bill__tip-option{
-        min-height:11rem;
-        display: flex;
-        font-family: $proxima;
-        width:100%;
-        justify-content: space-between;
-        margin:0.5rem auto;
-        .bill-tips{
-            height:9.5rem;
-            
-            margin-left: .2rem;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            width:22%;
-        }
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        #tip-0_active{
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        //  display whenthe amount to be given to the waiter is selected  When selected
-        }
-        
-        #tip-1_activee,
-        #tip-2_actives
-        {
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        }
-        #tip-3_activez{
-            background-color: #000;
-            border-radius:10px;   
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            color: #FAFAFA;
-            text-align: center;
-        }
-        #tip-3_,
-        #tip-3_active,
-        #tip-3_actives,
-        #tip-3_activee{
-            background-color: #FAFAFA;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-        }
-        #tip-0_,
-        #tip-0_actives,
-        #tip-0_activez,
-        #tip-0_activee,
-        #tip-1_,
-        #tip-1_active,
-        #tip-1_actives,
-        #tip-1_activez,
-        #tip-2_,
-        #tip-2_active,
-        #tip-2_activee,
-        #tip-2_activez
-        {
-            background-color: #FAFAFA;
-            border-radius: 10px;
-            border: #EAEAEA solid 1px;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
-            text-align: center;
-        }
-       
-
-        .bill__img_white{
-            width:5.5rem;
-            height:5.5rem;
-            border-radius: 50%;
-            background-color: #EAEAEA;
-            margin:.5rem auto;
-            text-align: center;
-            img{
-                width:5.5rem;
-                border-radius: 50%;
-            }
-        }
-        .bill__amount3_activez{
-            color:#fff;
-            text-align:center;  
-            font-family: $proxima;
-            width:100%;
-        }
-        .bill__amount0_active,
-        .bill__amount2_actives, 
-        .bill__amount1_activee{
-            color:#fff;
-            text-align:center;  
-            font-family: $proxima;
-            width:100%;
-            margin: 1rem auto 0rem;
-            font-size: 23px;
-            //  display whenthe amount to be given to the waiter is selected  When selected 
-        }
-        .bill__amount3_actives,
-        .bill__amount3_active,
-        .bill__amount3_activee,
-        .bill__amount3_{
-            color:#000;
-            text-align: center;   
-            font-family: $proxima;
-            width:100%;
-            margin: 0.2rem auto 0;
-            font-size: 23px;
-        }
-        .bill__amount1_active,.bill__amount2_active, .bill__amount3_active,
-         .bill__amount2_, .bill__amount1_,
-        .bill__amount2_activee,.bill__amount2_activez, 
-        .bill__amount1_actives, .bill__amount1_activez,
-        .bill__amount0_activee, .bill__amount0_activez, 
-        .bill__amount0_actives, .bill__amount0_
-        {
-            color:#000;
-            text-align: center;   
-            font-family: $proxima;
-            width:100%;
-            margin: 0rem auto 0;
-            font-size: 23px;
-        }
-    } 
-    .custom-tip{
-        height:6.5rem;
-        min-width:6rem;
-        margin:0rem 1rem;
-        border-radius: 10px;
-        border: #EAEAEA solid 1px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    &::-webkit-scrollbar {
+      display: none;
     }
-    .bill__custom_,
-    .bill__custom_active,
-    .bill__custom_actives, 
-    .bill__custom_activee,
-    .bill__custom_activez {
-        color:#5E5E5E;   
-        font-weight: normal;
-        font-family: $proxima;
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        // NOT  selected 
-        &activez {
-           color:#fff;   
-           font-weight: normal;
-           font-family: $proxima;
-           width: 100%;
-           margin: .5rem auto 0rem;
-           text-align: center;
-           //  display whenthe amount to be given to the waiter is selected  When selected 
-        }
-    }
-    .bill__green0__active,
-    .bill__green1__activee,
-    .bill__green2__actives, 
-    .bill__green3__activez {
-        height:.8rem;
-        width:.8rem;
-        border-radius:50%;
-        background-color: green;
-        margin-left: 80%;
-        margin-top: .1rem;
-        margin-bottom: -.5rem;
-        //  display the  green notification amount to be given to the waiter is selected  When selected 
-        }
-    .bill__footer{
-        width:100%;
-        height:2rem;
-    }
-    .bill__flex{
-        width: 100%;
-        // height:5rem;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: .5rem;
-        margin-top: .5rem;
-        align-items: center;
-        animation: .2s bill ease-in;
-        font-family: $proxima;
+    #tip-0_active {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+      //  display whenthe amount to be given to the waiter is selected  When selected
     }
 
+    #tip-1_activee,
+    #tip-2_actives {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+    }
+    #tip-3_activez {
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      color: #fafafa;
+      text-align: center;
+    }
+    #tip-3_,
+    #tip-3_active,
+    #tip-3_actives,
+    #tip-3_activee {
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+    #tip-0_,
+    #tip-0_actives,
+    #tip-0_activez,
+    #tip-0_activee,
+    #tip-1_,
+    #tip-1_active,
+    #tip-1_actives,
+    #tip-1_activez,
+    #tip-2_,
+    #tip-2_active,
+    #tip-2_activee,
+    #tip-2_activez {
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: #eaeaea solid 1px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
 
-.welcome__tableText1{
+    .bill__img_white {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
+      background-color: #eaeaea;
+      margin: 0.5rem auto;
+      text-align: center;
+      img {
+        width: 5.5rem;
+        border-radius: 50%;
+      }
+    }
+    .bill__amount3_activez {
+      color: #fff;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+    }
+    .bill__amount0_active,
+    .bill__amount2_actives,
+    .bill__amount1_activee {
+      color: #fff;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 1rem auto 0rem;
+      font-size: 23px;
+      //  display whenthe amount to be given to the waiter is selected  When selected
+    }
+    .bill__amount3_actives,
+    .bill__amount3_active,
+    .bill__amount3_activee,
+    .bill__amount3_ {
+      color: #000;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0.2rem auto 0;
+      font-size: 23px;
+    }
+    .bill__amount1_active,
+    .bill__amount2_active,
+    .bill__amount3_active,
+    .bill__amount2_,
+    .bill__amount1_,
+    .bill__amount2_activee,
+    .bill__amount2_activez,
+    .bill__amount1_actives,
+    .bill__amount1_activez,
+    .bill__amount0_activee,
+    .bill__amount0_activez,
+    .bill__amount0_actives,
+    .bill__amount0_ {
+      color: #000;
+      text-align: center;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0rem auto 0;
+      font-size: 23px;
+    }
+  }
+  .custom-tip {
+    height: 6.5rem;
+    min-width: 6rem;
+    margin: 0rem 1rem;
+    border-radius: 10px;
+    border: #eaeaea solid 1px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+  .bill__custom_,
+  .bill__custom_active,
+  .bill__custom_actives,
+  .bill__custom_activee,
+  .bill__custom_activez {
+    color: #5e5e5e;
+    font-weight: normal;
+    font-family: $proxima;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    // NOT  selected
+    &activez {
+      color: #fff;
+      font-weight: normal;
+      font-family: $proxima;
+      width: 100%;
+      margin: 0.5rem auto 0rem;
+      text-align: center;
+      //  display whenthe amount to be given to the waiter is selected  When selected
+    }
+  }
+  .bill__green0__active,
+  .bill__green1__activee,
+  .bill__green2__actives,
+  .bill__green3__activez {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 80%;
+    margin-top: 0.1rem;
+    margin-bottom: -0.5rem;
+    //  display the  green notification amount to be given to the waiter is selected  When selected
+  }
+  .bill__footer {
+    width: 100%;
+    height: 2rem;
+  }
+  .bill__flex {
+    width: 100%;
+    // height:5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    animation: 0.2s bill ease-in;
+    font-family: $proxima;
+  }
+
+  .welcome__tableText1 {
     height: 1rem;
     font-size: 22px;
     font-family: $proxima;
@@ -1081,86 +1069,84 @@ $proxima: 'Proxima Nova', sans-serif;
     line-height: 29px;
     text-align: end;
     padding-top: 1rem;
-}
-.welcome__tablePrice1__welcome__tableText1{
+  }
+  .welcome__tablePrice1__welcome__tableText1 {
     font-family: $proxima;
     font-weight: bold;
     font-size: 22px;
-    height:4rem;
-    h2{
-        height: 1rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+    height: 4rem;
+    h2 {
+      height: 1rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        width:8rem;
-        height:3rem;
-        margin-top: -7rem;
-        margin-right: -1rem;
+    img {
+      width: 8rem;
+      height: 3rem;
+      margin-top: -7rem;
+      margin-right: -1rem;
     }
-}
-.welcome__tablePrice1__welcome__design{
-    background-image: url('../images/double2.png');   
+  }
+  .welcome__tablePrice1__welcome__design {
+    background-image: url('../images/double2.png');
     background-repeat: no-repeat;
     background-size: 5rem;
     background-position: bottom;
     font-family: $proxima;
     font-weight: bold;
     font-size: 22px;
-    h2{
-        height: 2rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+    h2 {
+      height: 2rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        display: none;
+    img {
+      display: none;
     }
-    
-}
-.welcome__tableText2{
-    h2{
-        height: 1rem;
-        font-size: 22px;
-        font-family: $proxima;
-        font-weight: bold;
-        line-height: 29px;
-        text-align: end;
-        padding-top: 2rem;
+  }
+  .welcome__tableText2 {
+    h2 {
+      height: 1rem;
+      font-size: 22px;
+      font-family: $proxima;
+      font-weight: bold;
+      line-height: 29px;
+      text-align: end;
+      padding-top: 2rem;
     }
-     img{
-        width:8rem;
-        margin-top: -3rem;
-        margin-right: -1rem;
+    img {
+      width: 8rem;
+      margin-top: -3rem;
+      margin-right: -1rem;
     }
-}
-.welcome__design__img{
+  }
+  .welcome__design__img {
     margin-left: -4rem;
-    margin-bottom: -.4rem;
-}
-#welcome__design{
+    margin-bottom: -0.4rem;
+  }
+  #welcome__design {
     font-size: 21px;
     font-weight: 600;
-}
-.arrowState{
+  }
+  .arrowState {
     display: none;
-}
+  }
 }
 @keyframes bill {
-    from{
-        opacity:0;
-        height:0;
-    }
-    to{
-        opacity:1;
-        height:2rem;
-    }
-    
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 2rem;
+  }
 }
