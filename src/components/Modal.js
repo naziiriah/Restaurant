@@ -135,6 +135,7 @@ export const CustomTip = ({ active, Wingedmoney, waiter }) => {
     if (Waiter !== customTip) {
       SetCustomTip(0.0);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Waiter]);
 
   return (
